@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>More Better Writing</title>
+   <meta name="author" content="Daniel Dosen" />
+   <link href="http://feeds.feedburner.com/danieldosen" rel="alternate" title="Daniel Dosen" type="application/atom+xml" />
+
+   <!-- syntax highlighting CSS -->
+   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+
+   <!-- Typekit -->
+   <script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
+   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+
+<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+
+<div class="site">
+  <div class="title">
+    <a href="/">Daniel Dosen</a>
+    <a class="extra" href="/">home</a>
+  </div>
+  
+  <div id="post">
+So, I'm back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.
+
+Now, however, I'm taking a different tack. Blogging can and should have a more powerful impact on what I'm doing and I've come to realize that blogging can have a positive impact on my life in a few ways:
+<ul>
+	<li>I want to write more to contribute to the Rails/Objective C world.</li>
+	<li>I'd like to write more about data modeling and rails - if only to capture some of the cool things I've learned in the past year or two. Right now, all these little gems I've learned, or applied, are stuck in some Evernote notebook.</li>
+	<li>I want to apply lean development practices to lean publishing (which is already a term I learned about this week at Seattle's Lean Camp.</li>
+	<li>Blogging is the gateway drug to book-writing - which when it comes to something like ePub - there's no reason why the world doesn't need a book by Daniel Dosen - even if nobody or just a few read it. Now it's a goal of mine, so it will happen.</li>
+	<li>…</li>
+	<li>Profit</li>
+	<li>I want to publicly commit do doing things like - updating or writing a gem. The main reason is, to me, I need more github based code with my name on it. Most everything I do or have, is in a private repository on github, or on my own git server at agidevelopment.com</li>
+</ul>
+Hey, look-y here - this is almost a blog post.
+
+I have to admit, I've spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I'm particularly fascinated about is adding syntax highlighted code in a post - so here's something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:
+
+<pre class="brush: ruby">
+class Pomodoro < ActiveRecord::Base
+
+  belongs_to :activity
+
+  attr_accessible :start_date_time,
+    :length,
+    :completed,
+    :note,
+    :location_id,
+    :break_length,
+    :activity,
+    :activity_id,
+    :activity_attributes
+
+  validates_presence_of :start_date_time
+
+end
+</pre>
+
+</div>
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>02 Aug 2011</span> &raquo; <a href="/2011/08/02/jekyllization.html">Jekyllization</a></li>
+    
+      <li><span>25 Jul 2011</span> &raquo; <a href="/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog.html">Posting an image from MarsEdit to a wordpress blog..</a></li>
+    
+      <li><span>25 Jul 2011</span> &raquo; <a href="/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop.html">Pomodori Controller and Blogging from the coffee shop...</a></li>
+    
+  </ul>
+</div>
+  
+  <div class="footer">
+    <div class="contact">
+      <p>
+       Daniel Dosen<br />
+        Founder of <a href="http://agidevelopment.com/">AgI Development</a><br />
+        daniel@danieldosen.org
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="http://github.com/ddosen/">github.com/ddosen</a><br />
+        <a href="http://twitter.com/dgdosen/">twitter.com/dgdosen</a><br />
+      </p>
+    </div>
+    <div class="rss">
+      <a href="http://feeds.feedburner.com/daniel-dosen">
+        <img src="/images/feed-icon-28x28.png" alt="Subscribe to RSS Feed" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<a href="http://github.com/ddosen/danieldosen_org"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+
+<!-- ClickTale Bottom part -->
+<div id="ClickTaleDiv" style="display: none;"></div>
+<script type="text/javascript">
+if(document.location.protocol!='https:')
+  document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
+</script>
+<!-- ClickTale end of Bottom part -->
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-24907808-1");
+pageTracker._trackPageview();
+</script>
+<!-- Google Analytics end -->
+
+</body>
+</html>
