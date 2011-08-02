@@ -1,0 +1,39 @@
+--- 
+layout: post
+title: Test 2 round tripping local
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _syntaxhighlighter_encoded: "1"
+  _edit_last: "1"
+---
+Trying out MarsEdit and posts
+Well, look there - it looks like wrapping code in a data tag works fine 
+Trying with the old version of syntax highlighter
+Ah - I've think I've found the perfect solution - 
+
+Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn't work well anyway…
+
+<pre class="brush: ruby">
+  describe "POST create" do
+    # test code roundtripping with marsedit
+    it "should create a pomodoro from json" do
+      post :create, :format => "json", :activity_id => @activity.id, :pomodoro => {
+        "start_date_time" => "2011-07-22 00:00",
+        "length" => "25",
+        "completed" => "0",
+        "note" => "json post individual pomodoro",
+        "break_length" => "5"
+      }
+      pomodoro = assigns(:pomodoro)
+      pomodoro.id.should > 0
+      pomodoro.note.should == "json post individual pomodoro"
+      pomodoro.length.should == 25
+    end
+  end
+</pre>
+
+It looks to me, like you'll need to do more of this before posting… Just don't edit a post (or round trip it) in Mars Edit
