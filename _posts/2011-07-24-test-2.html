@@ -8,10 +8,16 @@ published: true
 
 ---
 This is a test
-{% highlight ruby %}
-class User
-  def name
-    [first, last].join(' ')
-  end
-end
+A sample of cucumber
+
+{% highlight gherkin clinenos %}
+Feature: Manage pomodori
+  In order to [goal]
+  [stakeholder]
+  wants [behaviour]
+  
+  # test comment
+  Scenario: Register new pomodori
+    Given I am on the new pomodori page
+    And I press "Create"
 {% endhighlight %}
