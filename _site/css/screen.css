@@ -154,8 +154,9 @@ ul.posts {
   /* standard */
 
   #post pre {
-    border: 1px solid #ddd;
-    background-color: #eef;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: lightgrey;
     padding: 0 .4em;
   }
 
@@ -165,8 +166,9 @@ ul.posts {
   }
 
   #post code {
-    border: 1px solid #ddd;
-    background-color: #eef;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: lightgrey;
     font-size: 85%;
     padding: 0 .2em;
   }
