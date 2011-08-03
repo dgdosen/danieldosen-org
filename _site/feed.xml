@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
- 
+<feed xmlns="http://www.w3.org/2005/Atom"> 
  <title>Daniel Dosen</title>
- <link href="http://danieldosen.org/atom.xml" rel="self"/>
- <link href="http://danieldosen.org/"/>
- <updated>2011-08-03T14:18:41-07:00</updated>
- <id>http://danieldosen.org/</id>
+ <link href="/feed.xml" rel="self"/>
+ <link href="/feed.xml" />
+ <updated>2011-08-03T14:58:51-07:00</updated>
+ <id>/</id>
  <author>
    <name>Daniel Dosen</name>
    <email>daniel@danieldosen.org</email>
  </author>
-
  
  <entry>
    <title>Trying out Markdown</title>
-   <link href="http://danieldosen.org/2011/08/02/playing_with-markdown.html"/>
+   <link href="/2011/08/02/playing_with-markdown.html"/>
    <updated>2011-08-02T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/08/02/playing_with-markdown</id>
-   <content type="html">&lt;h1&gt;Very cool header&lt;/h1&gt;
+   <id>/2011/08/02/playing_with-markdown</id>
+   <content type="html">
+    &lt;h1&gt;Very cool header&lt;/h1&gt;
 
 &lt;h2&gt;An even cooler header&lt;/h2&gt;
 
@@ -65,41 +64,50 @@
 
 
 
-</content>
+
+    
+   </content>
  </entry>
  
  <entry>
    <title>Jekyllization</title>
-   <link href="http://danieldosen.org/2011/08/02/jekyllization.html"/>
+   <link href="/2011/08/02/jekyllization.html"/>
    <updated>2011-08-02T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/08/02/jekyllization</id>
-   <content type="html">I've been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress.  And for the most part - it's written in Ruby and supports MarsEdit.  
+   <id>/2011/08/02/jekyllization</id>
+   <content type="html">
+    I've been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress.  And for the most part - it's written in Ruby and supports MarsEdit.  
 
 It's so easy - it looks like stealing candy from a  baby! - What a lark, let's try!
 
 This post is going to my wordpress blog, let's see how long it takes me to move it to Jekyll on github (not including DNS changes).
 
 See you on the flip side.
-</content>
+
+    
+   </content>
  </entry>
  
  <entry>
    <title>Posting an image from MarsEdit to a wordpress blog..</title>
-   <link href="http://danieldosen.org/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog.html"/>
+   <link href="/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog.html"/>
    <updated>2011-07-25T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
-   <content type="html">Just wrapping up testing of a completed API for pomodoro service.  I'll post the API in another post… This post just notes minimal testing on the pomodori controller:
+   <id>/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
+   <content type="html">
+    Just wrapping up testing of a completed API for pomodoro service.  I'll post the API in another post… This post just notes minimal testing on the pomodori controller:
 
 &lt;img src=&quot;/images/cucumber-green.png&quot; alt=&quot;got to green&quot; border=&quot;0&quot; width=&quot;600&quot; height=&quot;178&quot; /&gt;
-</content>
+
+    
+   </content>
  </entry>
  
  <entry>
    <title>Pomodori Controller and Blogging from the coffee shop...</title>
-   <link href="http://danieldosen.org/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop.html"/>
+   <link href="/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop.html"/>
    <updated>2011-07-25T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop</id>
-   <content type="html">In the coffee shop
+   <id>/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop</id>
+   <content type="html">
+    In the coffee shop
 not using their sucky bandwidth
 using personal hotspot
 using mars edit
@@ -130,28 +138,34 @@ profit
 &lt;/pre&gt;
 
 Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.
-</content>
+
+    
+   </content>
  </entry>
  
  <entry>
    <title>Concentration and simplynoise.com</title>
-   <link href="http://danieldosen.org/2011/07/25/concentration-and-simplynoise-com.html"/>
+   <link href="/2011/07/25/concentration-and-simplynoise-com.html"/>
    <updated>2011-07-25T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/07/25/concentration-and-simplynoise-com</id>
-   <content type="html">I'm a fan of white voice from a fan in my bedroom on summer nights with the windows open.  It drowns out any noise wafting up from 35th street - and there's plenty of noise on that street.
+   <id>/2011/07/25/concentration-and-simplynoise-com</id>
+   <content type="html">
+    I'm a fan of white voice from a fan in my bedroom on summer nights with the windows open.  It drowns out any noise wafting up from 35th street - and there's plenty of noise on that street.
 
 It turns out I'm also a big fan of white noise when working - or my favorite brown noise from simplynoise.com.  Combine that and the ticking of a pomodoro and my ADHDness melts away.  
 
 It looks like you need to donate to download some of their noise - which is worth a dollar to me, considering I just spent four dollars on a latte that is just plain not very good.  Sorry Cafe Ladro, the only thing you have going for you are your late hours.
-</content>
+
+    
+   </content>
  </entry>
  
  <entry>
    <title>Test 2 round tripping local</title>
-   <link href="http://danieldosen.org/2011/07/24/test-locally.html"/>
+   <link href="/2011/07/24/test-locally.html"/>
    <updated>2011-07-24T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/07/24/test-locally</id>
-   <content type="html">Trying out MarsEdit and posts
+   <id>/2011/07/24/test-locally</id>
+   <content type="html">
+    Trying out MarsEdit and posts
 Well, look there - it looks like wrapping code in a data tag works fine 
 Trying with the old version of syntax highlighter
 Ah - I've think I've found the perfect solution - 
@@ -178,15 +192,18 @@ Using the square brackets when publishing an entry via mars edit  is pretty frag
 &lt;/pre&gt;
 
 It looks to me, like you'll need to do more of this before posting… Just don't edit a post (or round trip it) in Mars Edit
-</content>
+
+    
+   </content>
  </entry>
  
  <entry>
    <title>Test 2</title>
-   <link href="http://danieldosen.org/2011/07/24/test-2.html"/>
+   <link href="/2011/07/24/test-2.html"/>
    <updated>2011-07-24T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/07/24/test-2</id>
-   <content type="html">This is a test
+   <id>/2011/07/24/test-2</id>
+   <content type="html">
+    This is a test
 A sample of cucumber
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;gherkin&quot;&gt;&lt;span class=&quot;k&quot;&gt;Feature:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Manage pomodori&lt;/span&gt;
@@ -201,15 +218,18 @@ A sample of cucumber
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-</content>
+
+    
+   </content>
  </entry>
  
  <entry>
    <title>More Better Writing</title>
-   <link href="http://danieldosen.org/2011/07/22/more-better-writing.html"/>
+   <link href="/2011/07/22/more-better-writing.html"/>
    <updated>2011-07-22T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/07/22/more-better-writing</id>
-   <content type="html">So, I'm back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.
+   <id>/2011/07/22/more-better-writing</id>
+   <content type="html">
+    So, I'm back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.
 
 Now, however, I'm taking a different tack. Blogging can and should have a more powerful impact on what I'm doing and I've come to realize that blogging can have a positive impact on my life in a few ways:
 &lt;ul&gt;
@@ -245,17 +265,21 @@ I have to admit, I've spent more time getting this blog set up than I did writin
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-</content>
+
+    
+   </content>
  </entry>
  
  <entry>
    <title>Playing with comments...</title>
-   <link href="http://danieldosen.org/2011/04/21/playing-with-comments.html"/>
+   <link href="/2011/04/21/playing-with-comments.html"/>
    <updated>2011-04-21T00:00:00-07:00</updated>
-   <id>http://danieldosen.org/2011/04/21/playing-with-comments</id>
-   <content type="html">Nothing new here.  I think I have the hang of this - I did a quick edit of the theme - and turned off editing on pages, but left them on for posts (albeit moderated)
-</content>
+   <id>/2011/04/21/playing-with-comments</id>
+   <content type="html">
+    Nothing new here.  I think I have the hang of this - I did a quick edit of the theme - and turned off editing on pages, but left them on for posts (albeit moderated)
+
+    
+   </content>
  </entry>
- 
  
 </feed>
