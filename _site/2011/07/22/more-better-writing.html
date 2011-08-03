@@ -46,25 +46,26 @@ Hey, look-y here - this is almost a blog post.
 
 I have to admit, I've spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I'm particularly fascinated about is adding syntax highlighted code in a post - so here's something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:
 
-<pre class="brush: ruby">
-class Pomodoro < ActiveRecord::Base
+<div class="highlight"><pre><code class="ruby"><span class="lineno"> 1</span> <span class="k">class</span> <span class="nc">Pomodoro</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span>   <span class="n">belongs_to</span> <span class="ss">:activity</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span>   <span class="n">attr_accessible</span> <span class="ss">:start_date_time</span><span class="p">,</span>
+<span class="lineno"> 6</span>     <span class="ss">:length</span><span class="p">,</span>
+<span class="lineno"> 7</span>     <span class="ss">:completed</span><span class="p">,</span>
+<span class="lineno"> 8</span>     <span class="ss">:note</span><span class="p">,</span>
+<span class="lineno"> 9</span>     <span class="ss">:location_id</span><span class="p">,</span>
+<span class="lineno">10</span>     <span class="ss">:break_length</span><span class="p">,</span>
+<span class="lineno">11</span>     <span class="ss">:activity</span><span class="p">,</span>
+<span class="lineno">12</span>     <span class="ss">:activity_id</span><span class="p">,</span>
+<span class="lineno">13</span>     <span class="ss">:activity_attributes</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>   <span class="n">validates_presence_of</span> <span class="ss">:start_date_time</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="k">end</span>
+</code></pre>
+</div>
 
-  belongs_to :activity
-
-  attr_accessible :start_date_time,
-    :length,
-    :completed,
-    :note,
-    :location_id,
-    :break_length,
-    :activity,
-    :activity_id,
-    :activity_attributes
-
-  validates_presence_of :start_date_time
-
-end
-</pre>
 
 </div>
 

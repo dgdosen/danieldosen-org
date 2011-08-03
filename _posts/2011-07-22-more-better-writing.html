@@ -26,7 +26,7 @@ Hey, look-y here - this is almost a blog post.
 
 I have to admit, I've spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I'm particularly fascinated about is adding syntax highlighted code in a post - so here's something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:
 
-<pre class="brush: ruby">
+{% highlight ruby linenos %}
 class Pomodoro < ActiveRecord::Base
 
   belongs_to :activity
@@ -44,4 +44,4 @@ class Pomodoro < ActiveRecord::Base
   validates_presence_of :start_date_time
 
 end
-</pre>
+{% endhighlight %}
