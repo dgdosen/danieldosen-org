@@ -4,13 +4,69 @@
  <title>Daniel Dosen</title>
  <link href="http://danieldosen.org/atom.xml" rel="self"/>
  <link href="http://danieldosen.org/"/>
- <updated>2011-08-03T14:12:44-07:00</updated>
+ <updated>2011-08-03T14:18:41-07:00</updated>
  <id>http://danieldosen.org/</id>
  <author>
    <name>Daniel Dosen</name>
    <email>daniel@danieldosen.org</email>
  </author>
 
+ 
+ <entry>
+   <title>Trying out Markdown</title>
+   <link href="http://danieldosen.org/2011/08/02/playing_with-markdown.html"/>
+   <updated>2011-08-02T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/08/02/playing_with-markdown</id>
+   <content type="html">&lt;h1&gt;Very cool header&lt;/h1&gt;
+
+&lt;h2&gt;An even cooler header&lt;/h2&gt;
+
+&lt;p&gt;Trying to look at using markdown and vim together...&lt;/p&gt;
+
+&lt;h3&gt;Header 3&lt;/h3&gt;
+
+&lt;blockquote&gt;&lt;p&gt;What the dog saw&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Things VIM is good at:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lists&lt;/li&gt;
+&lt;li&gt;Other Stuff&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Trying an image:
+&lt;img src=&quot;/images/vim-shot.png&quot; title=&quot;getting green&quot; alt=&quot;GO GREEN&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here's a post in cucumber - this isn't the nicest highlighting...&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;cucumber&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Feature:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Manage pomodori&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;  In order to [goal]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;  [stakeholder]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;  wants [behaviour]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;  # test comment&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Scenario:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Register new pomodori&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;    Given &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I am on the new pomodori page&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I press &amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Create&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;And here's a ruby post.  not the nicest...&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Account&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# what&amp;#39;s up, fool?&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+
+</content>
+ </entry>
  
  <entry>
    <title>Jekyllization</title>
@@ -131,11 +187,17 @@ It looks to me, like you'll need to do more of this before posting… Just don't
    <updated>2011-07-24T00:00:00-07:00</updated>
    <id>http://danieldosen.org/2011/07/24/test-2</id>
    <content type="html">This is a test
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;User&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+A sample of cucumber
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;gherkin&quot;&gt;&lt;span class=&quot;k&quot;&gt;Feature:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Manage pomodori&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;  In order to [goal]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;  [stakeholder]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;  wants [behaviour]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;  # test comment&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;Scenario:&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt; Register new pomodori&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    Given &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I am on the new pomodori page&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;And &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;I press &amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Create&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 

@@ -3,6 +3,7 @@ layout: post
 title: Trying out Markdown
 status: publish
 published: true
+type: post
 meta: {}
 ---
 
