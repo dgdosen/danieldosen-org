@@ -24,6 +24,10 @@ GEM
     maruku (0.6.0)
       syntax (>= 1.0.0)
     posix-spawn (0.3.6)
+    rack (1.3.2)
+    rack-jekyll (0.3.5)
+      jekyll
+      rack
     syntax (1.0.0)
 
 PLATFORMS
@@ -33,3 +37,4 @@ DEPENDENCIES
   jekyll
   kramdown (= 0.13.3)!
   maruku
+  rack-jekyll
