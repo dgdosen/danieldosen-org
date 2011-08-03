@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Daniel Dosen</title>
+ <link href="http://danieldosen.org/atom.xml" rel="self"/>
+ <link href="http://danieldosen.org/"/>
+ <updated>2011-08-03T14:12:44-07:00</updated>
+ <id>http://danieldosen.org/</id>
+ <author>
+   <name>Daniel Dosen</name>
+   <email>daniel@danieldosen.org</email>
+ </author>
+
+ 
+ <entry>
+   <title>Jekyllization</title>
+   <link href="http://danieldosen.org/2011/08/02/jekyllization.html"/>
+   <updated>2011-08-02T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/08/02/jekyllization</id>
+   <content type="html">I've been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress.  And for the most part - it's written in Ruby and supports MarsEdit.  
+
+It's so easy - it looks like stealing candy from a  baby! - What a lark, let's try!
+
+This post is going to my wordpress blog, let's see how long it takes me to move it to Jekyll on github (not including DNS changes).
+
+See you on the flip side.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Posting an image from MarsEdit to a wordpress blog..</title>
+   <link href="http://danieldosen.org/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog.html"/>
+   <updated>2011-07-25T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
+   <content type="html">Just wrapping up testing of a completed API for pomodoro service.  I'll post the API in another post… This post just notes minimal testing on the pomodori controller:
+
+&lt;img src=&quot;/images/cucumber-green.png&quot; alt=&quot;got to green&quot; border=&quot;0&quot; width=&quot;600&quot; height=&quot;178&quot; /&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Pomodori Controller and Blogging from the coffee shop...</title>
+   <link href="http://danieldosen.org/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop.html"/>
+   <updated>2011-07-25T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop</id>
+   <content type="html">In the coffee shop
+not using their sucky bandwidth
+using personal hotspot
+using mars edit
+…
+profit
+
+&lt;pre class=&quot;brush: ruby&quot;&gt;
+	  def create
+    respond_to do |format|
+      format.json {
+        @activity =  Activity.find(params[:activity_id])
+        # validate that this user is the current user...
+        @user =  @activity.user
+        @pomodoro = Pomodoro.new(params[:pomodoro])
+        @pomodoro.activity = @activity
+
+        respond_to do |format|
+          if @pomodoro.save
+            render json: @activity, status: :created, location: @activity
+          else
+            render json: @activity.errors, status: :unprocessable_entity
+          end
+        end
+
+      }
+    end
+  end
+&lt;/pre&gt;
+
+Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Concentration and simplynoise.com</title>
+   <link href="http://danieldosen.org/2011/07/25/concentration-and-simplynoise-com.html"/>
+   <updated>2011-07-25T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/07/25/concentration-and-simplynoise-com</id>
+   <content type="html">I'm a fan of white voice from a fan in my bedroom on summer nights with the windows open.  It drowns out any noise wafting up from 35th street - and there's plenty of noise on that street.
+
+It turns out I'm also a big fan of white noise when working - or my favorite brown noise from simplynoise.com.  Combine that and the ticking of a pomodoro and my ADHDness melts away.  
+
+It looks like you need to donate to download some of their noise - which is worth a dollar to me, considering I just spent four dollars on a latte that is just plain not very good.  Sorry Cafe Ladro, the only thing you have going for you are your late hours.
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Test 2 round tripping local</title>
+   <link href="http://danieldosen.org/2011/07/24/test-locally.html"/>
+   <updated>2011-07-24T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/07/24/test-locally</id>
+   <content type="html">Trying out MarsEdit and posts
+Well, look there - it looks like wrapping code in a data tag works fine 
+Trying with the old version of syntax highlighter
+Ah - I've think I've found the perfect solution - 
+
+Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn't work well anyway…
+
+&lt;pre class=&quot;brush: ruby&quot;&gt;
+  describe &quot;POST create&quot; do
+    # test code roundtripping with marsedit
+    it &quot;should create a pomodoro from json&quot; do
+      post :create, :format =&gt; &quot;json&quot;, :activity_id =&gt; @activity.id, :pomodoro =&gt; {
+        &quot;start_date_time&quot; =&gt; &quot;2011-07-22 00:00&quot;,
+        &quot;length&quot; =&gt; &quot;25&quot;,
+        &quot;completed&quot; =&gt; &quot;0&quot;,
+        &quot;note&quot; =&gt; &quot;json post individual pomodoro&quot;,
+        &quot;break_length&quot; =&gt; &quot;5&quot;
+      }
+      pomodoro = assigns(:pomodoro)
+      pomodoro.id.should &gt; 0
+      pomodoro.note.should == &quot;json post individual pomodoro&quot;
+      pomodoro.length.should == 25
+    end
+  end
+&lt;/pre&gt;
+
+It looks to me, like you'll need to do more of this before posting… Just don't edit a post (or round trip it) in Mars Edit
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Test 2</title>
+   <link href="http://danieldosen.org/2011/07/24/test-2.html"/>
+   <updated>2011-07-24T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/07/24/test-2</id>
+   <content type="html">This is a test
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;User&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>More Better Writing</title>
+   <link href="http://danieldosen.org/2011/07/22/more-better-writing.html"/>
+   <updated>2011-07-22T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/07/22/more-better-writing</id>
+   <content type="html">So, I'm back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.
+
+Now, however, I'm taking a different tack. Blogging can and should have a more powerful impact on what I'm doing and I've come to realize that blogging can have a positive impact on my life in a few ways:
+&lt;ul&gt;
+	&lt;li&gt;I want to write more to contribute to the Rails/Objective C world.&lt;/li&gt;
+	&lt;li&gt;I'd like to write more about data modeling and rails - if only to capture some of the cool things I've learned in the past year or two. Right now, all these little gems I've learned, or applied, are stuck in some Evernote notebook.&lt;/li&gt;
+	&lt;li&gt;I want to apply lean development practices to lean publishing (which is already a term I learned about this week at Seattle's Lean Camp.&lt;/li&gt;
+	&lt;li&gt;Blogging is the gateway drug to book-writing - which when it comes to something like ePub - there's no reason why the world doesn't need a book by Daniel Dosen - even if nobody or just a few read it. Now it's a goal of mine, so it will happen.&lt;/li&gt;
+	&lt;li&gt;…&lt;/li&gt;
+	&lt;li&gt;Profit&lt;/li&gt;
+	&lt;li&gt;I want to publicly commit do doing things like - updating or writing a gem. The main reason is, to me, I need more github based code with my name on it. Most everything I do or have, is in a private repository on github, or on my own git server at agidevelopment.com&lt;/li&gt;
+&lt;/ul&gt;
+Hey, look-y here - this is almost a blog post.
+
+I have to admit, I've spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I'm particularly fascinated about is adding syntax highlighted code in a post - so here's something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Pomodoro&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;belongs_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:activity&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;attr_accessible&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:start_date_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;:length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;:completed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;:note&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;:location_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;:break_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;:activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;:activity_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;:activity_attributes&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;validates_presence_of&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:start_date_time&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Playing with comments...</title>
+   <link href="http://danieldosen.org/2011/04/21/playing-with-comments.html"/>
+   <updated>2011-04-21T00:00:00-07:00</updated>
+   <id>http://danieldosen.org/2011/04/21/playing-with-comments</id>
+   <content type="html">Nothing new here.  I think I have the hang of this - I did a quick edit of the theme - and turned off editing on pages, but left them on for posts (albeit moderated)
+</content>
+ </entry>
+ 
+ 
+</feed>
