@@ -156,7 +156,7 @@ ul.posts {
   #post pre {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    background-color: lightgrey;
+    background-color: #f8f8f8;
     padding: 0 .4em;
   }
 
@@ -168,7 +168,7 @@ ul.posts {
   #post code {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    background-color: lightgrey;
+    background-color: #f8f8f8;
     font-size: 85%;
     padding: 0 .2em;
   }
