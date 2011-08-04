@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: Test 2 round tripping local
+title: Round-tripping code posts with MarsEdit - Not Pretty  
 tags: []
 
 status: publish
@@ -10,14 +10,12 @@ meta:
   _syntaxhighlighter_encoded: "1"
   _edit_last: "1"
 ---
-Trying out MarsEdit and posts
-Well, look there - it looks like wrapping code in a data tag works fine 
-Trying with the old version of syntax highlighter
-Ah - I've think I've found the perfect solution - 
+Trying out MarsEdit and posting...
 
 Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn't work well anyway…
 
-<pre class="brush: ruby">
+{% highlight ruby linenos %}
+
   describe "POST create" do
     # test code roundtripping with marsedit
     it "should create a pomodoro from json" do
@@ -34,6 +32,7 @@ Using the square brackets when publishing an entry via mars edit  is pretty frag
       pomodoro.length.should == 25
     end
   end
-</pre>
+
+{% endhighlight %}
 
 It looks to me, like you'll need to do more of this before posting… Just don't edit a post (or round trip it) in Mars Edit

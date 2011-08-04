@@ -9,15 +9,18 @@ published: true
 meta: {}
 
 ---
-In the coffee shop
+in the coffee shop
+
 not using their sucky bandwidth
+
 using personal hotspot
-using mars edit
+
 …
+
 profit
 
-<pre class="brush: ruby">
-	  def create
+{% highlight ruby linenos %}
+  def create
     respond_to do |format|
       format.json {
         @activity =  Activity.find(params[:activity_id])
@@ -37,6 +40,6 @@ profit
       }
     end
   end
-</pre>
+{% endhighlight %}
 
 Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.

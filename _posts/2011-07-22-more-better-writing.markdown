@@ -25,7 +25,7 @@ Now, however, I'm taking a different tack. Blogging can and should have a more p
 Hey, look-y here - this is almost a blog post.
 
 I have to admit, I've spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I'm particularly fascinated about is adding syntax highlighted code in a post - so here's something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:
-
+<p> </p>
 {% highlight ruby linenos %}
 class Pomodoro < ActiveRecord::Base
 
