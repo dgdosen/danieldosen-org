@@ -3,7 +3,7 @@
  <title>Daniel Dosen</title>
  <link href="/feed.xml" rel="self"/>
  <link href="/feed.xml" />
- <updated>2011-08-03T14:58:51-07:00</updated>
+ <updated>2011-08-05T06:48:23-07:00</updated>
  <id>/</id>
  <author>
    <name>Daniel Dosen</name>
@@ -75,14 +75,11 @@
    <updated>2011-08-02T00:00:00-07:00</updated>
    <id>/2011/08/02/jekyllization</id>
    <content type="html">
-    I've been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress.  And for the most part - it's written in Ruby and supports MarsEdit.  
-
-It's so easy - it looks like stealing candy from a  baby! - What a lark, let's try!
-
-This post is going to my wordpress blog, let's see how long it takes me to move it to Jekyll on github (not including DNS changes).
-
-See you on the flip side.
-
+    &lt;h1&gt;Jekyll&lt;/h1&gt;
+&lt;p&gt;I&amp;#8217;ve been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress.  And for the most part &amp;#8211; it&amp;#8217;s written in Ruby and supports MarsEdit.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s so easy &amp;#8211; it looks like stealing candy from a  baby! &amp;#8211; What a lark, let&amp;#8217;s try!&lt;/p&gt;
+&lt;p&gt;This post is going to my wordpress blog, let&amp;#8217;s see how long it takes me to move it to Jekyll on github (not including &lt;span class=&quot;caps&quot;&gt;DNS&lt;/span&gt; changes).&lt;/p&gt;
+&lt;p&gt;See you on the flip side.&lt;/p&gt;
     
    </content>
  </entry>
