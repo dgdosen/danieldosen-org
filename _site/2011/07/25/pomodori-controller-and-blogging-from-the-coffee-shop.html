@@ -30,37 +30,41 @@ var WRInitTime=(new Date()).getTime();
   </div>
   
   <div id="post">
-In the coffee shop
-not using their sucky bandwidth
-using personal hotspot
-using mars edit
-…
-profit
+<p>in the coffee shop</p>
 
-<pre class="brush: ruby">
-	  def create
-    respond_to do |format|
-      format.json {
-        @activity =  Activity.find(params[:activity_id])
-        # validate that this user is the current user...
-        @user =  @activity.user
-        @pomodoro = Pomodoro.new(params[:pomodoro])
-        @pomodoro.activity = @activity
+<p>not using their sucky bandwidth</p>
 
-        respond_to do |format|
-          if @pomodoro.save
-            render json: @activity, status: :created, location: @activity
-          else
-            render json: @activity.errors, status: :unprocessable_entity
-          end
-        end
+<p>using personal hotspot</p>
 
-      }
-    end
-  end
-</pre>
+<p>…</p>
 
-Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.
+<p>profit</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="lineno"> 1</span>   <span class="k">def</span> <span class="nf">create</span>
+<span class="lineno"> 2</span>     <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+<span class="lineno"> 3</span>       <span class="nb">format</span><span class="o">.</span><span class="n">json</span> <span class="p">{</span>
+<span class="lineno"> 4</span>         <span class="vi">@activity</span> <span class="o">=</span>  <span class="no">Activity</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:activity_id</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno"> 5</span>         <span class="c1"># validate that this user is the current user...</span>
+<span class="lineno"> 6</span>         <span class="vi">@user</span> <span class="o">=</span>  <span class="vi">@activity</span><span class="o">.</span><span class="n">user</span>
+<span class="lineno"> 7</span>         <span class="vi">@pomodoro</span> <span class="o">=</span> <span class="no">Pomodoro</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:pomodoro</span><span class="o">]</span><span class="p">)</span>
+<span class="lineno"> 8</span>         <span class="vi">@pomodoro</span><span class="o">.</span><span class="n">activity</span> <span class="o">=</span> <span class="vi">@activity</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>         <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+<span class="lineno">11</span>           <span class="k">if</span> <span class="vi">@pomodoro</span><span class="o">.</span><span class="n">save</span>
+<span class="lineno">12</span>             <span class="n">render</span> <span class="n">json</span><span class="p">:</span> <span class="vi">@activity</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="ss">:created</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="vi">@activity</span>
+<span class="lineno">13</span>           <span class="k">else</span>
+<span class="lineno">14</span>             <span class="n">render</span> <span class="n">json</span><span class="p">:</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="ss">:unprocessable_entity</span>
+<span class="lineno">15</span>           <span class="k">end</span>
+<span class="lineno">16</span>         <span class="k">end</span>
+<span class="lineno">17</span> 
+<span class="lineno">18</span>       <span class="p">}</span>
+<span class="lineno">19</span>     <span class="k">end</span>
+<span class="lineno">20</span>   <span class="k">end</span>
+</code></pre>
+</div>
+
+
+<p>Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.</p>
 
 </div>
 
@@ -68,11 +72,11 @@ Updating a new controller in pomodoro service that works on existing activities.
   <h2>Related Posts</h2>
   <ul class="posts">
     
+      <li><span>03 Aug 2011</span> &raquo; <a href="/2011/08/03/test-from-ubuntu.html">Trying out Ubuntu</a></li>
+    
       <li><span>02 Aug 2011</span> &raquo; <a href="/2011/08/02/playing_with-markdown.html">Trying out Markdown</a></li>
     
       <li><span>02 Aug 2011</span> &raquo; <a href="/2011/08/02/jekyllization.html">Jekyllization</a></li>
-    
-      <li><span>25 Jul 2011</span> &raquo; <a href="/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog.html">Posting an image from MarsEdit to a wordpress blog..</a></li>
     
   </ul>
 </div>
@@ -93,7 +97,7 @@ Updating a new controller in pomodoro service that works on existing activities.
     </div>
     <div class="rss">
       <a href="http://feeds.feedburner.com/daniel-dosen">
-        <img src="/images/feed-icon-28x28.png" alt="Subscribe to RSS Feed" />
+        <img src="/blimages/feed-icon-28x28.png" alt="Subscribe to RSS Feed" />
       </a>
     </div>
   </div>
