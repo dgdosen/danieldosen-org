@@ -22,7 +22,7 @@ Things VIM is good at:
 * Other Stuff
 
 Trying an image:
-![GO GREEN](/images/vim-shot.png "getting green")
+![GO GREEN](/blimages/vim-shot.png "getting green")
 
 
 Here's a post in cucumber - this isn't the nicest highlighting...
