@@ -24,3 +24,10 @@ My gotchas, anyway:
 
 - the `new_post` Rake command.  There's no space in there... `rake new_post["post_name"]` not `rake new_post ["post name"]`.  I got stung by that...
 - Using the `backtick` method for code - means that all the code needs to be indented.  Just different from some other tools I was using...
+
+Theming
+-------
+
+This was one of the main reasons I wanted to use Octopress.  Here's what I fumbled through:
+
+- 
