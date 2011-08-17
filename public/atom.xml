@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>danieldosen.org</title>
+  <link href="http://danieldosen.org/atom.xml" rel="self"/>
+  <link href="http://danieldosen.org/"/>
+  <updated>2011-08-16T17:04:33-07:00</updated>
+  <id>http://danieldosen.org/</id>
+  <author>
+    <name>Daniel Dosen</name>
+    
+  </author>
+
+  
+  <entry>
+    <title>Trying out Ubuntu</title>
+    <link href="http://danieldosen.org/blog/2011/08/03/test-from-ubuntu/"/>
+    <updated>2011-08-03T00:00:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/08/03/test-from-ubuntu</id>
+    <content type="html">&lt;p&gt;I really need to find out how to &quot;unpublish&quot; these posts...&lt;/p&gt;
+
+&lt;p&gt;...But since I'm here, I now see the value in using Markdown - especially in an editor like VIM.  I've also loaded some helper mappings for using the spell checker when I write. It's pretty fast! I think finding a spell checker was my last big hangup for using VIM.&lt;/p&gt;
+
+&lt;p&gt;I'm now a convert.&lt;/p&gt;
+
+&lt;p&gt;Shiite! Must get to the dog park.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Trying out Markdown</title>
+    <link href="http://danieldosen.org/blog/2011/08/02/playing_with-markdown/"/>
+    <updated>2011-08-02T00:00:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/08/02/playing_with-markdown</id>
+    <content type="html">&lt;h1&gt;Very cool header&lt;/h1&gt;
+
+&lt;h2&gt;An even cooler header&lt;/h2&gt;
+
+&lt;p&gt;Trying to look at using markdown and vim together...&lt;/p&gt;
+
+&lt;h3&gt;Header 3&lt;/h3&gt;
+
+&lt;blockquote&gt;&lt;p&gt;What the dog saw&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Things VIM is good at:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lists&lt;/li&gt;
+&lt;li&gt;Other Stuff&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Trying an image:
+&lt;img src=&quot;http://danieldosen.org/blimages/vim-shot.png&quot; title=&quot;getting green&quot; alt=&quot;GO GREEN&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here's a post in cucumber - this isn't the nicest highlighting...&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='cucumber'&gt;Feature: Manage pomodori
+  In order to [goal]
+  [stakeholder]
+  wants [behaviour]
+  
+  # test comment
+  Scenario: Register new pomodori
+    Given I am on the new pomodori page
+    And I press &amp;quot;Create&amp;quot;&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;And here's a ruby post.  not the nicest...&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='ruby'&gt;class Account
+  # what's up, fool?
+  def init
+  end
+end&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Jekyllization</title>
+    <link href="http://danieldosen.org/blog/2011/08/02/jekyllization/"/>
+    <updated>2011-08-02T00:00:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/08/02/jekyllization</id>
+    <content type="html">&lt;h1&gt;Jekyll&lt;/h1&gt;
+&lt;p&gt;I&amp;#8217;ve been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress.  And for the most part &amp;#8211; it&amp;#8217;s written in Ruby and supports MarsEdit.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s so easy &amp;#8211; it looks like stealing candy from a  baby! &amp;#8211; What a lark, let&amp;#8217;s try!&lt;/p&gt;
+&lt;p&gt;This post is going to my wordpress blog, let&amp;#8217;s see how long it takes me to move it to Jekyll on github (not including &lt;span class=&quot;caps&quot;&gt;DNS&lt;/span&gt; changes).&lt;/p&gt;
+&lt;p&gt;See you on the flip side.&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>Posting an image from MarsEdit to a wordpress blog..</title>
+    <link href="http://danieldosen.org/blog/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog/"/>
+    <updated>2011-07-25T00:00:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
+    <content type="html">&lt;p&gt;Just wrapping up testing of a completed API for pomodoro service.  I'll post the API in another post… This post just notes minimal testing on the pomodori controller:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://danieldosen.org/blimages/cucumber-green.png&quot; alt=&quot;got to green&quot; border=&quot;0&quot; width=&quot;600&quot; height=&quot;178&quot; /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Pomodori Controller and Blogging from the coffee shop...</title>
+    <link href="http://danieldosen.org/blog/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop/"/>
+    <updated>2011-07-25T00:00:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop</id>
+    <content type="html">&lt;p&gt;in the coffee shop&lt;/p&gt;
+
+&lt;p&gt;not using their sucky bandwidth&lt;/p&gt;
+
+&lt;p&gt;using personal hotspot&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;profit&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='ruby'&gt;def create
+    respond_to do |format|
+      format.json {
+        @activity =  Activity.find(params[:activity_id])
+        # validate that this user is the current user...
+        @user =  @activity.user
+        @pomodoro = Pomodoro.new(params[:pomodoro])
+        @pomodoro.activity = @activity
+
+        respond_to do |format|
+          if @pomodoro.save
+            render json: @activity, status: :created, location: @activity
+          else
+            render json: @activity.errors, status: :unprocessable_entity
+          end
+        end
+
+      }
+    end
+  end&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Concentration and simplynoise.com</title>
+    <link href="http://danieldosen.org/blog/2011/07/25/concentration-and-simplynoise-com/"/>
+    <updated>2011-07-25T00:00:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/07/25/concentration-and-simplynoise-com</id>
+    <content type="html">&lt;p&gt;I'm a fan of using white noise  -  mainly from using a floor fan in my bedroom on summer nights to drown out the noisy streets.  It drowns out any noise wafting up from 35th street - and there's plenty of noise on that street.&lt;/p&gt;
+
+&lt;p&gt;It turns out I'm also a big fan of white noise when working - or my favorite brown noise from simplynoise.com.  Combine that and the ticking of a pomodoro and my ADHDness melts away.&lt;/p&gt;
+
+&lt;p&gt;It looks like you need to donate to download some of their noise - which is worth a dollar to me, considering I just spent four dollars on a latte that is just plain not very good.  Sorry Cafe Ladro, the only thing you have going for you are your late hours.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Round-tripping code posts with MarsEdit - Not Pretty</title>
+    <link href="http://danieldosen.org/blog/2011/07/24/test-locally/"/>
+    <updated>2011-07-24T00:00:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/07/24/test-locally</id>
+    <content type="html">&lt;p&gt;Trying out MarsEdit and posting...&lt;/p&gt;
+
+&lt;p&gt;Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn't work well anyway…&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre&gt;
+    &lt;code class='ruby'&gt;describe &amp;quot;POST create&amp;quot; do
+    # test code roundtripping with marsedit
+    it &amp;quot;should create a pomodoro from json&amp;quot; do
+      post :create, :format =&amp;gt; &amp;quot;json&amp;quot;, :activity_id =&amp;gt; @activity.id, :pomodoro =&amp;gt; {
+        &amp;quot;start_date_time&amp;quot; =&amp;gt; &amp;quot;2011-07-22 00:00&amp;quot;,
+        &amp;quot;length&amp;quot; =&amp;gt; &amp;quot;25&amp;quot;,
+        &amp;quot;completed&amp;quot; =&amp;gt; &amp;quot;0&amp;quot;,
+        &amp;quot;note&amp;quot; =&amp;gt; &amp;quot;json post individual pomodoro&amp;quot;,
+        &amp;quot;break_length&amp;quot; =&amp;gt; &amp;quot;5&amp;quot;
+      }
+      pomodoro = assigns(:pomodoro)
+      pomodoro.id.should &amp;gt; 0
+      pomodoro.note.should == &amp;quot;json post individual pomodoro&amp;quot;
+      pomodoro.length.should == 25
+    end
+  end&lt;/code&gt;
+  &lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;It looks to me, like you'll need to do more of this before posting… Just don't edit a post (or round trip it) in Mars Edit&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>More Better Writing</title>
+    <link href="http://danieldosen.org/blog/2011/07/22/more-better-writing/"/>
+    <updated>2011-07-22T00:00:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/07/22/more-better-writing</id>
+    <content type="html">&lt;p&gt;So, I'm back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.&lt;/p&gt;
+
+&lt;p&gt;Now, however, I'm taking a different tack. Blogging can and should have a more powerful impact on what I'm doing and I've come to realize that blogging can have a positive impact on my life in a few ways:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;I want to write more to contribute to the Rails/Objective C world.&lt;/li&gt;
+    &lt;li&gt;I'd like to write more about data modeling and rails - if only to capture some of the cool things I've learned in the past year or two. Right now, all these little gems I've learned, or applied, are stuck in some Evernote notebook.&lt;/li&gt;
+    &lt;li&gt;I want to apply lean development practices to lean publishing (which is already a term I learned about this week at Seattle's Lean Camp.&lt;/li&gt;
+    &lt;li&gt;Blogging is the gateway drug to book-writing - which when it comes to something like ePub - there's no reason why the world doesn't need a book by Daniel Dosen - even if nobody or just a few read it. Now it's a goal of mine, so it will happen.&lt;/li&gt;
+    &lt;li&gt;…&lt;/li&gt;
+    &lt;li&gt;Profit&lt;/li&gt;
+    &lt;li&gt;I want to publicly commit do doing things like - updating or writing a gem. The main reason is, to me, I need more github based code with my name on it. Most everything I do or have, is in a private repository on github, or on my own git server at agidevelopment.com&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Hey, look-y here - this is almost a blog post.&lt;/p&gt;
+
+&lt;p&gt;I have to admit, I've spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I'm particularly fascinated about is adding syntax highlighted code in a post - so here's something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Pomodoro &amp;lt; ActiveRecord::Base
+
+  belongs_to :activity
+
+  attr_accessible :start_date_time,
+    :length,
+    :completed,
+    :note,
+    :location_id,
+    :break_length,
+    :activity,
+    :activity_id,
+    :activity_attributes
+
+  validates_presence_of :start_date_time
+
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>
