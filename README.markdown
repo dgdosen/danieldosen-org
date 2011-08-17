@@ -26,3 +26,9 @@ THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 #### If you want to be awesome.
 - Proudly display the 'Powered by Octopress' credit in the footer.
 - Add your site to the wiki so we can watch the community grow.
+
+## Notes
+
+[remote "heroku"]
+	url = git@heroku.com:danieldosen-org-octopress.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
