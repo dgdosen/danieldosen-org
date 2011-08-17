@@ -4,13 +4,24 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-08-16T17:04:33-07:00</updated>
+  <updated>2011-08-16T17:36:44-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
     
   </author>
 
+  
+  <entry>
+    <title>Swtiched to Octopress</title>
+    <link href="http://danieldosen.org/blog/2011/08/16/new-post/"/>
+    <updated>2011-08-16T17:24:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/08/16/new-post</id>
+    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this is, and I really like working with the solarized theme in VIM.  I stumbled across Octopress looking for solarized css content...&lt;/p&gt;
+
+&lt;p&gt;Now, I'm not sure if I'll stay with Octopress - although I don't like moving code snippets around.  We'll see how this works...  For now, I should just blog with something more important to say... Like how to use jekyll, octopress and heroku.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Trying out Ubuntu</title>

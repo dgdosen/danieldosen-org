@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Swtiched to Octopress"
+date: 2011-08-16 17:24
+comments: true
+categories: 
+---
+
+I really like Jekyll for a static website - which this is, and I really like working with the solarized theme in VIM.  I stumbled across Octopress looking for solarized css content... 
+
+Now, I'm not sure if I'll stay with Octopress - although I don't like moving code snippets around.  We'll see how this works...  For now, I should just blog with something more important to say... Like how to use jekyll, octopress and heroku.
+
+
