@@ -18,34 +18,37 @@ Trying to look at using markdown and vim together...
 
 Things VIM is good at:
 
-* Lists
+* Fast Editing
+* Fast Navigation
+* Efficient use of time
+* Multiple Buffers open at the same time
+* Solarized
 * Other Stuff
 
 Trying an image:
-![GO GREEN](/blimages/vim-shot.png "getting green")
+![GO GREEN](/images/vim-shot.png "getting green")
 
+Looking at code snippets...
+Here's a post in cucumber:
 
-Here's a post in cucumber - this isn't the nicest highlighting...
+``` ruby
+    Feature: Manage pomodori
+      In order to [goal]
+      [stakeholder]
+      wants [behaviour]
+      
+      # test comment
+      Scenario: Register new pomodori
+        Given I am on the new pomodori page
+        And I press "Create"
+```
 
-{% highlight cucumber linenos %}
-Feature: Manage pomodori
-  In order to [goal]
-  [stakeholder]
-  wants [behaviour]
-  
-  # test comment
-  Scenario: Register new pomodori
-    Given I am on the new pomodori page
-    And I press "Create"
-{% endhighlight %}
+And here's a ruby post:
 
-And here's a ruby post.  not the nicest...
-
-{% highlight ruby linenos %}
-class Account
-  # what's up, fool?
-  def init
-  end
-end
-{% endhighlight %}
-
+``` ruby
+    class Account
+      # what's up, fool?
+      def init
+      end
+    end
+```

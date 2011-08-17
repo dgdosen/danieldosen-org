@@ -62,6 +62,7 @@
   <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -116,29 +117,41 @@
 
 <div class="entry-content"><p>Trying out MarsEdit and posting&#8230;</p>
 
-<p>Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn&#8217;t work well anyway…</p>
+<p>Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn&#8217;t work well anyway.</p>
 
-<div>
-  <pre>
-    <code class='ruby'>describe &quot;POST create&quot; do
-    # test code roundtripping with marsedit
-    it &quot;should create a pomodoro from json&quot; do
-      post :create, :format =&gt; &quot;json&quot;, :activity_id =&gt; @activity.id, :pomodoro =&gt; {
-        &quot;start_date_time&quot; =&gt; &quot;2011-07-22 00:00&quot;,
-        &quot;length&quot; =&gt; &quot;25&quot;,
-        &quot;completed&quot; =&gt; &quot;0&quot;,
-        &quot;note&quot; =&gt; &quot;json post individual pomodoro&quot;,
-        &quot;break_length&quot; =&gt; &quot;5&quot;
-      }
-      pomodoro = assigns(:pomodoro)
-      pomodoro.id.should &gt; 0
-      pomodoro.note.should == &quot;json post individual pomodoro&quot;
-      pomodoro.length.should == 25
-    end
-  end</code>
-  </pre>
-</div>
-
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">describe</span> <span class="s2">&quot;POST create&quot;</span> <span class="k">do</span>
+</div><div class='line'>    <span class="c1"># test code roundtripping with marsedit</span>
+</div><div class='line'>    <span class="n">it</span> <span class="s2">&quot;should create a pomodoro from json&quot;</span> <span class="k">do</span>
+</div><div class='line'>      <span class="n">post</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">:format</span> <span class="o">=&gt;</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="ss">:activity_id</span> <span class="o">=&gt;</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="ss">:pomodoro</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</div><div class='line'>        <span class="s2">&quot;start_date_time&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;2011-07-22 00:00&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;25&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;completed&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;note&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;json post individual pomodoro&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;break_length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;5&quot;</span>
+</div><div class='line'>      <span class="p">}</span>
+</div><div class='line'>      <span class="n">pomodoro</span> <span class="o">=</span> <span class="n">assigns</span><span class="p">(</span><span class="ss">:pomodoro</span><span class="p">)</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">should</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">note</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="s2">&quot;json post individual pomodoro&quot;</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="mi">25</span>
+</div><div class='line'>    <span class="k">end</span>
+</div><div class='line'>  <span class="k">end</span>
+</div></code></pre></td></tr></table></div></figure>
 
 <p>It looks to me, like you&#8217;ll need to do more of this before posting… Just don&#8217;t edit a post (or round trip it) in Mars Edit</p>
 </div>
@@ -187,7 +200,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2011/08/16/new-post/">Swtiched to Octopress</a>
+        <a href="/blog/2011/08/16/new-post/">Switched to Octopress</a>
       </li>
     
       <li class="post">

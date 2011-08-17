@@ -9,37 +9,33 @@ published: true
 meta: {}
 
 ---
-in the coffee shop
+- in the coffee shop
+- not using their sucky bandwidth
+- using personal hotspot
+- ...
+- profit
 
-not using their sucky bandwidth
-
-using personal hotspot
-
-…
-
-profit
-
-{% highlight ruby linenos %}
-  def create
-    respond_to do |format|
-      format.json {
-        @activity =  Activity.find(params[:activity_id])
-        # validate that this user is the current user...
-        @user =  @activity.user
-        @pomodoro = Pomodoro.new(params[:pomodoro])
-        @pomodoro.activity = @activity
-
+``` ruby
+      def create
         respond_to do |format|
-          if @pomodoro.save
-            render json: @activity, status: :created, location: @activity
-          else
-            render json: @activity.errors, status: :unprocessable_entity
-          end
-        end
+          format.json {
+            @activity =  Activity.find(params[:activity_id])
+            # validate that this user is the current user...
+            @user =  @activity.user
+            @pomodoro = Pomodoro.new(params[:pomodoro])
+            @pomodoro.activity = @activity
 
-      }
-    end
-  end
-{% endhighlight %}
+            respond_to do |format|
+              if @pomodoro.save
+                render json: @activity, status: :created, location: @activity
+              else
+                render json: @activity.errors, status: :unprocessable_entity
+              end
+            end
+
+          }
+        end
+      end
+```
 
 Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.

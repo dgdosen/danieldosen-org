@@ -4,7 +4,7 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-08-16T23:24:05-07:00</updated>
+  <updated>2011-08-17T10:42:14-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
@@ -13,27 +13,36 @@
 
   
   <entry>
-    <title>Swtiched to Octopress</title>
+    <title>Switched to Octopress</title>
     <link href="http://danieldosen.org/blog/2011/08/16/new-post/"/>
     <updated>2011-08-16T17:24:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/08/16/new-post</id>
-    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the solarized theme in VIM.  In fact, while googleing for a solarized jekyll them, I stumbled across Octopress and am now trying it out..&lt;/p&gt;
+    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the Solarized theme in VIM.  In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out...&lt;/p&gt;
 
-&lt;p&gt;Now, I'm not sure if I'll stay with Octopress - there's no built in support for using the rake file to publish to Heroku, so I'll have to add that.  And it's got it's own way of marking code for snipets, and I don't want to go change those... But I have to admit, solarized is pretty to look at.  We'll see how this works...  For now, I should just blog with something more important to say... Like how to use jekyll, octopress and Heroku together.&lt;/p&gt;
+&lt;p&gt;Now, I'm not sure if I'll stay with Octopress - I'm not convinced of the value and freedom of what you already get in a jekyll site.  But I have to admit, it is easier, and it's evolving, so I imagine you can get alot for free.  And Solarized is pretty to look at.  For now, I should just blog with something to say... Like how to use jekyll, Octopress and Heroku together.&lt;/p&gt;
 
 &lt;p&gt;And that's what this post is about:&lt;/p&gt;
 
 &lt;h2&gt;Pushing to Heroku&lt;/h2&gt;
 
-&lt;p&gt;In order to push my site to Heroku, I created a Heroku app, added that heroku information to git, and then changed the &lt;code&gt;.gitignore&lt;/code&gt; file to not exclude the &lt;code&gt;public&lt;/code&gt; folder.  That was really it.  The problem with this is - I'll be churning a bunch of files each time I generate the content using Jekyll... Meh...&lt;/p&gt;
+&lt;p&gt;In order to push my site to Heroku, I created a Heroku app, added that Heroku information to git, and then changed the &lt;code&gt;.gitignore&lt;/code&gt; file to not exclude the &lt;code&gt;public&lt;/code&gt; folder.  That was really it.  The problem with this is - I'll be churning a bunch of files each time I generate the content using Jekyll... A better way to do this would be to edit the .gitignore for this branch, and then customize the rake task to build the static content and push to Heroku.  Right now, I'm doing that manually, but I like to see what changes I'm committing so, we'll see.&lt;/p&gt;
 
 &lt;h2&gt;Gotchas with Octopress&lt;/h2&gt;
 
 &lt;p&gt;My gotchas, anyway:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;the &lt;code&gt;new_post&lt;/code&gt; Rake command.  There's no space in there... &lt;code&gt;rake new_post[&quot;post_name&quot;]&lt;/code&gt; not &lt;code&gt;rake new_post [&quot;post name&quot;]&lt;/code&gt;.  I got stung by that...&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;new_post&lt;/code&gt; Rake command.  There's no space in there... &lt;code&gt;rake new_post[&quot;post_name&quot;]&lt;/code&gt; not &lt;code&gt;rake new_post [&quot;post name&quot;]&lt;/code&gt;.  I got stung by that...&lt;/li&gt;
 &lt;li&gt;Using the &lt;code&gt;backtick&lt;/code&gt; method for code - means that all the code needs to be indented.  Just different from some other tools I was using...&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Theming&lt;/h2&gt;
+
+&lt;p&gt;This was one of the main reasons I wanted to use Octopress.  Here's what I fumbled through:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It's pretty easy - although I haven't done much other than override fonts, some existing template stuff and colors.  I'll look to do more extensive theme changes using the custom options in Octopress - more drastic css changes.  That will be next on the list...&lt;/li&gt;
 &lt;/ul&gt;
 
 </content>
@@ -44,13 +53,13 @@
     <link href="http://danieldosen.org/blog/2011/08/03/test-from-ubuntu/"/>
     <updated>2011-08-03T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/08/03/test-from-ubuntu</id>
-    <content type="html">&lt;p&gt;I really need to find out how to &quot;unpublish&quot; these posts...&lt;/p&gt;
+    <content type="html">&lt;p&gt;I really should set &lt;code&gt;published: false&lt;/code&gt; for some of these posts...&lt;/p&gt;
 
 &lt;p&gt;...But since I'm here, I now see the value in using Markdown - especially in an editor like VIM.  I've also loaded some helper mappings for using the spell checker when I write. It's pretty fast! I think finding a spell checker was my last big hangup for using VIM.&lt;/p&gt;
 
-&lt;p&gt;I'm now a convert.&lt;/p&gt;
+&lt;p&gt;So now I'm now a convert.&lt;/p&gt;
 
-&lt;p&gt;Shiite! Must get to the dog park.&lt;/p&gt;
+&lt;p&gt;Since getting this environment setup was so easy on my macs - I got out an old netbook with Ubuntu intalled, and I've pretty much got the same enironment working there!  Not that I'll ever use it, but it's pretty easy.  It makes me think there should be an easy way to do all of this over ssh to a desktop, from an iPad.&lt;/p&gt;
 </content>
   </entry>
   
@@ -72,45 +81,48 @@
 &lt;p&gt;Things VIM is good at:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Lists&lt;/li&gt;
+&lt;li&gt;Fast Editing&lt;/li&gt;
+&lt;li&gt;Fast Navigation&lt;/li&gt;
+&lt;li&gt;Efficient use of time&lt;/li&gt;
+&lt;li&gt;Multiple Buffers open at the same time&lt;/li&gt;
+&lt;li&gt;Solarized&lt;/li&gt;
 &lt;li&gt;Other Stuff&lt;/li&gt;
 &lt;/ul&gt;
 
 
 &lt;p&gt;Trying an image:
-&lt;img src=&quot;http://danieldosen.org/blimages/vim-shot.png&quot; title=&quot;getting green&quot; alt=&quot;GO GREEN&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://danieldosen.org/images/vim-shot.png&quot; title=&quot;getting green&quot; alt=&quot;GO GREEN&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Here's a post in cucumber - this isn't the nicest highlighting...&lt;/p&gt;
+&lt;p&gt;Looking at code snippets...
+Here's a post in cucumber:&lt;/p&gt;
 
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='cucumber'&gt;Feature: Manage pomodori
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Feature: Manage pomodori
   In order to [goal]
   [stakeholder]
   wants [behaviour]
-  
+
   # test comment
   Scenario: Register new pomodori
     Given I am on the new pomodori page
-    And I press &amp;quot;Create&amp;quot;&lt;/code&gt;
-  &lt;/pre&gt;
-&lt;/div&gt;
+    And I press &quot;Create&quot;
+&lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;p&gt;And here's a ruby post.  not the nicest...&lt;/p&gt;
+&lt;p&gt;And here's a ruby post:&lt;/p&gt;
 
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='ruby'&gt;class Account
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Account
   # what's up, fool?
   def init
   end
-end&lt;/code&gt;
-  &lt;/pre&gt;
-&lt;/div&gt;
+end
+&lt;/code&gt;&lt;/pre&gt;
 
-
-
+&lt;p&gt;```&lt;/p&gt;
 </content>
   </entry>
   
@@ -120,7 +132,7 @@ end&lt;/code&gt;
     <updated>2011-08-02T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/08/02/jekyllization</id>
     <content type="html">&lt;h1&gt;Jekyll&lt;/h1&gt;
-&lt;p&gt;I&amp;#8217;ve been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress.  And for the most part &amp;#8211; it&amp;#8217;s written in Ruby and supports MarsEdit.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress. It works great because all your posts are stored as text using haml and kept under source control &amp;#8211; It&amp;#8217;s makes it easy to work from anywhere, and gives you feature partiy you could get with MarsEdit &amp;#8211; but just easier to work with.&lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s so easy &amp;#8211; it looks like stealing candy from a  baby! &amp;#8211; What a lark, let&amp;#8217;s try!&lt;/p&gt;
 &lt;p&gt;This post is going to my wordpress blog, let&amp;#8217;s see how long it takes me to move it to Jekyll on github (not including &lt;span class=&quot;caps&quot;&gt;DNS&lt;/span&gt; changes).&lt;/p&gt;
 &lt;p&gt;See you on the flip side.&lt;/p&gt;</content>
@@ -133,7 +145,9 @@ end&lt;/code&gt;
     <id>http://danieldosen.org/blog/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
     <content type="html">&lt;p&gt;Just wrapping up testing of a completed API for pomodoro service.  I'll post the API in another post… This post just notes minimal testing on the pomodori controller:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://danieldosen.org/blimages/cucumber-green.png&quot; alt=&quot;got to green&quot; border=&quot;0&quot; width=&quot;600&quot; height=&quot;178&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://danieldosen.org/images/cucumber-green.png&quot; alt=&quot;got to green&quot; border=&quot;0&quot; width=&quot;600&quot; height=&quot;178&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Obviously, this image was from me using Textmate and the cucumber plugin.  This is before I saw the light and switched to vim.&lt;/p&gt;
 </content>
   </entry>
   
@@ -142,19 +156,18 @@ end&lt;/code&gt;
     <link href="http://danieldosen.org/blog/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop/"/>
     <updated>2011-07-25T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop</id>
-    <content type="html">&lt;p&gt;in the coffee shop&lt;/p&gt;
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;in the coffee shop&lt;/li&gt;
+&lt;li&gt;not using their sucky bandwidth&lt;/li&gt;
+&lt;li&gt;using personal hotspot&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;profit&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;not using their sucky bandwidth&lt;/p&gt;
 
-&lt;p&gt;using personal hotspot&lt;/p&gt;
+&lt;p&gt;``` ruby&lt;/p&gt;
 
-&lt;p&gt;…&lt;/p&gt;
-
-&lt;p&gt;profit&lt;/p&gt;
-
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='ruby'&gt;def create
+&lt;pre&gt;&lt;code&gt;  def create
     respond_to do |format|
       format.json {
         @activity =  Activity.find(params[:activity_id])
@@ -173,10 +186,10 @@ end&lt;/code&gt;
 
       }
     end
-  end&lt;/code&gt;
-  &lt;/pre&gt;
-&lt;/div&gt;
+  end
+&lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;```&lt;/p&gt;
 
 &lt;p&gt;Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.&lt;/p&gt;
 </content>
@@ -202,29 +215,29 @@ end&lt;/code&gt;
     <id>http://danieldosen.org/blog/2011/07/24/test-locally</id>
     <content type="html">&lt;p&gt;Trying out MarsEdit and posting...&lt;/p&gt;
 
-&lt;p&gt;Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn't work well anyway…&lt;/p&gt;
+&lt;p&gt;Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn't work well anyway.&lt;/p&gt;
 
-&lt;div&gt;
-  &lt;pre&gt;
-    &lt;code class='ruby'&gt;describe &amp;quot;POST create&amp;quot; do
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  describe &quot;POST create&quot; do
     # test code roundtripping with marsedit
-    it &amp;quot;should create a pomodoro from json&amp;quot; do
-      post :create, :format =&amp;gt; &amp;quot;json&amp;quot;, :activity_id =&amp;gt; @activity.id, :pomodoro =&amp;gt; {
-        &amp;quot;start_date_time&amp;quot; =&amp;gt; &amp;quot;2011-07-22 00:00&amp;quot;,
-        &amp;quot;length&amp;quot; =&amp;gt; &amp;quot;25&amp;quot;,
-        &amp;quot;completed&amp;quot; =&amp;gt; &amp;quot;0&amp;quot;,
-        &amp;quot;note&amp;quot; =&amp;gt; &amp;quot;json post individual pomodoro&amp;quot;,
-        &amp;quot;break_length&amp;quot; =&amp;gt; &amp;quot;5&amp;quot;
+    it &quot;should create a pomodoro from json&quot; do
+      post :create, :format =&amp;gt; &quot;json&quot;, :activity_id =&amp;gt; @activity.id, :pomodoro =&amp;gt; {
+        &quot;start_date_time&quot; =&amp;gt; &quot;2011-07-22 00:00&quot;,
+        &quot;length&quot; =&amp;gt; &quot;25&quot;,
+        &quot;completed&quot; =&amp;gt; &quot;0&quot;,
+        &quot;note&quot; =&amp;gt; &quot;json post individual pomodoro&quot;,
+        &quot;break_length&quot; =&amp;gt; &quot;5&quot;
       }
       pomodoro = assigns(:pomodoro)
       pomodoro.id.should &amp;gt; 0
-      pomodoro.note.should == &amp;quot;json post individual pomodoro&amp;quot;
+      pomodoro.note.should == &quot;json post individual pomodoro&quot;
       pomodoro.length.should == 25
     end
-  end&lt;/code&gt;
-  &lt;/pre&gt;
-&lt;/div&gt;
+  end
+&lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;```&lt;/p&gt;
 
 &lt;p&gt;It looks to me, like you'll need to do more of this before posting… Just don't edit a post (or round trip it) in Mars Edit&lt;/p&gt;
 </content>

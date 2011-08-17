@@ -62,6 +62,7 @@
   <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -101,7 +102,7 @@
     
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/08/16/new-post/">Swtiched to Octopress</a></h1>
+      <h1 class="entry-title"><a href="/blog/2011/08/16/new-post/">Switched to Octopress</a></h1>
     
     
       <p class="meta">
@@ -117,23 +118,32 @@
   </header>
 
 
-  <div class="entry-content"><p>I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the solarized theme in VIM.  In fact, while googleing for a solarized jekyll them, I stumbled across Octopress and am now trying it out..</p>
+  <div class="entry-content"><p>I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the Solarized theme in VIM.  In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out&#8230;</p>
 
-<p>Now, I&#8217;m not sure if I&#8217;ll stay with Octopress - there&#8217;s no built in support for using the rake file to publish to Heroku, so I&#8217;ll have to add that.  And it&#8217;s got it&#8217;s own way of marking code for snipets, and I don&#8217;t want to go change those&#8230; But I have to admit, solarized is pretty to look at.  We&#8217;ll see how this works&#8230;  For now, I should just blog with something more important to say&#8230; Like how to use jekyll, octopress and Heroku together.</p>
+<p>Now, I&#8217;m not sure if I&#8217;ll stay with Octopress - I&#8217;m not convinced of the value and freedom of what you already get in a jekyll site.  But I have to admit, it is easier, and it&#8217;s evolving, so I imagine you can get alot for free.  And Solarized is pretty to look at.  For now, I should just blog with something to say&#8230; Like how to use jekyll, Octopress and Heroku together.</p>
 
 <p>And that&#8217;s what this post is about:</p>
 
 <h2>Pushing to Heroku</h2>
 
-<p>In order to push my site to Heroku, I created a Heroku app, added that heroku information to git, and then changed the <code>.gitignore</code> file to not exclude the <code>public</code> folder.  That was really it.  The problem with this is - I&#8217;ll be churning a bunch of files each time I generate the content using Jekyll&#8230; Meh&#8230;</p>
+<p>In order to push my site to Heroku, I created a Heroku app, added that Heroku information to git, and then changed the <code>.gitignore</code> file to not exclude the <code>public</code> folder.  That was really it.  The problem with this is - I&#8217;ll be churning a bunch of files each time I generate the content using Jekyll&#8230; A better way to do this would be to edit the .gitignore for this branch, and then customize the rake task to build the static content and push to Heroku.  Right now, I&#8217;m doing that manually, but I like to see what changes I&#8217;m committing so, we&#8217;ll see.</p>
 
 <h2>Gotchas with Octopress</h2>
 
 <p>My gotchas, anyway:</p>
 
 <ul>
-<li>the <code>new_post</code> Rake command.  There&#8217;s no space in there&#8230; <code>rake new_post["post_name"]</code> not <code>rake new_post ["post name"]</code>.  I got stung by that&#8230;</li>
+<li>The <code>new_post</code> Rake command.  There&#8217;s no space in there&#8230; <code>rake new_post["post_name"]</code> not <code>rake new_post ["post name"]</code>.  I got stung by that&#8230;</li>
 <li>Using the <code>backtick</code> method for code - means that all the code needs to be indented.  Just different from some other tools I was using&#8230;</li>
+</ul>
+
+
+<h2>Theming</h2>
+
+<p>This was one of the main reasons I wanted to use Octopress.  Here&#8217;s what I fumbled through:</p>
+
+<ul>
+<li>It&#8217;s pretty easy - although I haven&#8217;t done much other than override fonts, some existing template stuff and colors.  I&#8217;ll look to do more extensive theme changes using the custom options in Octopress - more drastic css changes.  That will be next on the list&#8230;</li>
 </ul>
 
 </div>
@@ -165,13 +175,13 @@
   </header>
 
 
-  <div class="entry-content"><p>I really need to find out how to &#8220;unpublish&#8221; these posts&#8230;</p>
+  <div class="entry-content"><p>I really should set <code>published: false</code> for some of these posts&#8230;</p>
 
 <p>&#8230;But since I&#8217;m here, I now see the value in using Markdown - especially in an editor like VIM.  I&#8217;ve also loaded some helper mappings for using the spell checker when I write. It&#8217;s pretty fast! I think finding a spell checker was my last big hangup for using VIM.</p>
 
-<p>I&#8217;m now a convert.</p>
+<p>So now I&#8217;m now a convert.</p>
 
-<p>Shiite! Must get to the dog park.</p>
+<p>Since getting this environment setup was so easy on my macs - I got out an old netbook with Ubuntu intalled, and I&#8217;ve pretty much got the same enironment working there!  Not that I&#8217;ll ever use it, but it&#8217;s pretty easy.  It makes me think there should be an easy way to do all of this over ssh to a desktop, from an iPad.</p>
 </div>
   <footer>
     <a rel="full-article" href="/blog/2011/08/03/test-from-ubuntu/">Read on &rarr;</a>
@@ -214,45 +224,54 @@
 <p>Things VIM is good at:</p>
 
 <ul>
-<li>Lists</li>
+<li>Fast Editing</li>
+<li>Fast Navigation</li>
+<li>Efficient use of time</li>
+<li>Multiple Buffers open at the same time</li>
+<li>Solarized</li>
 <li>Other Stuff</li>
 </ul>
 
 
 <p>Trying an image:
-<img src="/blimages/vim-shot.png" title="getting green" alt="GO GREEN" /></p>
+<img src="/images/vim-shot.png" title="getting green" alt="GO GREEN" /></p>
 
-<p>Here&#8217;s a post in cucumber - this isn&#8217;t the nicest highlighting&#8230;</p>
+<p>Looking at code snippets&#8230;
+Here&#8217;s a post in cucumber:</p>
 
-<div>
-  <pre>
-    <code class='cucumber'>Feature: Manage pomodori
-  In order to [goal]
-  [stakeholder]
-  wants [behaviour]
-  
-  # test comment
-  Scenario: Register new pomodori
-    Given I am on the new pomodori page
-    And I press &quot;Create&quot;</code>
-  </pre>
-</div>
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="no">Feature</span><span class="p">:</span> <span class="no">Manage</span> <span class="n">pomodori</span>
+</div><div class='line'>  <span class="no">In</span> <span class="n">order</span> <span class="n">to</span> <span class="o">[</span><span class="n">goal</span><span class="o">]</span>
+</div><div class='line'>  <span class="o">[</span><span class="n">stakeholder</span><span class="o">]</span>
+</div><div class='line'>  <span class="n">wants</span> <span class="o">[</span><span class="n">behaviour</span><span class="o">]</span>
+</div><div class='line'>
+</div><div class='line'>  <span class="c1"># test comment</span>
+</div><div class='line'>  <span class="no">Scenario</span><span class="p">:</span> <span class="no">Register</span> <span class="kp">new</span> <span class="n">pomodori</span>
+</div><div class='line'>    <span class="no">Given</span> <span class="n">I</span> <span class="n">am</span> <span class="n">on</span> <span class="n">the</span> <span class="kp">new</span> <span class="n">pomodori</span> <span class="n">page</span>
+</div><div class='line'>    <span class="no">And</span> <span class="n">I</span> <span class="n">press</span> <span class="s2">&quot;Create&quot;</span>
+</div></code></pre></td></tr></table></div></figure>
 
+<p>And here&#8217;s a ruby post:</p>
 
-<p>And here&#8217;s a ruby post.  not the nicest&#8230;</p>
-
-<div>
-  <pre>
-    <code class='ruby'>class Account
-  # what's up, fool?
-  def init
-  end
-end</code>
-  </pre>
-</div>
-
-
-
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">class</span> <span class="nc">Account</span>
+</div><div class='line'>  <span class="c1"># what&#39;s up, fool?</span>
+</div><div class='line'>  <span class="k">def</span> <span class="nf">init</span>
+</div><div class='line'>  <span class="k">end</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div></figure>
 </div>
   <footer>
     <a rel="full-article" href="/blog/2011/08/02/playing_with-markdown/">Read on &rarr;</a>
@@ -283,7 +302,7 @@ end</code>
 
 
   <div class="entry-content"><h1>Jekyll</h1>
-<p>I&#8217;ve been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress.  And for the most part &#8211; it&#8217;s written in Ruby and supports MarsEdit.</p>
+<p>I&#8217;ve been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress. It works great because all your posts are stored as text using haml and kept under source control &#8211; It&#8217;s makes it easy to work from anywhere, and gives you feature partiy you could get with MarsEdit &#8211; but just easier to work with.</p>
 <p>It&#8217;s so easy &#8211; it looks like stealing candy from a  baby! &#8211; What a lark, let&#8217;s try!</p>
 <p>This post is going to my wordpress blog, let&#8217;s see how long it takes me to move it to Jekyll on github (not including <span class="caps">DNS</span> changes).</p>
 <p>See you on the flip side.</p></div>
@@ -317,7 +336,9 @@ end</code>
 
   <div class="entry-content"><p>Just wrapping up testing of a completed API for pomodoro service.  I&#8217;ll post the API in another post… This post just notes minimal testing on the pomodori controller:</p>
 
-<p><img src="/blimages/cucumber-green.png" alt="got to green" border="0" width="600" height="178" /></p>
+<p><img src="/images/cucumber-green.png" alt="got to green" border="0" width="600" height="178" /></p>
+
+<p>Obviously, this image was from me using Textmate and the cucumber plugin.  This is before I saw the light and switched to vim.</p>
 </div>
   <footer>
     <a rel="full-article" href="/blog/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog/">Read on &rarr;</a>
@@ -347,41 +368,56 @@ end</code>
   </header>
 
 
-  <div class="entry-content"><p>in the coffee shop</p>
+  <div class="entry-content"><ul>
+<li>in the coffee shop</li>
+<li>not using their sucky bandwidth</li>
+<li>using personal hotspot</li>
+<li>&#8230;</li>
+<li>profit</li>
+</ul>
 
-<p>not using their sucky bandwidth</p>
 
-<p>using personal hotspot</p>
-
-<p>…</p>
-
-<p>profit</p>
-
-<div>
-  <pre>
-    <code class='ruby'>def create
-    respond_to do |format|
-      format.json {
-        @activity =  Activity.find(params[:activity_id])
-        # validate that this user is the current user...
-        @user =  @activity.user
-        @pomodoro = Pomodoro.new(params[:pomodoro])
-        @pomodoro.activity = @activity
-
-        respond_to do |format|
-          if @pomodoro.save
-            render json: @activity, status: :created, location: @activity
-          else
-            render json: @activity.errors, status: :unprocessable_entity
-          end
-        end
-
-      }
-    end
-  end</code>
-  </pre>
-</div>
-
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+<span class='line'>17</span>
+<span class='line'>18</span>
+<span class='line'>19</span>
+<span class='line'>20</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">def</span> <span class="nf">create</span>
+</div><div class='line'>    <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+</div><div class='line'>      <span class="nb">format</span><span class="o">.</span><span class="n">json</span> <span class="p">{</span>
+</div><div class='line'>        <span class="vi">@activity</span> <span class="o">=</span>  <span class="no">Activity</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:activity_id</span><span class="o">]</span><span class="p">)</span>
+</div><div class='line'>        <span class="c1"># validate that this user is the current user...</span>
+</div><div class='line'>        <span class="vi">@user</span> <span class="o">=</span>  <span class="vi">@activity</span><span class="o">.</span><span class="n">user</span>
+</div><div class='line'>        <span class="vi">@pomodoro</span> <span class="o">=</span> <span class="no">Pomodoro</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:pomodoro</span><span class="o">]</span><span class="p">)</span>
+</div><div class='line'>        <span class="vi">@pomodoro</span><span class="o">.</span><span class="n">activity</span> <span class="o">=</span> <span class="vi">@activity</span>
+</div><div class='line'>
+</div><div class='line'>        <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+</div><div class='line'>          <span class="k">if</span> <span class="vi">@pomodoro</span><span class="o">.</span><span class="n">save</span>
+</div><div class='line'>            <span class="n">render</span> <span class="n">json</span><span class="p">:</span> <span class="vi">@activity</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="ss">:created</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="vi">@activity</span>
+</div><div class='line'>          <span class="k">else</span>
+</div><div class='line'>            <span class="n">render</span> <span class="n">json</span><span class="p">:</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="ss">:unprocessable_entity</span>
+</div><div class='line'>          <span class="k">end</span>
+</div><div class='line'>        <span class="k">end</span>
+</div><div class='line'>
+</div><div class='line'>      <span class="p">}</span>
+</div><div class='line'>    <span class="k">end</span>
+</div><div class='line'>  <span class="k">end</span>
+</div></code></pre></td></tr></table></div></figure>
 
 <p>Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.</p>
 </div>
@@ -449,29 +485,41 @@ end</code>
 
   <div class="entry-content"><p>Trying out MarsEdit and posting&#8230;</p>
 
-<p>Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn&#8217;t work well anyway…</p>
+<p>Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn&#8217;t work well anyway.</p>
 
-<div>
-  <pre>
-    <code class='ruby'>describe &quot;POST create&quot; do
-    # test code roundtripping with marsedit
-    it &quot;should create a pomodoro from json&quot; do
-      post :create, :format =&gt; &quot;json&quot;, :activity_id =&gt; @activity.id, :pomodoro =&gt; {
-        &quot;start_date_time&quot; =&gt; &quot;2011-07-22 00:00&quot;,
-        &quot;length&quot; =&gt; &quot;25&quot;,
-        &quot;completed&quot; =&gt; &quot;0&quot;,
-        &quot;note&quot; =&gt; &quot;json post individual pomodoro&quot;,
-        &quot;break_length&quot; =&gt; &quot;5&quot;
-      }
-      pomodoro = assigns(:pomodoro)
-      pomodoro.id.should &gt; 0
-      pomodoro.note.should == &quot;json post individual pomodoro&quot;
-      pomodoro.length.should == 25
-    end
-  end</code>
-  </pre>
-</div>
-
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">describe</span> <span class="s2">&quot;POST create&quot;</span> <span class="k">do</span>
+</div><div class='line'>    <span class="c1"># test code roundtripping with marsedit</span>
+</div><div class='line'>    <span class="n">it</span> <span class="s2">&quot;should create a pomodoro from json&quot;</span> <span class="k">do</span>
+</div><div class='line'>      <span class="n">post</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">:format</span> <span class="o">=&gt;</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="ss">:activity_id</span> <span class="o">=&gt;</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="ss">:pomodoro</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</div><div class='line'>        <span class="s2">&quot;start_date_time&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;2011-07-22 00:00&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;25&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;completed&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;note&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;json post individual pomodoro&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;break_length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;5&quot;</span>
+</div><div class='line'>      <span class="p">}</span>
+</div><div class='line'>      <span class="n">pomodoro</span> <span class="o">=</span> <span class="n">assigns</span><span class="p">(</span><span class="ss">:pomodoro</span><span class="p">)</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">should</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">note</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="s2">&quot;json post individual pomodoro&quot;</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="mi">25</span>
+</div><div class='line'>    <span class="k">end</span>
+</div><div class='line'>  <span class="k">end</span>
+</div></code></pre></td></tr></table></div></figure>
 
 <p>It looks to me, like you&#8217;ll need to do more of this before posting… Just don&#8217;t edit a post (or round trip it) in Mars Edit</p>
 </div>
@@ -584,7 +632,7 @@ end</code>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2011/08/16/new-post/">Swtiched to Octopress</a>
+        <a href="/blog/2011/08/16/new-post/">Switched to Octopress</a>
       </li>
     
       <li class="post">
