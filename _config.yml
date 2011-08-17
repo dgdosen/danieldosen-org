@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://danieldosen.org
+title: danieldosen.org
+subtitle: Blogging What Interests Me
+author: Daniel Dosen
 simple_search: http://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
@@ -48,7 +48,7 @@ default_asides: [asides/recent_posts.html, asides/twitter.html, asides/delicious
 # ----------------------- #
 
 # Twitter
-twitter_user:
+twitter_user: dgdosen
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -71,4 +71,4 @@ delicious_count: 3
 disqus_short_name:
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-24907808-1
