@@ -113,9 +113,25 @@
   </header>
 
 
-<div class="entry-content"><p>I really like Jekyll for a static website - which this is, and I really like working with the solarized theme in VIM.  I stumbled across Octopress looking for solarized css content&#8230;</p>
+<div class="entry-content"><p>I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the solarized theme in VIM.  In fact, while googleing for a solarized jekyll them, I stumbled across Octopress and am now trying it out..</p>
 
-<p>Now, I&#8217;m not sure if I&#8217;ll stay with Octopress - although I don&#8217;t like moving code snippets around.  We&#8217;ll see how this works&#8230;  For now, I should just blog with something more important to say&#8230; Like how to use jekyll, octopress and heroku.</p>
+<p>Now, I&#8217;m not sure if I&#8217;ll stay with Octopress - there&#8217;s no built in support for using the rake file to publish to Heroku, so I&#8217;ll have to add that.  And it&#8217;s got it&#8217;s own way of marking code for snipets, and I don&#8217;t want to go change those&#8230; But I have to admit, solarized is pretty to look at.  We&#8217;ll see how this works&#8230;  For now, I should just blog with something more important to say&#8230; Like how to use jekyll, octopress and Heroku together.</p>
+
+<p>And that&#8217;s what this post is about:</p>
+
+<h2>Pushing to Heroku</h2>
+
+<p>In order to push my site to Heroku, I created a Heroku app, added that heroku information to git, and then changed the <code>.gitignore</code> file to not exclude the <code>public</code> folder.  That was really it.  The problem with this is - I&#8217;ll be churning a bunch of files each time I generate the content using Jekyll&#8230; Meh&#8230;</p>
+
+<h2>Gotchas with Octopress</h2>
+
+<p>My gotchas, anyway:</p>
+
+<ul>
+<li>the <code>new_post</code> Rake command.  There&#8217;s no space in there&#8230; <code>rake new_post["post_name"]</code> not <code>rake new_post ["post name"]</code>.  I got stung by that&#8230;</li>
+<li>Using the <code>backtick</code> method for code - means that all the code needs to be indented.  Just different from some other tools I was using&#8230;</li>
+</ul>
+
 </div>
 
 

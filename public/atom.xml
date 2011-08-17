@@ -4,7 +4,7 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-08-16T17:36:44-07:00</updated>
+  <updated>2011-08-16T22:45:26-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
@@ -17,9 +17,25 @@
     <link href="http://danieldosen.org/blog/2011/08/16/new-post/"/>
     <updated>2011-08-16T17:24:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/08/16/new-post</id>
-    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this is, and I really like working with the solarized theme in VIM.  I stumbled across Octopress looking for solarized css content...&lt;/p&gt;
+    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the solarized theme in VIM.  In fact, while googleing for a solarized jekyll them, I stumbled across Octopress and am now trying it out..&lt;/p&gt;
 
-&lt;p&gt;Now, I'm not sure if I'll stay with Octopress - although I don't like moving code snippets around.  We'll see how this works...  For now, I should just blog with something more important to say... Like how to use jekyll, octopress and heroku.&lt;/p&gt;
+&lt;p&gt;Now, I'm not sure if I'll stay with Octopress - there's no built in support for using the rake file to publish to Heroku, so I'll have to add that.  And it's got it's own way of marking code for snipets, and I don't want to go change those... But I have to admit, solarized is pretty to look at.  We'll see how this works...  For now, I should just blog with something more important to say... Like how to use jekyll, octopress and Heroku together.&lt;/p&gt;
+
+&lt;p&gt;And that's what this post is about:&lt;/p&gt;
+
+&lt;h2&gt;Pushing to Heroku&lt;/h2&gt;
+
+&lt;p&gt;In order to push my site to Heroku, I created a Heroku app, added that heroku information to git, and then changed the &lt;code&gt;.gitignore&lt;/code&gt; file to not exclude the &lt;code&gt;public&lt;/code&gt; folder.  That was really it.  The problem with this is - I'll be churning a bunch of files each time I generate the content using Jekyll... Meh...&lt;/p&gt;
+
+&lt;h2&gt;Gotchas with Octopress&lt;/h2&gt;
+
+&lt;p&gt;My gotchas, anyway:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the &lt;code&gt;new_post&lt;/code&gt; Rake command.  There's no space in there... &lt;code&gt;rake new_post[&quot;post_name&quot;]&lt;/code&gt; not &lt;code&gt;rake new_post [&quot;post name&quot;]&lt;/code&gt;.  I got stung by that...&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;backtick&lt;/code&gt; method for code - means that all the code needs to be indented.  Just different from some other tools I was using...&lt;/li&gt;
+&lt;/ul&gt;
+
 </content>
   </entry>
   
