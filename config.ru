@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'bundler/setup'
 require 'sinatra/base'
 
@@ -23,3 +24,7 @@ class SinatraStaticServer < Sinatra::Base
 end
 
 run SinatraStaticServer
+=======
+require "rack/jekyll"
+run Rack::Jekyll.new
+>>>>>>> 672752fc3f047830bd72f664aab97be1bea2a9c4

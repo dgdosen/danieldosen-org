@@ -1,0 +1,9 @@
+---
+layout: post
+title: test
+published: false
+categories:
+---
+Just a test using a Rakefile to create a new post from the command line.  This makes it easy to create a new post, then start editing.
+
+Pretty cool
