@@ -4,13 +4,29 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-09-16T16:14:32-07:00</updated>
+  <updated>2011-09-16T16:29:54-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
     
   </author>
 
+  
+  <entry>
+    <title>I Need a Schedule Gem</title>
+    <link href="http://danieldosen.org/blog/2011/09/16/i-need-a-schedule-gem/"/>
+    <updated>2011-09-16T16:25:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/09/16/i-need-a-schedule-gem</id>
+    <content type="html">&lt;p&gt;So, this is what I need - Well, this is what I wanted before I started out thinking I should build a Schedule gem:&lt;/p&gt;
+
+&lt;iframe src=&#8217;http://maptini.com/maps/06f9e830-b375-012e-3f0a-12313d0361e4?embedded=true&amp;zoom=0.4524886877828054&#8217; height=&#8217;549.0196078431372&#8217; width=&#8217;800&#8217; style=&#8217;border:solid 2px silver;&#8217;&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;The problem is, I really haven&amp;#8217;t found any schedule gems that I like.&lt;/p&gt;
+
+&lt;p&gt;What I want, is to be able to create a schedule, in a manner very similar to the API shown on the ice_cube gem - but with more than just an API, as I want something that&amp;#8217;s easy to show on a Rails (or Formtastic) form.  So, why not build a new one&amp;#8230; That&amp;#8217;s where I&amp;#8217;m at right now.  I&amp;#8217;ll let you know where it goes.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>The Lean Startup</title>
