@@ -23,5 +23,3 @@ class SinatraStaticServer < Sinatra::Base
 end
 
 run SinatraStaticServer
-# require "rack/jekyll"
-# run Rack::Jekyll.new
