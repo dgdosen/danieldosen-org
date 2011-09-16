@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Round-tripping code posts with MarsEdit - Not Pretty - danieldosen.org</title>
+  <title>The Lean Startup - danieldosen.org</title>
   <meta name="author" content="Daniel Dosen">
   
 
@@ -16,7 +16,7 @@
 
   
 
-  <link rel="canonical" href="http://danieldosen.org/blog/2011/07/24/test-locally/"/>
+  <link rel="canonical" href="http://danieldosen.org/blog/2011/09/16/the-lean-startup/"/>
   <link href="/favicon.png" rel="shortcut icon" />
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,7 +63,7 @@
   
   <header>
     
-      <h1 class="entry-title">Round-tripping Code Posts With MarsEdit - Not Pretty</h1>
+      <h1 class="entry-title">The Lean Startup</h1>
     
     
       <p class="meta">
@@ -76,51 +76,21 @@
 
 
 
-<time datetime="2011-07-24T00:00:00-07:00" pubdate  data-updated="true" >Jul 24<span>th</span>, 2011</time></p>
+<time datetime="2011-09-16T14:37:00-07:00" pubdate  data-updated="true" >Sep 16<span>th</span>, 2011</time></p>
     
   </header>
 
 
-<div class="entry-content"><p>Trying out MarsEdit and posting&#8230;</p>
+<div class="entry-content"><p>I just started reading Eric Ries&#8217; new book <em>The Lean Startup</em>.<br/>
+Almost right away, there&#8217;s a section on the five principles of the Lean Startup.  Number 5 jumps out at me:</p>
 
-<p>Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn&#8217;t work well anyway.</p>
+<p>Number 5 - <strong>Innovation Accounting</strong></p>
 
-<figure role=code><figcaption><span></span></figcaption><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
-<span class='line'>2</span>
-<span class='line'>3</span>
-<span class='line'>4</span>
-<span class='line'>5</span>
-<span class='line'>6</span>
-<span class='line'>7</span>
-<span class='line'>8</span>
-<span class='line'>9</span>
-<span class='line'>10</span>
-<span class='line'>11</span>
-<span class='line'>12</span>
-<span class='line'>13</span>
-<span class='line'>14</span>
-<span class='line'>15</span>
-<span class='line'>16</span>
-</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'>  <span class="n">describe</span> <span class="s2">&quot;POST create&quot;</span> <span class="k">do</span>
-</div><div class='line'>    <span class="c1"># test code roundtripping with marsedit</span>
-</div><div class='line'>    <span class="n">it</span> <span class="s2">&quot;should create a pomodoro from json&quot;</span> <span class="k">do</span>
-</div><div class='line'>      <span class="n">post</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">:format</span> <span class="o">=&gt;</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="ss">:activity_id</span> <span class="o">=&gt;</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="ss">:pomodoro</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</div><div class='line'>        <span class="s2">&quot;start_date_time&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;2011-07-22 00:00&quot;</span><span class="p">,</span>
-</div><div class='line'>        <span class="s2">&quot;length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;25&quot;</span><span class="p">,</span>
-</div><div class='line'>        <span class="s2">&quot;completed&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-</div><div class='line'>        <span class="s2">&quot;note&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;json post individual pomodoro&quot;</span><span class="p">,</span>
-</div><div class='line'>        <span class="s2">&quot;break_length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;5&quot;</span>
-</div><div class='line'>      <span class="p">}</span>
-</div><div class='line'>      <span class="n">pomodoro</span> <span class="o">=</span> <span class="n">assigns</span><span class="p">(</span><span class="ss">:pomodoro</span><span class="p">)</span>
-</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">should</span> <span class="o">&gt;</span> <span class="mi">0</span>
-</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">note</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="s2">&quot;json post individual pomodoro&quot;</span>
-</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="mi">25</span>
-</div><div class='line'>    <span class="k">end</span>
-</div><div class='line'>  <span class="k">end</span>
-</div></code></pre></td></tr></table></div></figure>
+<blockquote><p>To improve entrepreneurial outcomes and hold innovators accountable, we need to focus on the boring stuff:  how to measure progress, how to set up milestones, and how to prioritize work.  This requires a new kind of accounting designed for startups-and the people who hold them accountable.</p></blockquote>
 
+<p>Now, that&#8217;s kind of exciting to me.  Here I&#8217;ve got this accounting system that I wrote and use for myself.  While I use it for financial accounting for small businesses (HOAs) I want to take it to another level - and help startups with it.  But as this principle notes, they need <em>more</em> than pretty invoices and automated billing, they need innovation accounting.  Sure he may call it boring, but to capture and measure that data - is right up the alley of the kinds of apps I create.  I&#8217;m kind of giddy after reading this, as I can see the synergy here.</p>
 
-<p>It looks to me, like you&#8217;ll need to do more of this before posting… Just don&#8217;t edit a post (or round trip it) in Mars Edit</p>
+<p>Taken to another level, here in Seattle, I know Jim Benson and David Anderson - two pioneers in using lean methodologies for software development.  Why can&#8217;t I get guidance from them on creating the cool kinds of metrics and integrate that stuff together.  I think there&#8217;s more than a germ of an idea here, and I just the petri dish to get incubate it.</p>
 </div>
 
 
@@ -141,7 +111,7 @@
 
 
 
-<time datetime="2011-07-24T00:00:00-07:00" pubdate  data-updated="true" >Jul 24<span>th</span>, 2011</time>
+<time datetime="2011-09-16T14:37:00-07:00" pubdate  data-updated="true" >Sep 16<span>th</span>, 2011</time>
       
 
 
@@ -149,7 +119,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://danieldosen.org/blog/2011/07/24/test-locally/" data-via="dgdosen" data-counturl="http://danieldosen.org/blog/2011/07/24/test-locally/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://danieldosen.org/blog/2011/09/16/the-lean-startup/" data-via="dgdosen" data-counturl="http://danieldosen.org/blog/2011/09/16/the-lean-startup/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>

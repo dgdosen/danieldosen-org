@@ -4,7 +4,7 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-08-17T10:42:14-07:00</updated>
+  <updated>2011-09-16T14:59:59-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
@@ -13,36 +13,54 @@
 
   
   <entry>
+    <title>The Lean Startup</title>
+    <link href="http://danieldosen.org/blog/2011/09/16/the-lean-startup/"/>
+    <updated>2011-09-16T14:37:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/09/16/the-lean-startup</id>
+    <content type="html">&lt;p&gt;I just started reading Eric Ries&amp;#8217; new book &lt;em&gt;The Lean Startup&lt;/em&gt;.&lt;br/&gt;
+Almost right away, there&amp;#8217;s a section on the five principles of the Lean Startup.  Number 5 jumps out at me:&lt;/p&gt;
+
+&lt;p&gt;Number 5 - &lt;strong&gt;Innovation Accounting&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;To improve entrepreneurial outcomes and hold innovators accountable, we need to focus on the boring stuff:  how to measure progress, how to set up milestones, and how to prioritize work.  This requires a new kind of accounting designed for startups-and the people who hold them accountable.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Now, that&amp;#8217;s kind of exciting to me.  Here I&amp;#8217;ve got this accounting system that I wrote and use for myself.  While I use it for financial accounting for small businesses (HOAs) I want to take it to another level - and help startups with it.  But as this principle notes, they need &lt;em&gt;more&lt;/em&gt; than pretty invoices and automated billing, they need innovation accounting.  Sure he may call it boring, but to capture and measure that data - is right up the alley of the kinds of apps I create.  I&amp;#8217;m kind of giddy after reading this, as I can see the synergy here.&lt;/p&gt;
+
+&lt;p&gt;Taken to another level, here in Seattle, I know Jim Benson and David Anderson - two pioneers in using lean methodologies for software development.  Why can&amp;#8217;t I get guidance from them on creating the cool kinds of metrics and integrate that stuff together.  I think there&amp;#8217;s more than a germ of an idea here, and I just the petri dish to get incubate it.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>Switched to Octopress</title>
     <link href="http://danieldosen.org/blog/2011/08/16/new-post/"/>
     <updated>2011-08-16T17:24:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/08/16/new-post</id>
-    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the Solarized theme in VIM.  In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out...&lt;/p&gt;
+    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the Solarized theme in VIM.  In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;Now, I'm not sure if I'll stay with Octopress - I'm not convinced of the value and freedom of what you already get in a jekyll site.  But I have to admit, it is easier, and it's evolving, so I imagine you can get alot for free.  And Solarized is pretty to look at.  For now, I should just blog with something to say... Like how to use jekyll, Octopress and Heroku together.&lt;/p&gt;
+&lt;p&gt;Now, I&amp;#8217;m not sure if I&amp;#8217;ll stay with Octopress - I&amp;#8217;m not convinced of the value and freedom of what you already get in a jekyll site.  But I have to admit, it is easier, and it&amp;#8217;s evolving, so I imagine you can get alot for free.  And Solarized is pretty to look at.  For now, I should just blog with something to say&amp;#8230; Like how to use jekyll, Octopress and Heroku together.&lt;/p&gt;
 
-&lt;p&gt;And that's what this post is about:&lt;/p&gt;
+&lt;p&gt;And that&amp;#8217;s what this post is about:&lt;/p&gt;
 
 &lt;h2&gt;Pushing to Heroku&lt;/h2&gt;
 
-&lt;p&gt;In order to push my site to Heroku, I created a Heroku app, added that Heroku information to git, and then changed the &lt;code&gt;.gitignore&lt;/code&gt; file to not exclude the &lt;code&gt;public&lt;/code&gt; folder.  That was really it.  The problem with this is - I'll be churning a bunch of files each time I generate the content using Jekyll... A better way to do this would be to edit the .gitignore for this branch, and then customize the rake task to build the static content and push to Heroku.  Right now, I'm doing that manually, but I like to see what changes I'm committing so, we'll see.&lt;/p&gt;
+&lt;p&gt;In order to push my site to Heroku, I created a Heroku app, added that Heroku information to git, and then changed the &lt;code&gt;.gitignore&lt;/code&gt; file to not exclude the &lt;code&gt;public&lt;/code&gt; folder.  That was really it.  The problem with this is - I&amp;#8217;ll be churning a bunch of files each time I generate the content using Jekyll&amp;#8230; A better way to do this would be to edit the .gitignore for this branch, and then customize the rake task to build the static content and push to Heroku.  Right now, I&amp;#8217;m doing that manually, but I like to see what changes I&amp;#8217;m committing so, we&amp;#8217;ll see.&lt;/p&gt;
 
 &lt;h2&gt;Gotchas with Octopress&lt;/h2&gt;
 
 &lt;p&gt;My gotchas, anyway:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;The &lt;code&gt;new_post&lt;/code&gt; Rake command.  There's no space in there... &lt;code&gt;rake new_post[&quot;post_name&quot;]&lt;/code&gt; not &lt;code&gt;rake new_post [&quot;post name&quot;]&lt;/code&gt;.  I got stung by that...&lt;/li&gt;
-&lt;li&gt;Using the &lt;code&gt;backtick&lt;/code&gt; method for code - means that all the code needs to be indented.  Just different from some other tools I was using...&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;new_post&lt;/code&gt; Rake command.  There&amp;#8217;s no space in there&amp;#8230; &lt;code&gt;rake new_post[&quot;post_name&quot;]&lt;/code&gt; not &lt;code&gt;rake new_post [&quot;post name&quot;]&lt;/code&gt;.  I got stung by that&amp;#8230;&lt;/li&gt;
+&lt;li&gt;Using the &lt;code&gt;backtick&lt;/code&gt; method for code - means that all the code needs to be indented.  Just different from some other tools I was using&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 
 
 &lt;h2&gt;Theming&lt;/h2&gt;
 
-&lt;p&gt;This was one of the main reasons I wanted to use Octopress.  Here's what I fumbled through:&lt;/p&gt;
+&lt;p&gt;This was one of the main reasons I wanted to use Octopress.  Here&amp;#8217;s what I fumbled through:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;It's pretty easy - although I haven't done much other than override fonts, some existing template stuff and colors.  I'll look to do more extensive theme changes using the custom options in Octopress - more drastic css changes.  That will be next on the list...&lt;/li&gt;
+&lt;li&gt;It&amp;#8217;s pretty easy - although I haven&amp;#8217;t done much other than override fonts, some existing template stuff and colors.  I&amp;#8217;ll look to do more extensive theme changes using the custom options in Octopress - more drastic css changes.  That will be next on the list&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 
 </content>
@@ -53,13 +71,13 @@
     <link href="http://danieldosen.org/blog/2011/08/03/test-from-ubuntu/"/>
     <updated>2011-08-03T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/08/03/test-from-ubuntu</id>
-    <content type="html">&lt;p&gt;I really should set &lt;code&gt;published: false&lt;/code&gt; for some of these posts...&lt;/p&gt;
+    <content type="html">&lt;p&gt;I really should set &lt;code&gt;published: false&lt;/code&gt; for some of these posts&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;...But since I'm here, I now see the value in using Markdown - especially in an editor like VIM.  I've also loaded some helper mappings for using the spell checker when I write. It's pretty fast! I think finding a spell checker was my last big hangup for using VIM.&lt;/p&gt;
+&lt;p&gt;&amp;#8230;But since I&amp;#8217;m here, I now see the value in using Markdown - especially in an editor like VIM.  I&amp;#8217;ve also loaded some helper mappings for using the spell checker when I write. It&amp;#8217;s pretty fast! I think finding a spell checker was my last big hangup for using VIM.&lt;/p&gt;
 
-&lt;p&gt;So now I'm now a convert.&lt;/p&gt;
+&lt;p&gt;So now I&amp;#8217;m now a convert.&lt;/p&gt;
 
-&lt;p&gt;Since getting this environment setup was so easy on my macs - I got out an old netbook with Ubuntu intalled, and I've pretty much got the same enironment working there!  Not that I'll ever use it, but it's pretty easy.  It makes me think there should be an easy way to do all of this over ssh to a desktop, from an iPad.&lt;/p&gt;
+&lt;p&gt;Since getting this environment setup was so easy on my macs - I got out an old netbook with Ubuntu intalled, and I&amp;#8217;ve pretty much got the same enironment working there!  Not that I&amp;#8217;ll ever use it, but it&amp;#8217;s pretty easy.  It makes me think there should be an easy way to do all of this over ssh to a desktop, from an iPad.&lt;/p&gt;
 </content>
   </entry>
   
@@ -72,7 +90,7 @@
 
 &lt;h2&gt;An even cooler header&lt;/h2&gt;
 
-&lt;p&gt;Trying to look at using markdown and vim together...&lt;/p&gt;
+&lt;p&gt;Trying to look at using markdown and vim together&amp;#8230;&lt;/p&gt;
 
 &lt;h3&gt;Header 3&lt;/h3&gt;
 
@@ -93,36 +111,44 @@
 &lt;p&gt;Trying an image:
 &lt;img src=&quot;http://danieldosen.org/images/vim-shot.png&quot; title=&quot;getting green&quot; alt=&quot;GO GREEN&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Looking at code snippets...
-Here's a post in cucumber:&lt;/p&gt;
+&lt;p&gt;Looking at code snippets&amp;#8230;
+Here&amp;#8217;s a post in cucumber:&lt;/p&gt;
 
-&lt;p&gt;``` ruby&lt;/p&gt;
+&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;6&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;7&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;8&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;9&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217; width=&#8217;100%&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;ruby&#8217;&gt;&lt;div class=&#8217;line&#8217;&gt;&lt;span class=&quot;no&quot;&gt;Feature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Manage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pomodori&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;no&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;goal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stakeholder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;n&quot;&gt;wants&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;behaviour&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;c1&quot;&gt;# test comment&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;no&quot;&gt;Scenario&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Register&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pomodori&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;no&quot;&gt;Given&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;I&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;am&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pomodori&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;no&quot;&gt;And&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;I&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;press&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Create&amp;quot;&lt;/span&gt;
+&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
 
-&lt;pre&gt;&lt;code&gt;Feature: Manage pomodori
-  In order to [goal]
-  [stakeholder]
-  wants [behaviour]
 
-  # test comment
-  Scenario: Register new pomodori
-    Given I am on the new pomodori page
-    And I press &quot;Create&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And here&amp;#8217;s a ruby post:&lt;/p&gt;
 
-&lt;p&gt;```&lt;/p&gt;
+&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;5&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217; width=&#8217;100%&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;ruby&#8217;&gt;&lt;div class=&#8217;line&#8217;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Account&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;c1&quot;&gt;# what&amp;#39;s up, fool?&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
 
-&lt;p&gt;And here's a ruby post:&lt;/p&gt;
-
-&lt;p&gt;``` ruby&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;class Account
-  # what's up, fool?
-  def init
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;```&lt;/p&gt;
 </content>
   </entry>
   
@@ -143,7 +169,7 @@ end
     <link href="http://danieldosen.org/blog/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog/"/>
     <updated>2011-07-25T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
-    <content type="html">&lt;p&gt;Just wrapping up testing of a completed API for pomodoro service.  I'll post the API in another post… This post just notes minimal testing on the pomodori controller:&lt;/p&gt;
+    <content type="html">&lt;p&gt;Just wrapping up testing of a completed API for pomodoro service.  I&amp;#8217;ll post the API in another post… This post just notes minimal testing on the pomodori controller:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://danieldosen.org/images/cucumber-green.png&quot; alt=&quot;got to green&quot; border=&quot;0&quot; width=&quot;600&quot; height=&quot;178&quot; /&gt;&lt;/p&gt;
 
@@ -152,7 +178,7 @@ end
   </entry>
   
   <entry>
-    <title>Pomodori Controller and Blogging from the coffee shop...</title>
+    <title>Pomodori Controller and Blogging from the coffee shop&#8230;</title>
     <link href="http://danieldosen.org/blog/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop/"/>
     <updated>2011-07-25T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop</id>
@@ -160,36 +186,53 @@ end
 &lt;li&gt;in the coffee shop&lt;/li&gt;
 &lt;li&gt;not using their sucky bandwidth&lt;/li&gt;
 &lt;li&gt;using personal hotspot&lt;/li&gt;
-&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;&amp;#8230;&lt;/li&gt;
 &lt;li&gt;profit&lt;/li&gt;
 &lt;/ul&gt;
 
 
-&lt;p&gt;``` ruby&lt;/p&gt;
+&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;6&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;7&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;8&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;9&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;10&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;11&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;12&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;13&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;14&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;15&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;16&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;17&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;18&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;19&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;20&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217; width=&#8217;100%&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;ruby&#8217;&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;n&quot;&gt;respond_to&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;      &lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;vi&quot;&gt;@activity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;no&quot;&gt;Activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:activity_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;c1&quot;&gt;# validate that this user is the current user&#8230;&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;vi&quot;&gt;@user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;vi&quot;&gt;@activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;vi&quot;&gt;@pomodoro&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Pomodoro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:pomodoro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;vi&quot;&gt;@pomodoro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@activity&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;n&quot;&gt;respond_to&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;          &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@pomodoro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;            &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:created&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@activity&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;          &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;            &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:unprocessable_entity&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;          &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
 
-&lt;pre&gt;&lt;code&gt;  def create
-    respond_to do |format|
-      format.json {
-        @activity =  Activity.find(params[:activity_id])
-        # validate that this user is the current user...
-        @user =  @activity.user
-        @pomodoro = Pomodoro.new(params[:pomodoro])
-        @pomodoro.activity = @activity
-
-        respond_to do |format|
-          if @pomodoro.save
-            render json: @activity, status: :created, location: @activity
-          else
-            render json: @activity.errors, status: :unprocessable_entity
-          end
-        end
-
-      }
-    end
-  end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;```&lt;/p&gt;
 
 &lt;p&gt;Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.&lt;/p&gt;
 </content>
@@ -200,9 +243,9 @@ end
     <link href="http://danieldosen.org/blog/2011/07/25/concentration-and-simplynoise-com/"/>
     <updated>2011-07-25T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/07/25/concentration-and-simplynoise-com</id>
-    <content type="html">&lt;p&gt;I'm a fan of using white noise  -  mainly from using a floor fan in my bedroom on summer nights to drown out the noisy streets.  It drowns out any noise wafting up from 35th street - and there's plenty of noise on that street.&lt;/p&gt;
+    <content type="html">&lt;p&gt;I&amp;#8217;m a fan of using white noise  -  mainly from using a floor fan in my bedroom on summer nights to drown out the noisy streets.  It drowns out any noise wafting up from 35th street - and there&amp;#8217;s plenty of noise on that street.&lt;/p&gt;
 
-&lt;p&gt;It turns out I'm also a big fan of white noise when working - or my favorite brown noise from simplynoise.com.  Combine that and the ticking of a pomodoro and my ADHDness melts away.&lt;/p&gt;
+&lt;p&gt;It turns out I&amp;#8217;m also a big fan of white noise when working - or my favorite brown noise from simplynoise.com.  Combine that and the ticking of a pomodoro and my ADHDness melts away.&lt;/p&gt;
 
 &lt;p&gt;It looks like you need to donate to download some of their noise - which is worth a dollar to me, considering I just spent four dollars on a latte that is just plain not very good.  Sorry Cafe Ladro, the only thing you have going for you are your late hours.&lt;/p&gt;
 </content>
@@ -213,33 +256,46 @@ end
     <link href="http://danieldosen.org/blog/2011/07/24/test-locally/"/>
     <updated>2011-07-24T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/07/24/test-locally</id>
-    <content type="html">&lt;p&gt;Trying out MarsEdit and posting...&lt;/p&gt;
+    <content type="html">&lt;p&gt;Trying out MarsEdit and posting&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn't work well anyway.&lt;/p&gt;
+&lt;p&gt;Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn&amp;#8217;t work well anyway.&lt;/p&gt;
 
-&lt;p&gt;``` ruby&lt;/p&gt;
+&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;6&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;7&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;8&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;9&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;10&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;11&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;12&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;13&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;14&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;15&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;16&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217; width=&#8217;100%&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;ruby&#8217;&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;n&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;POST create&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;c1&quot;&gt;# test code roundtripping with marsedit&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;should create a pomodoro from json&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;      &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:activity_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@activity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:pomodoro&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;s2&quot;&gt;&amp;quot;start_date_time&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;2011-07-22 00:00&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;s2&quot;&gt;&amp;quot;length&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;25&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;s2&quot;&gt;&amp;quot;completed&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;s2&quot;&gt;&amp;quot;note&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;json post individual pomodoro&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;        &lt;span class=&quot;s2&quot;&gt;&amp;quot;break_length&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;5&amp;quot;&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;      &lt;span class=&quot;n&quot;&gt;pomodoro&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;assigns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:pomodoro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;      &lt;span class=&quot;n&quot;&gt;pomodoro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;      &lt;span class=&quot;n&quot;&gt;pomodoro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;note&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;json post individual pomodoro&amp;quot;&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;      &lt;span class=&quot;n&quot;&gt;pomodoro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
 
-&lt;pre&gt;&lt;code&gt;  describe &quot;POST create&quot; do
-    # test code roundtripping with marsedit
-    it &quot;should create a pomodoro from json&quot; do
-      post :create, :format =&amp;gt; &quot;json&quot;, :activity_id =&amp;gt; @activity.id, :pomodoro =&amp;gt; {
-        &quot;start_date_time&quot; =&amp;gt; &quot;2011-07-22 00:00&quot;,
-        &quot;length&quot; =&amp;gt; &quot;25&quot;,
-        &quot;completed&quot; =&amp;gt; &quot;0&quot;,
-        &quot;note&quot; =&amp;gt; &quot;json post individual pomodoro&quot;,
-        &quot;break_length&quot; =&amp;gt; &quot;5&quot;
-      }
-      pomodoro = assigns(:pomodoro)
-      pomodoro.id.should &amp;gt; 0
-      pomodoro.note.should == &quot;json post individual pomodoro&quot;
-      pomodoro.length.should == 25
-    end
-  end
-&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;p&gt;It looks to me, like you'll need to do more of this before posting… Just don't edit a post (or round trip it) in Mars Edit&lt;/p&gt;
+&lt;p&gt;It looks to me, like you&amp;#8217;ll need to do more of this before posting… Just don&amp;#8217;t edit a post (or round trip it) in Mars Edit&lt;/p&gt;
 </content>
   </entry>
   
@@ -248,15 +304,15 @@ end
     <link href="http://danieldosen.org/blog/2011/07/22/more-better-writing/"/>
     <updated>2011-07-22T00:00:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/07/22/more-better-writing</id>
-    <content type="html">&lt;p&gt;So, I'm back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.&lt;/p&gt;
+    <content type="html">&lt;p&gt;So, I&amp;#8217;m back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.&lt;/p&gt;
 
-&lt;p&gt;Now, however, I'm taking a different tack. Blogging can and should have a more powerful impact on what I'm doing and I've come to realize that blogging can have a positive impact on my life in a few ways:&lt;/p&gt;
+&lt;p&gt;Now, however, I&amp;#8217;m taking a different tack. Blogging can and should have a more powerful impact on what I&amp;#8217;m doing and I&amp;#8217;ve come to realize that blogging can have a positive impact on my life in a few ways:&lt;/p&gt;
 
 &lt;ul&gt;
     &lt;li&gt;I want to write more to contribute to the Rails/Objective C world.&lt;/li&gt;
-    &lt;li&gt;I'd like to write more about data modeling and rails - if only to capture some of the cool things I've learned in the past year or two. Right now, all these little gems I've learned, or applied, are stuck in some Evernote notebook.&lt;/li&gt;
-    &lt;li&gt;I want to apply lean development practices to lean publishing (which is already a term I learned about this week at Seattle's Lean Camp.&lt;/li&gt;
-    &lt;li&gt;Blogging is the gateway drug to book-writing - which when it comes to something like ePub - there's no reason why the world doesn't need a book by Daniel Dosen - even if nobody or just a few read it. Now it's a goal of mine, so it will happen.&lt;/li&gt;
+    &lt;li&gt;I&amp;#8217;d like to write more about data modeling and rails - if only to capture some of the cool things I&amp;#8217;ve learned in the past year or two. Right now, all these little gems I&amp;#8217;ve learned, or applied, are stuck in some Evernote notebook.&lt;/li&gt;
+    &lt;li&gt;I want to apply lean development practices to lean publishing (which is already a term I learned about this week at Seattle&amp;#8217;s Lean Camp.&lt;/li&gt;
+    &lt;li&gt;Blogging is the gateway drug to book-writing - which when it comes to something like ePub - there&amp;#8217;s no reason why the world doesn&amp;#8217;t need a book by Daniel Dosen - even if nobody or just a few read it. Now it&amp;#8217;s a goal of mine, so it will happen.&lt;/li&gt;
     &lt;li&gt;…&lt;/li&gt;
     &lt;li&gt;Profit&lt;/li&gt;
     &lt;li&gt;I want to publicly commit do doing things like - updating or writing a gem. The main reason is, to me, I need more github based code with my name on it. Most everything I do or have, is in a private repository on github, or on my own git server at agidevelopment.com&lt;/li&gt;
@@ -265,33 +321,49 @@ end
 
 &lt;p&gt;Hey, look-y here - this is almost a blog post.&lt;/p&gt;
 
-&lt;p&gt;I have to admit, I've spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I'm particularly fascinated about is adding syntax highlighted code in a post - so here's something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:&lt;/p&gt;
+&lt;p&gt;I have to admit, I&amp;#8217;ve spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I&amp;#8217;m particularly fascinated about is adding syntax highlighted code in a post - so here&amp;#8217;s something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 
 
-&lt;p&gt;``` ruby&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;class Pomodoro &amp;lt; ActiveRecord::Base
 
-  belongs_to :activity
+&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;6&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;7&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;8&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;9&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;10&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;11&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;12&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;13&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;14&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;15&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;16&lt;/span&gt;
+&lt;span class=&#8217;line&#8217;&gt;17&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217; width=&#8217;100%&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;ruby&#8217;&gt;&lt;div class=&#8217;line&#8217;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Pomodoro&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;n&quot;&gt;belongs_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:activity&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;n&quot;&gt;attr_accessible&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:start_date_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;ss&quot;&gt;:length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;ss&quot;&gt;:completed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;ss&quot;&gt;:note&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;ss&quot;&gt;:location_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;ss&quot;&gt;:break_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;ss&quot;&gt;:activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;ss&quot;&gt;:activity_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;    &lt;span class=&quot;ss&quot;&gt;:activity_attributes&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;  &lt;span class=&quot;n&quot;&gt;validates_presence_of&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:start_date_time&lt;/span&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;
+&lt;/div&gt;&lt;div class=&#8217;line&#8217;&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
 
-  attr_accessible :start_date_time,
-    :length,
-    :completed,
-    :note,
-    :location_id,
-    :break_length,
-    :activity,
-    :activity_id,
-    :activity_attributes
-
-  validates_presence_of :start_date_time
-
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;```&lt;/p&gt;
 </content>
   </entry>
   
