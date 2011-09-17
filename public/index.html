@@ -66,6 +66,43 @@
     
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2011/09/17/vim-over-vnc-on-an-ipad/">Vim Over VNC on an iPad</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-09-17T14:18:00-07:00" pubdate  data-updated="true" >Sep 17<span>th</span>, 2011</time></p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OK, now this is geeky, but I needed to share it.  Take you iPad and add a VNC client (I added Remoter, which is 99 cents of bugginess).  Use your iPad with a BT keyboard, connect the VNC client to your Mac Lion machine - or  VM (even over a 3G connection), start up iTerm on the host and VIM away&#8230;</p>
+
+<p><img src="images/vnc-vim.png" alt="Vim over VNC" /></p>
+
+<p>I wanted to see how snappy this would be using an iPad over Personal Hotspot sharing on my iPhone&#8230; and it&#8217;s kind of nice!  Now I need a stand for the iPad.</p>
+
+<p>I also need to stay within VIM or iTerm2 when doing git checkins..</p>
+</div>
+  
+  
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2011/09/16/i-need-a-schedule-gem/">I Need a Schedule Gem</a></h1>
     
     
@@ -514,76 +551,6 @@ Here&#8217;s a post in cucumber:</p>
 
   </article>
 
-
-  <article>
-    
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/24/test-locally/">Round-tripping Code Posts With MarsEdit - Not Pretty</a></h1>
-    
-    
-      <p class="meta">
-
-
-
-
-
-  
-
-
-
-<time datetime="2011-07-24T00:00:00-07:00" pubdate  data-updated="true" >Jul 24<span>th</span>, 2011</time></p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Trying out MarsEdit and posting&#8230;</p>
-
-<p>Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn&#8217;t work well anyway.</p>
-
-<figure role=code><figcaption><span></span></figcaption><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
-<span class='line'>2</span>
-<span class='line'>3</span>
-<span class='line'>4</span>
-<span class='line'>5</span>
-<span class='line'>6</span>
-<span class='line'>7</span>
-<span class='line'>8</span>
-<span class='line'>9</span>
-<span class='line'>10</span>
-<span class='line'>11</span>
-<span class='line'>12</span>
-<span class='line'>13</span>
-<span class='line'>14</span>
-<span class='line'>15</span>
-<span class='line'>16</span>
-</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'>  <span class="n">describe</span> <span class="s2">&quot;POST create&quot;</span> <span class="k">do</span>
-</div><div class='line'>    <span class="c1"># test code roundtripping with marsedit</span>
-</div><div class='line'>    <span class="n">it</span> <span class="s2">&quot;should create a pomodoro from json&quot;</span> <span class="k">do</span>
-</div><div class='line'>      <span class="n">post</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">:format</span> <span class="o">=&gt;</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="ss">:activity_id</span> <span class="o">=&gt;</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="ss">:pomodoro</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</div><div class='line'>        <span class="s2">&quot;start_date_time&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;2011-07-22 00:00&quot;</span><span class="p">,</span>
-</div><div class='line'>        <span class="s2">&quot;length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;25&quot;</span><span class="p">,</span>
-</div><div class='line'>        <span class="s2">&quot;completed&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-</div><div class='line'>        <span class="s2">&quot;note&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;json post individual pomodoro&quot;</span><span class="p">,</span>
-</div><div class='line'>        <span class="s2">&quot;break_length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;5&quot;</span>
-</div><div class='line'>      <span class="p">}</span>
-</div><div class='line'>      <span class="n">pomodoro</span> <span class="o">=</span> <span class="n">assigns</span><span class="p">(</span><span class="ss">:pomodoro</span><span class="p">)</span>
-</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">should</span> <span class="o">&gt;</span> <span class="mi">0</span>
-</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">note</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="s2">&quot;json post individual pomodoro&quot;</span>
-</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="mi">25</span>
-</div><div class='line'>    <span class="k">end</span>
-</div><div class='line'>  <span class="k">end</span>
-</div></code></pre></td></tr></table></div></figure>
-
-
-<p>It looks to me, like you&#8217;ll need to do more of this before posting… Just don&#8217;t edit a post (or round trip it) in Mars Edit</p>
-</div>
-  
-  
-
-
-  </article>
-
 <nav role="pagination">
   <div>
     
@@ -602,6 +569,10 @@ Here&#8217;s a post in cucumber:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2011/09/17/vim-over-vnc-on-an-ipad/">Vim Over VNC on an iPad</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2011/09/16/i-need-a-schedule-gem/">I Need a Schedule Gem</a>
       </li>
     
@@ -615,10 +586,6 @@ Here&#8217;s a post in cucumber:</p>
     
       <li class="post">
         <a href="/blog/2011/08/03/test-from-ubuntu/">Trying out Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/08/02/playing_with-markdown/">Trying out Markdown</a>
       </li>
     
   </ul>
