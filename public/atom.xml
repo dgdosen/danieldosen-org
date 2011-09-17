@@ -4,7 +4,7 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-09-17T14:39:30-07:00</updated>
+  <updated>2011-09-17T14:43:29-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
@@ -19,7 +19,7 @@
     <id>http://danieldosen.org/blog/2011/09/17/vim-over-vnc-on-an-ipad</id>
     <content type="html">&lt;p&gt;OK, now this is geeky, but I needed to share it.  Take you iPad and add a VNC client (I added Remoter, which is 99 cents of bugginess).  Use your iPad with a BT keyboard, connect the VNC client to your Mac Lion machine - or  VM (even over a 3G connection), start up iTerm on the host and VIM away&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/vnc-vim.png&quot; alt=&quot;Vim over VNC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://danieldosen.org/images/vnc-vim.png&quot; alt=&quot;Vim over VNC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I wanted to see how snappy this would be using an iPad over Personal Hotspot sharing on my iPhone&amp;#8230; and it&amp;#8217;s kind of nice!  Now I need a stand for the iPad.&lt;/p&gt;
 
