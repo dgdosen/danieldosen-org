@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>More Better Writing - danieldosen.org</title>
+  <title>danieldosen.org</title>
   <meta name="author" content="Daniel Dosen">
   
 
@@ -16,7 +16,7 @@
 
   
 
-  <link rel="canonical" href="http://danieldosen.org/blog/2011/07/22/more-better-writing/"/>
+  <link rel="canonical" href="http://danieldosen.org/blog/page/2/index.html"/>
   <link href="/favicon.png" rel="shortcut icon" />
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -58,12 +58,85 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article class="hentry">
-  
+      <div class="blog-index">
+
+
+
+  <article>
+    
   <header>
     
-      <h1 class="entry-title">More Better Writing</h1>
+      <h1 class="entry-title"><a href="/blog/2011/07/24/test-locally/">Round-tripping Code Posts With MarsEdit - Not Pretty</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-07-24T00:00:00-07:00" pubdate  data-updated="true" >Jul 24<span>th</span>, 2011</time></p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying out MarsEdit and posting&#8230;</p>
+
+<p>Using the square brackets when publishing an entry via mars edit  is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter.  Then you just turn off the toolbar, which doesn&#8217;t work well anyway.</p>
+
+<figure role=code><figcaption><span></span></figcaption><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+<span class='line'>15</span>
+<span class='line'>16</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'>  <span class="n">describe</span> <span class="s2">&quot;POST create&quot;</span> <span class="k">do</span>
+</div><div class='line'>    <span class="c1"># test code roundtripping with marsedit</span>
+</div><div class='line'>    <span class="n">it</span> <span class="s2">&quot;should create a pomodoro from json&quot;</span> <span class="k">do</span>
+</div><div class='line'>      <span class="n">post</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">:format</span> <span class="o">=&gt;</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="ss">:activity_id</span> <span class="o">=&gt;</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="ss">:pomodoro</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</div><div class='line'>        <span class="s2">&quot;start_date_time&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;2011-07-22 00:00&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;25&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;completed&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;note&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;json post individual pomodoro&quot;</span><span class="p">,</span>
+</div><div class='line'>        <span class="s2">&quot;break_length&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;5&quot;</span>
+</div><div class='line'>      <span class="p">}</span>
+</div><div class='line'>      <span class="n">pomodoro</span> <span class="o">=</span> <span class="n">assigns</span><span class="p">(</span><span class="ss">:pomodoro</span><span class="p">)</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">should</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">note</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="s2">&quot;json post individual pomodoro&quot;</span>
+</div><div class='line'>      <span class="n">pomodoro</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="mi">25</span>
+</div><div class='line'>    <span class="k">end</span>
+</div><div class='line'>  <span class="k">end</span>
+</div></code></pre></td></tr></table></div></figure>
+
+
+<p>It looks to me, like you&#8217;ll need to do more of this before posting… Just don&#8217;t edit a post (or round trip it) in Mars Edit</p>
+</div>
+  
+  
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/22/more-better-writing/">More Better Writing</a></h1>
     
     
       <p class="meta">
@@ -81,7 +154,7 @@
   </header>
 
 
-<div class="entry-content"><p>So, I&#8217;m back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.</p>
+  <div class="entry-content"><p>So, I&#8217;m back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.</p>
 
 <p>Now, however, I&#8217;m taking a different tack. Blogging can and should have a more powerful impact on what I&#8217;m doing and I&#8217;ve come to realize that blogging can have a positive impact on my life in a few ways:</p>
 
@@ -142,46 +215,23 @@
 </div></code></pre></td></tr></table></div></figure>
 
 </div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Daniel Dosen</span></span>
-
-      
-
-
-
-
-
   
 
 
+  </article>
 
-<time datetime="2011-07-22T00:00:00-07:00" pubdate  data-updated="true" >Jul 22<span>nd</span>, 2011</time>
-      
-
-
-    </p>
+<nav role="pagination">
+  <div>
     
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://danieldosen.org/blog/2011/07/22/more-better-writing/" data-via="dgdosen" data-counturl="http://danieldosen.org/blog/2011/07/22/more-better-writing/" >Tweet</a>
-  
-  
-  <div class="g-plusone" data-size="medium"></div>
-  
-</div>
-
+    <a href="/blog/archives">Blog Archives</a>
     
-  </footer>
-</article>
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</nav>
 
 </div>
-
 <aside role=sidebar>
   
     <section>
@@ -215,7 +265,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating...</li>
+    <li class="loading">Status updating&#8230;</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -233,7 +283,6 @@
 
   
 </aside>
-
 
     </div>
   </div>
