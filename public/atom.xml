@@ -4,7 +4,7 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-09-17T23:44:59-07:00</updated>
+  <updated>2011-09-17T23:53:18-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
@@ -17,13 +17,15 @@
     <link href="http://danieldosen.org/blog/2011/09/17/vim-over-vnc-on-an-ipad/"/>
     <updated>2011-09-17T14:18:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/09/17/vim-over-vnc-on-an-ipad</id>
-    <content type="html">&lt;p&gt;OK, now this is geeky, but I needed to share it.  Take you iPad and add a VNC client (I added Remoter, which is 99 cents of bugginess).  Use your iPad with a BT keyboard, connect the VNC client to your Mac Lion machine - or  VM (even over a 3G connection), start up iTerm on the host and VIM away&amp;#8230;&lt;/p&gt;
+    <content type="html">&lt;p&gt;OK, now this is geeky, but I needed to share it.  Take your iPad and add a VNC client (I added Remoter, which is 99 cents of bugginess).  Now use your iPad with a BT keyboard and connect the VNC client to a Mac Lion machine - or VM.  Start up iTerm on the host and VIM away&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://danieldosen.org/images/vnc-vim.png&quot; alt=&quot;Vim over VNC&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I wanted to see how snappy this would be using an iPad over Personal Hotspot sharing on my iPhone&amp;#8230; and it&amp;#8217;s kind of nice!  Now I need a stand for the iPad.&lt;/p&gt;
+&lt;p&gt;This image may look a little ugly, but Remoter doesn&amp;#8217;t seem to hang on to my keyboard unless I have the onscreen keyboard up.  Luckily, you can just alpha it away&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;I also need to stay within VIM or iTerm2 when doing git checkins..&lt;/p&gt;
+&lt;p&gt;I wanted to see how snappy this would be using an iPad over my iPhone Personal Hotspot sharing&amp;#8230; and it&amp;#8217;s kind of nice!  Now I need a stand for the iPad.&lt;/p&gt;
+
+&lt;p&gt;I also need to stay within VIM or iTerm2 when doing git checkins.  I haven&amp;#8217;t really tried fugitive.vim, because gitx is so nice.  I think I&amp;#8217;ll have to give it a shot.&lt;/p&gt;
 </content>
   </entry>
   
