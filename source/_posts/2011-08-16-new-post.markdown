@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the Solarized theme in VIM.  In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out...
+I really like Jekyll for a static website - which this (or any blog site I write\(or *fail* to write)) is.  And I really like working with the Solarized theme in VIM.  In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out...
 
 Now, I'm not sure if I'll stay with Octopress - I'm not convinced of the value and freedom of what you already get in a jekyll site.  But I have to admit, it is easier, and it's evolving, so I imagine you can get alot for free.  And Solarized is pretty to look at.  For now, I should just blog with something to say... Like how to use jekyll, Octopress and Heroku together.
 

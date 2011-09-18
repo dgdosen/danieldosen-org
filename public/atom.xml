@@ -4,7 +4,7 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-09-16T16:37:23-07:00</updated>
+  <updated>2011-09-16T16:43:04-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
@@ -51,7 +51,7 @@ Almost right away, there&amp;#8217;s a section on the five principles of the Lea
     <link href="http://danieldosen.org/blog/2011/08/16/new-post/"/>
     <updated>2011-08-16T17:24:00-07:00</updated>
     <id>http://danieldosen.org/blog/2011/08/16/new-post</id>
-    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this (or any web site I write) is.  And I really like working with the Solarized theme in VIM.  In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out&amp;#8230;&lt;/p&gt;
+    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this (or any blog site I write(or &lt;em&gt;fail&lt;/em&gt; to write)) is.  And I really like working with the Solarized theme in VIM.  In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;Now, I&amp;#8217;m not sure if I&amp;#8217;ll stay with Octopress - I&amp;#8217;m not convinced of the value and freedom of what you already get in a jekyll site.  But I have to admit, it is easier, and it&amp;#8217;s evolving, so I imagine you can get alot for free.  And Solarized is pretty to look at.  For now, I should just blog with something to say&amp;#8230; Like how to use jekyll, Octopress and Heroku together.&lt;/p&gt;
 
