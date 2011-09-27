@@ -4,13 +4,186 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-09-27T09:44:35-07:00</updated>
+  <updated>2011-09-27T11:16:06-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
     
   </author>
 
+  
+  <entry>
+    <title>Create Me a Rails App</title>
+    <link href="http://danieldosen.org/blog/2011/09/26/create-me-a-rails-app/"/>
+    <updated>2011-09-26T20:18:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/09/26/create-me-a-rails-app</id>
+    <content type="html">&lt;p&gt;I watched the latest and very helpful Railscast episode this morning - on &lt;a href=&quot;http://railscasts.com/episodes/285-spork&quot;&gt;Spork&lt;/a&gt; and wound up tweaking all the projects I&amp;#8217;m working on to incorporate some of the things I learned in that screencast.&lt;/p&gt;
+
+&lt;p&gt;I also wound up tweaking a checklist I maintain in an Evernote entry of what I do to setup a Rails project.  Of the projects I&amp;#8217;m working on, I wind up putting them all into a similar environment and figured it would be a useful blog post.  So here it is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a git repository: Git is pretty awesome.  If you don&amp;#8217;t care who sees your app, you can stick it up on Github for free! This is a no brainer.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;: Cheap and easy for a team of developers&lt;/li&gt;
+&lt;li&gt;Roll your own: I have a &lt;a href=&quot;http://linode.com&quot;&gt;Linode&lt;/a&gt; slice, and put up a private git repository&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create a generic .gitignore file for the app.  Here&amp;#8217;s what I start with (on MacOS):
+
+&lt;ul&gt;
+&lt;li&gt;.bundle&lt;/li&gt;
+&lt;li&gt;db/*.sqlite3&lt;/li&gt;
+&lt;li&gt;log/*.log&lt;/li&gt;
+&lt;li&gt;tmp/restart.txt&lt;/li&gt;
+&lt;li&gt;tmp/*&lt;/li&gt;
+&lt;li&gt;.DS_Store&lt;/li&gt;
+&lt;li&gt;public/system/documents*&lt;/li&gt;
+&lt;li&gt;.sass-cache/*&lt;/li&gt;
+&lt;li&gt;.powenv # I use &lt;a href=&quot;http://pow.cx/&quot;&gt;pow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Use RVM: &lt;a href=&quot;http://beginrescueend.com&quot;&gt;RVM&lt;/a&gt; helps you manage multiple version of Rubies and related gem environments.  I try to use one rvm for all my &amp;#8220;rails 3.1 apps that could end up on heroku&amp;#8221; and call it &lt;code&gt;rails31&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add a .rvmrc file to the root directory:  You should do this before you run &lt;code&gt;rails new&lt;/code&gt; because you want to make sure you&amp;#8217;re using the version of ruby rails you want.  This means you should have a ruby and gemset created  already via rvm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create the app: &lt;code&gt;rails new &amp;lt;app_name&amp;gt;&lt;/code&gt; (I create so few apps, I always have to look this up - although now that I just wrote it in a blog entry, I&amp;#8217;ll probably never have to do it again.)&lt;/li&gt;
+&lt;li&gt;Add the gems you want to work with.  I&amp;#8217;ve always add a few to support BDD/TDD.
+
+&lt;ul&gt;
+&lt;li&gt;pg: Postgres is the default database on heroku, where most of my apps end up.  On top of that, I like the pg admin tool on mac os. Much more pleasant that mysql or using sqlite.&lt;/li&gt;
+&lt;li&gt;metric_fu: Based on advice from the Railscast &lt;a href=&quot;http://railscasts.com/episodes/252-metrics-metrics-metrics&quot;&gt;Metrics, Metrics, Metrics&lt;/a&gt;.  Simplecov is great.&lt;/li&gt;
+&lt;li&gt;formtastic: great for form processing&lt;/li&gt;
+&lt;li&gt;rspec-rails: I like RSpec over TestUnit&lt;/li&gt;
+&lt;li&gt;cucumber-rails: I also like BDD - even though it can be expensive in terms of time to run a test suite.&lt;/li&gt;
+&lt;li&gt;capybara&lt;/li&gt;
+&lt;li&gt;nokogiri: helpful with cucumber and capybara&lt;/li&gt;
+&lt;li&gt;factory_girl_rails: test factories&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add gems for continous testing:  Rails 3.1 takes a few seconds to load - and I&amp;#8217;d rather adopt tools that make it easy to re-run tests without delays:
+
+&lt;ul&gt;
+&lt;li&gt;database-cleaner: help with speeding up test runs&lt;/li&gt;
+&lt;li&gt;spork: a distributed ruby server environment&lt;/li&gt;
+&lt;li&gt;guard: supports continuous testing&lt;/li&gt;
+&lt;li&gt;guard-spork: helps to configure guard and spork&lt;/li&gt;
+&lt;li&gt;guard-rspec: helps to configure guard and rspec (don&amp;#8217;t forget the cli options :all_on_start =&gt; false)&lt;/li&gt;
+&lt;li&gt;guard-cucumber: helps to configure guard and cucumber
+rb-fsevent - a listener for guard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Did you Check in yet?  Check in early and often&lt;/li&gt;
+&lt;li&gt;Change your spec_helper.rb file and move functionality up into the Spork pre fork block.&lt;/li&gt;
+&lt;li&gt;Change your environment.rb to allow for factory girl and cucumber integration (of lots of borrowable step definitions)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;ruby&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;factory_girl/step_definitions&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Create a database:&lt;/li&gt;
+&lt;li&gt;Change your database.yml:&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;6&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;7&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt; adapter: postgresql
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; database: accountingtrak
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; username: postgres
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; password: password
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; pool: 5
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; timeout: 5000
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; host: localhost
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Install RSpec&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;rails g rspec:install
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Install Cucumber&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;rails g cucumber:install
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Add a model&lt;/li&gt;
+&lt;li&gt;Migrate your database(s)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;rake:db:create
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;rake:db:migrate
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;rake:db:test:prepare
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Make sure the site runs with one of your object controllers being the default home page configure everything for running tests quickly and automatically&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;2&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;3&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;4&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;5&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;6&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;7&lt;/span&gt;
+&lt;span class=&#8217;line-number&#8217;&gt;8&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;# bootstrap spork
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;spork &#8211;bootstrap
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;# configure spec helper to use database cleaner
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;guard init spork
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;guard init rspec
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;guard init cucumber
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;# make sure spark block comes first
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt;# make sure rspec and cucumber both startup (in guard) with the &#8211;drb option
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Add a project in &lt;a href=&quot;http://www.pivotaltracker.com&quot;&gt;Pivotal Tracker&lt;/a&gt; (or some kanban tool) to manage your stories and velocity
+
+&lt;ul&gt;
+&lt;li&gt;I&amp;#8217;m partial to pivotal tracker, it&amp;#8217;s much faster than your typical kanban tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BDD TDD in your features&lt;/li&gt;
+&lt;li&gt;&amp;#8230;&lt;/li&gt;
+&lt;li&gt;Profit!&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Now this post doesn&amp;#8217;t really delve into configuration for most of these setup options, but there&amp;#8217;s a ton of great resources on the web.  Feel free to comment with your own indispensable configuration&amp;#8230;&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>MVCs Galore</title>

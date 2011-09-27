@@ -2,62 +2,57 @@
 layout: post
 title: "Create Me a Rails App"
 date: 2011-09-26 20:18
-published: false
+published: true
 comments: true
 categories:
 - technical
 ---
+I watched the latest and very helpful Railscast episode this morning - on [Spork](http://railscasts.com/episodes/285-spork) and wound up tweaking all the projects I'm working on to incorporate some of the things I learned in that screencast.
 
-So, I'm sitting here at something called Ruby Racer - a Seattle thing.  Different from Ruby Brigade - it's something more for beginners, where nobody should be afraid of asking a question that might make them look bad (Of course, that never seems to stop me.)
+I also wound up tweaking a checklist I maintain in an Evernote entry of what I do to setup a Rails project.  Of the projects I'm working on, I wind up putting them all into a similar environment and figured it would be a useful blog post.  So here it is:
 
-I watched the latest Railscast episode this morning - on [spork](http://railscasts.com/episodes/285-spork) and I kind of thought I'd publish some kind of checklist of what I do to setup a Rails project.  Of the projects I'm working on, I wind up putting them all into a consistent environment, and I have a little checklist in Evernote that I figured would be good to stick on a blog.  So here it is:
-
-- Create a git repository: Git is pretty awesome.  If you don't care who sees your app, you can stick it up on github for free!  There was someone from github at the Cascadia Ruby Conference, and he did note that they needed to change their pricing model, so who knows how long that will last...
-    - Where to put it: I'm too cheap to use github - I do have a [Linode](http://linode.com) slice, and I just threw my own private git repository up there.  Now that git can host web sits (Jekyll) and now that I'm using heroku to host my apps, I'm thinking I don't need linode anymore (especially if just create a small account on github)
-    - Run through git init for the app
-    - Create a generic .gitignore file for the app.  Here's what's in one of mine: 
-        - .bundle
-        - db/\*.sqlite3
-        - log/\*.log
-        - tmp/restart.txt
-        - tmp/\*
-        - .DS\_Store # Damn that Apple DS\_Store file
-        - public/system/documents\*
-        - .sass-cache/\*
-        - .powenv
-- Use RVM: [RVM](http://beginrescueend.com) helps you manage multiple version of Rubies and related gem environments.  I try to use one rvm for all my "rails 3.1 apps that could end up on heroku"
-    - Add an .rvmrc file to the root directory:  You should do this before you run "rails new" because you want to make sure you're using the version of ruby rails you want.  This means you should have a ruby and gemset created  already via rvm.
-  Create the app: "rails new <app_name>" (You create so few apps, I always have to look this up)
-  Add the gems you want to work with (above and beyond what's in the default gem file. I've always got a few I like to use
-
-
-       pg - this is important because postgres is the default on heroku, where most of my apps end up.  On top of that, I like the pg admin tool on mac os. Much more pleasant that mysql or using sqllite.
-       metric_fu - based on advice from railscats metrics, metrics, metrics - can't argue that.
-       formtastic - if you have any forms
-     For Testing 
-   database-cleaner - help with faster tests
-  rspec-rails - I like rspec
-  cucumber-rails - I like cucumber
-  capybara
-  nokogiri - helpful with cucumber and capybara
-  factory\_girl\_rails - test factories
-
-For continuous testing
-
-  spork
-  guard-spork
-  guard-rspec
-  guard-cucumber
+- Create a git repository: Git is pretty awesome.  If you don't care who sees your app, you can stick it up on Github for free! This is a no brainer.
+    - [Github](http://github.com): Cheap and easy for a team of developers
+    - Roll your own: I have a [Linode](http://linode.com) slice, and put up a private git repository
+- Create a generic .gitignore file for the app.  Here's what I start with (on MacOS): 
+    - .bundle
+    - db/\*.sqlite3
+    - log/\*.log
+    - tmp/restart.txt
+    - tmp/\*
+    - .DS\_Store
+    - public/system/documents\*
+    - .sass-cache/\*
+    - .powenv # I use [pow](http://pow.cx/)
+- Use RVM: [RVM](http://beginrescueend.com) helps you manage multiple version of Rubies and related gem environments.  I try to use one rvm for all my "rails 3.1 apps that could end up on heroku" and call it `rails31`
+    - Add a .rvmrc file to the root directory:  You should do this before you run `rails new` because you want to make sure you're using the version of ruby rails you want.  This means you should have a ruby and gemset created  already via rvm.
+- Create the app: `rails new <app_name>` (I create so few apps, I always have to look this up - although now that I just wrote it in a blog entry, I'll probably never have to do it again.)
+- Add the gems you want to work with.  I've always add a few to support BDD/TDD.
+    - pg: Postgres is the default database on heroku, where most of my apps end up.  On top of that, I like the pg admin tool on mac os. Much more pleasant that mysql or using sqlite.
+    - metric\_fu: Based on advice from the Railscast [Metrics, Metrics, Metrics](http://railscasts.com/episodes/252-metrics-metrics-metrics).  Simplecov is great.
+    - formtastic: great for form processing
+    - rspec-rails: I like RSpec over TestUnit
+    - cucumber-rails: I also like BDD - even though it can be expensive in terms of time to run a test suite.
+    - capybara
+    - nokogiri: helpful with cucumber and capybara
+    - factory\_girl\_rails: test factories
+- Add gems for continous testing:  Rails 3.1 takes a few seconds to load - and I'd rather adopt tools that make it easy to re-run tests without delays:
+    - database-cleaner: help with speeding up test runs
+    - spork: a distributed ruby server environment
+    - guard: supports continuous testing
+    - guard-spork: helps to configure guard and spork
+    - guard-rspec: helps to configure guard and rspec (don't forget the cli options :all\_on\_start =\> false)
+    - guard-cucumber: helps to configure guard and cucumber
   rb-fsevent - a listener for guard
-
-  Check it in… Check in early and often
-  Change your spec\_helper.rb file and move functionality up into the Spork pre fork block.
-  Change your environment.rb to allow for factory girl and cucumber integration (of lots of borrowable step definitions)
-     require 'factory\_girl step\_definitions'
-  Create a database:
-     I use postgres for dev.  It's what heroku uses, and it's where most of my apps end up.
-     I just use the pg admin tool
-  Change your database.yml:
+- Did you Check in yet?  Check in early and often
+- Change your spec\_helper.rb file and move functionality up into the Spork pre fork block.
+- Change your environment.rb to allow for factory girl and cucumber integration (of lots of borrowable step definitions)
+``` ruby
+    require 'factory_girl/step_definitions'
+```
+- Create a database:
+- Change your database.yml:
+``` haml
      adapter: postgresql
      database: accountingtrak
      username: postgres
@@ -65,33 +60,38 @@ For continuous testing
      pool: 5
      timeout: 5000
      host: localhost
+```
+- Install RSpec
+```
+    rails g rspec:install
+```
+- Install Cucumber
+```
+    rails g cucumber:install
+```
+- Add a model
+- Migrate your database(s)
+```
+    rake:db:create
+    rake:db:migrate
+    rake:db:test:prepare
+```
+- Make sure the site runs with one of your object controllers being the default home page configure everything for running tests quickly and automatically
 
-  Install RSpec
-     rails g rspec:install
-  Install Cucumber
-     rails g cucumber:install
-  Add a model
-  Migrate your database(s)
-     rake:db:create (if the db isn't there)
-     rake:db:migrate
-     rake:db:test:prepare
-  Make sure the site runs with one of your object controllers being the default home page configure everything for running tests quickly and automatically
-     spork --bootstrap (add spork wrapper in spec\_helper.rb
-     configure spec helper to use database cleaner
-     guard init spork
-     guard init rspec
-     guard init cucumber     
-     make sure spark block comes first
-     make sure rspec and cucumber both startup (in guard) with the --drb option
-     example: root :to 'contact#index"
-  Add a project in pivotal tracker to manage your stories and velocity
-     I'm partial to pivotal tracker, because it's a web app, and it's much faster than your typical kanban tools
-  BDD TDD in your features
+```
+    # bootstrap spork
+    spork --bootstrap
+    # configure spec helper to use database cleaner
+    guard init spork
+    guard init rspec
+    guard init cucumber
+    # make sure spark block comes first
+    # make sure rspec and cucumber both startup (in guard) with the --drb option
+```
+- Add a project in [Pivotal Tracker](http://www.pivotaltracker.com) (or some kanban tool) to manage your stories and velocity
+    - I'm partial to pivotal tracker, it's much faster than your typical kanban tools
+- BDD TDD in your features
+- ...
+- Profit!
 
-
-
-
-
-
-
-
+Now this post doesn't really delve into configuration for most of these setup options, but there's a ton of great resources on the web.  Feel free to comment with your own indispensable configuration...
