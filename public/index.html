@@ -9,7 +9,7 @@
   <meta name="author" content="Daniel Dosen">
 
   
-  <meta name="description" content="I just wrapped up a project (well, the first phase of a project) using Microsoft&#8217;s MVC3 framework for a client here in Seattle.  Similar to o...">
+  <meta name="description" content="So, I&#8217;m sitting here at something called Ruby Racer - a Seattle thing.  Different from Ruby Brigade - it&#8217;s something more for beginners...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -62,6 +62,152 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/26/create-me-a-rails-app/">Create Me a Rails App</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-09-26T20:18:00-07:00" pubdate  data-updated="true" >Sep 26<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, I&#8217;m sitting here at something called Ruby Racer - a Seattle thing.  Different from Ruby Brigade - it&#8217;s something more for beginners, where nobody should be afraid of asking a question that might make them look bad (Of course, that never seems to stop me.)</p>
+
+<p>I watched the latest Railscast episode this morning - on <a href="http://railscasts.com/episodes/285-spork">spork</a> and I kind of thought I&#8217;d publish some kind of checklist of what I do to setup a Rails project.  Of the projects I&#8217;m working on, I wind up putting them all into a consistent environment, and I have a little checklist in Evernote that I figured would be good to stick on a blog.  So here it is:</p>
+
+<ul>
+<li>Create a git repository: Git is pretty awesome.  If you don&#8217;t care who sees your app, you can stick it up on github for free!  There was someone from github at the Cascadia Ruby Conference, and he did note that they needed to change their pricing model, so who knows how long that will last&#8230;
+
+<ul>
+<li>Where to put it: I&#8217;m too cheap to use github - I do have a <a href="http://linode.com">Linode</a> slice, and I just threw my own private git repository up there.  Now that git can host web sits (Jekyll) and now that I&#8217;m using heroku to host my apps, I&#8217;m thinking I don&#8217;t need linode anymore (especially if just create a small account on github)</li>
+<li>Run through git init for the app</li>
+<li>Create a generic .gitignore file for the app.  Here&#8217;s what&#8217;s in one of mine:
+
+<ul>
+<li>.bundle</li>
+<li>db/*.sqlite3</li>
+<li>log/*.log</li>
+<li>tmp/restart.txt</li>
+<li>tmp/*</li>
+<li>.DS_Store # Damn that apple DS_Store file</li>
+<li>public/system/documents*</li>
+<li>.sass-cache *
+.powenv
+Use RVM
+I try to use one rvm for all my &#8220;rails 3.1 apps that could end up on heroku&#8221;
+Add an .rvmrc file to the root directory.  You should do this before you run &#8220;rails new&#8221; because you want to make sure you&#8217;re using the version of ruby rails you wan.  This means you should have a ruby and gem set already installed via rvm.
+Create the app: &#8220;rails new <app_name>&#8221; (You create so few apps, I always have to look this up)
+Add the gems you want to work with (above and beyond what&#8217;s in the default gem file. I&#8217;ve always got a few I like to use</li>
+</ul>
+
+
+<p>   pg - this is important because postgres is the default on heroku, where most of my apps end up.  On top of that, I like the pg admin tool on mac os. Much more pleasant that mysql or using sqllite.
+   metric_fu - based on advice from railscats metrics, metrics, metrics - can&#8217;t argue that.
+   formtastic - if you have any forms
+ For Testing
+database-cleaner - help with faster tests
+rspec-rails - I like rspec
+cucumber-rails - I like cucumber
+capybara
+nokogiri - helpful with cucumber and capybara
+factory_girl_rails - test factories</p></li>
+</ul>
+</li>
+</ul>
+
+
+<p>For continuous testing</p>
+
+<p>  spork
+  guard-spork
+  guard-rspec
+  guard-cucumber
+  rb-fsevent - a listener for guard</p>
+
+<p>  Check it in… Check in early and often
+  Change your spec_helper.rb file and move functionality up into the Spork pre fork block.
+  Change your environment.rb to allow for factory girl and cucumber integration (of lots of borrowable step definitions)</p>
+
+<pre><code> require 'factory\_girl step\_definitions'
+</code></pre>
+
+<p>  Create a database:</p>
+
+<pre><code> I use postgres for dev.  It's what heroku uses, and it's where most of my apps end up.
+ I just use the pg admin tool
+</code></pre>
+
+<p>  Change your database.yml:</p>
+
+<pre><code> adapter: postgresql
+ database: accountingtrak
+ username: postgres
+ password: password
+ pool: 5
+ timeout: 5000
+ host: localhost
+</code></pre>
+
+<p>  Install RSpec</p>
+
+<pre><code> rails g rspec:install
+</code></pre>
+
+<p>  Install Cucumber</p>
+
+<pre><code> rails g cucumber:install
+</code></pre>
+
+<p>  Add a model
+  Migrate your database(s)</p>
+
+<pre><code> rake:db:create (if the db isn't there)
+ rake:db:migrate
+ rake:db:test:prepare
+</code></pre>
+
+<p>  Make sure the site runs with one of your object controllers being the default home page configure everything for running tests quickly and automatically</p>
+
+<pre><code> spork --bootstrap (add spork wrapper in spec\_helper.rb
+ configure spec helper to use database cleaner
+ guard init spork
+ guard init rspec
+ guard init cucumber     
+ make sure spark block comes first
+ make sure rspec and cucumber both startup (in guard) with the --drb option
+ example: root :to 'contact#index"
+</code></pre>
+
+<p>  Add a project in pivotal tracker to manage your stories and velocity</p>
+
+<pre><code> I'm partial to pivotal tracker, because it's a web app, and it's much faster than your typical kanban tools
+</code></pre>
+
+<p>  BDD TDD in your features</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -519,92 +665,6 @@ Here&#8217;s a post in cucumber:</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop/">Pomodori Controller and Blogging From the Coffee Shop&#8230;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2011-07-25T00:00:00-07:00" pubdate  data-updated="true" >Jul 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li>in the coffee shop</li>
-<li>not using their sucky bandwidth</li>
-<li>using personal hotspot</li>
-<li>&#8230;</li>
-<li>profit</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="k">def</span> <span class="nf">create</span>
-</span><span class='line'>    <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-</span><span class='line'>      <span class="nb">format</span><span class="o">.</span><span class="n">json</span> <span class="p">{</span>
-</span><span class='line'>        <span class="vi">@activity</span> <span class="o">=</span>  <span class="no">Activity</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:activity_id</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>        <span class="c1"># validate that this user is the current user...</span>
-</span><span class='line'>        <span class="vi">@user</span> <span class="o">=</span>  <span class="vi">@activity</span><span class="o">.</span><span class="n">user</span>
-</span><span class='line'>        <span class="vi">@pomodoro</span> <span class="o">=</span> <span class="no">Pomodoro</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:pomodoro</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>        <span class="vi">@pomodoro</span><span class="o">.</span><span class="n">activity</span> <span class="o">=</span> <span class="vi">@activity</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-</span><span class='line'>          <span class="k">if</span> <span class="vi">@pomodoro</span><span class="o">.</span><span class="n">save</span>
-</span><span class='line'>            <span class="n">render</span> <span class="n">json</span><span class="p">:</span> <span class="vi">@activity</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="ss">:created</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="vi">@activity</span>
-</span><span class='line'>          <span class="k">else</span>
-</span><span class='line'>            <span class="n">render</span> <span class="n">json</span><span class="p">:</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="ss">:unprocessable_entity</span>
-</span><span class='line'>          <span class="k">end</span>
-</span><span class='line'>        <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <nav class="pagination">
     <div>
       
@@ -622,6 +682,10 @@ Here&#8217;s a post in cucumber:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2011/09/26/create-me-a-rails-app/">Create Me a Rails App</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2011/09/26/mvcs-galore/">MVCs Galore</a>
       </li>
     
@@ -635,10 +699,6 @@ Here&#8217;s a post in cucumber:</p>
     
       <li class="post">
         <a href="/blog/2011/09/16/the-lean-startup/">The Lean Startup</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/08/16/new-post/">Switched to Octopress</a>
       </li>
     
   </ul>
