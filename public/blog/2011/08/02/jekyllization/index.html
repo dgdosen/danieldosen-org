@@ -7,6 +7,9 @@
   <meta charset="utf-8">
   <title>Jekyllization - danieldosen.org</title>
   <meta name="author" content="Daniel Dosen">
+
+  
+  <meta name="description" content="JekyllI&#8217;ve been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpres...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -15,14 +18,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-
-  <link rel="canonical" href="http://danieldosen.org/blog/2011/08/02/jekyllization/"/>
-  <link href="/favicon.png" rel="shortcut icon" />
+  <link rel="canonical" href="http://danieldosen.org/blog/2011/08/02/jekyllization/">
+  <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="danieldosen.org" type="application/atom+xml"/>
+  <link href="/atom.xml" rel="alternate" title="danieldosen.org" type="application/atom+xml">
   <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
@@ -30,8 +32,8 @@
 
 </head>
 
-<body  >
-  <header><hgroup>
+<body   >
+  <header role="banner"><hgroup>
   <h1><a href="/">danieldosen.org</a></h1>
   
     <h2>Blogging What Interests Me</h2>
@@ -39,12 +41,12 @@
 </hgroup>
 
 </header>
-  <nav role=navigation><ul role=subscription data-subscription="rss">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
 <form action="http://google.com/search" method="get">
-  <fieldset role="site-search">
+  <fieldset role="search">
     <input type="hidden" name="q" value="site:danieldosen.org" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
@@ -59,7 +61,7 @@
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry">
+<article class="hentry" role="article">
   
   <header>
     
@@ -67,6 +69,7 @@
     
     
       <p class="meta">
+        
 
 
 
@@ -76,7 +79,9 @@
 
 
 
-<time datetime="2011-08-02T00:00:00-07:00" pubdate  data-updated="true" >Aug 2<span>nd</span>, 2011</time></p>
+<time datetime="2011-08-02T00:00:00-07:00" pubdate  data-updated="true" >Aug 2<span>nd</span>, 2011</time>
+        
+      </p>
     
   </header>
 
@@ -126,11 +131,15 @@
 
 </div>
 
-<aside role=sidebar>
+<aside class="sidebar">
   
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/mvcs-galore/">MVCs Galore</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2011/09/17/vim-over-vnc-on-an-ipad/">Vim Over VNC on an iPad</a>
@@ -146,10 +155,6 @@
     
       <li class="post">
         <a href="/blog/2011/08/16/new-post/">Switched to Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/08/03/test-from-ubuntu/">Trying out Ubuntu</a>
       </li>
     
   </ul>
@@ -181,12 +186,15 @@
 
     </div>
   </div>
-  <footer><p>
+  <footer role="contentinfo"><p>
   Copyright &copy; 2011 - Daniel Dosen -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
 </footer>
+  
+
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];

@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>MVCs Galore - danieldosen.org</title>
+  <meta name="author" content="Daniel Dosen">
+
+  
+  <meta name="description" content="I just wrapped up a project (well, the first phase of a project) using Microsoft&#8217;s MVC3 framework for a client here in Seattle.  Similar to o...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://danieldosen.org/blog/2011/09/26/mvcs-galore/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="danieldosen.org" type="application/atom+xml">
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">danieldosen.org</a></h1>
+  
+    <h2>Blogging What Interests Me</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:danieldosen.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+<ul role=main-navigation>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about.html">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">MVCs Galore</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-09-26T01:05:00-07:00" pubdate  data-updated="true" >Sep 26<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I just wrapped up a project (well, the first phase of a project) using <a href="http://www.asp.net/mvc/mvc3">Microsoft&#8217;s MVC3</a> framework for a client here in Seattle.  Similar to other clients I&#8217;ve worked with, they&#8217;re a Microsoft shop and have an existing investment in the MS stack for building applications.  They wanted to leverage that investment on this project.</p>
+
+<p>Working with MVC3 was pretty cool in that I had a differnt perspective of using Rails(Ruby) and Django/AppEngine(Python).  So, now I have perspective on using MS MVC3 I figure I&#8217;d share it with you.  Feel free to comment.</p>
+
+<p>First - some things I liked about using MS MVC3:</p>
+
+<ul>
+<li>Visual Studio Intellisense - If you&#8217;re going to use MS technology, you need to use those tools, and Visual Studio is great in its implementaiton of Intellisense.  It makes it easy to code and build your app. There&#8217;s even Intellisense in Razor - the MS MVC equivelant to erb.</li>
+<li>Visual Studio Debugging - Another great way to leverage the tools to step in, add watches, and examine what&#8217;s going on in your app while the server is doing its thing.</li>
+<li>The Entity Framework - I&#8217;ll admit, I used to work on that team, so I&#8217;m impartial (Don&#8217;t worry, evertying I worked on is well hidden).  I like EF and where it&#8217;s going.  If you&#8217;re staring with a DB from scratch, the EF has some nice tools integrated within Visual Studio that makes it easy to get up and running.</li>
+<li>Nugets: They&#8217;re the VS way to manage things like Gems inside a project.  There&#8217;s really no equivilent to RVM/VirtualEnv as it just makes sure everything is up to date - but the Nuget management made it easy to add functionality form the MVC3/.Net ecosystem.</li>
+</ul>
+
+
+<p>Some things I didn&#8217;t like about MVC3:</p>
+
+<ul>
+<li>Migrations.   Wow - I&#8217;m spoiled by Rails Migrations.  They are essential when working with a team of developers.  They help make it blood simple to let any one developer catch up with database changes on their own terms.  I can&#8217;t remember how I lived without them.  Even Objective C on iOS has their Core Data Migration capabilities.  MVC3 does not.  That&#8217;s painful.</li>
+<li>ViewModelClasses.  That&#8217;s right, Models, just for the views.   You already define your models, but say you want to pass a few things to a view, you should create a ViewModel Class to create strong typing of that data when you get painting those views.  Sure it makes you think about what your sending to the view, but it just feels unproductive to me.  With rails, you just create an @instance variable and you&#8217;re ready to go.  Much simpler, IMO.</li>
+<li>Crashes.  Visual Studio crashes alot (this is on a mid2010 MacBookPro.)  Bootcamp and Windows7 run great, but Visual Studio just crashes from time to time.  It&#8217;s a very heavyweight stack.  Compare that to VIM, which I use for everything these days, and it&#8217;s a letdown.  It&#8217;s the price you pay for that Intellisense.  I&#8217;ll chose the VIM plugins any day.</li>
+<li>The ecosystem.  Between Github and Stackoverflow, I can overcome any issue I have with a Rails app, usually in a manner of seconds.  The wealth of information at your fingertips is awesome.  The community works.  With MVC3, there&#8217;s MSDN forums, but I found myself using Stackoverflow more often that not, and when I did, it was a bit of an echo chamber.  The ability to execute within the open world of Rails just seems to move at a faster pace to me.  For example, Rails just implemented CoffeeScript.  With MVC3, you can, but it took some hunting, and there&#8217;s only a couple of Google links that get you to the Web Workbench tools.  Or Testing.  Sure there&#8217;s NUnit and Microsoft Test, but I kind of like RSpec&#8217;s matching language, and all the BDD/TDD goodness you can get from using RSpec and Cucumber together.  It just seems like tools can get introduced, get developed and mature faster in the open source world.</li>
+</ul>
+
+
+<p>On that last point, I was talking about this with my client today.  The &#8220;open&#8221; world is just getting faster and better and I don&#8217;t see how MS can keep pace unless they change the way they do things.  Add to that the cost savings (bring your best  TCO argument) of the non-MS environment, and I know what I&#8217;d choose, I&#8217;m just happy their&#8217;s a choice.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Daniel Dosen</span></span>
+
+      
+
+
+
+
+
+  
+
+
+
+<time datetime="2011-09-26T01:05:00-07:00" pubdate  data-updated="true" >Sep 26<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technical/'>technical</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://danieldosen.org/blog/2011/09/26/mvcs-galore/" data-via="dgdosen" data-counturl="http://danieldosen.org/blog/2011/09/26/mvcs-galore/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+</div>
+
+    
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2011/09/26/mvcs-galore/">MVCs Galore</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/17/vim-over-vnc-on-an-ipad/">Vim Over VNC on an iPad</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/16/i-need-a-schedule-gem/">I Need a Schedule Gem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/09/16/the-lean-startup/">The Lean Startup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/08/16/new-post/">Switched to Octopress</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("dgdosen", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/dgdosen" class="twitter-follow-button" data-width="208px" data-show-count="false">Follow @dgdosen</a>
+  
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2011 - Daniel Dosen -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24907808-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+</body>
+</html>
