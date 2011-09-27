@@ -2,6 +2,7 @@
 layout: post
 title: "Create Me a Rails App"
 date: 2011-09-26 20:18
+published: false
 comments: true
 categories:
 - technical

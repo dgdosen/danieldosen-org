@@ -4,134 +4,13 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-09-26T21:46:04-07:00</updated>
+  <updated>2011-09-27T09:44:35-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
     
   </author>
 
-  
-  <entry>
-    <title>Create Me a Rails App</title>
-    <link href="http://danieldosen.org/blog/2011/09/26/create-me-a-rails-app/"/>
-    <updated>2011-09-26T20:18:00-07:00</updated>
-    <id>http://danieldosen.org/blog/2011/09/26/create-me-a-rails-app</id>
-    <content type="html">&lt;p&gt;So, I&amp;#8217;m sitting here at something called Ruby Racer - a Seattle thing.  Different from Ruby Brigade - it&amp;#8217;s something more for beginners, where nobody should be afraid of asking a question that might make them look bad (Of course, that never seems to stop me.)&lt;/p&gt;
-
-&lt;p&gt;I watched the latest Railscast episode this morning - on &lt;a href=&quot;http://railscasts.com/episodes/285-spork&quot;&gt;spork&lt;/a&gt; and I kind of thought I&amp;#8217;d publish some kind of checklist of what I do to setup a Rails project.  Of the projects I&amp;#8217;m working on, I wind up putting them all into a consistent environment, and I have a little checklist in Evernote that I figured would be good to stick on a blog.  So here it is:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Create a git repository: Git is pretty awesome.  If you don&amp;#8217;t care who sees your app, you can stick it up on github for free!  There was someone from github at the Cascadia Ruby Conference, and he did note that they needed to change their pricing model, so who knows how long that will last&amp;#8230;
-
-&lt;ul&gt;
-&lt;li&gt;Where to put it: I&amp;#8217;m too cheap to use github - I do have a &lt;a href=&quot;http://linode.com&quot;&gt;Linode&lt;/a&gt; slice, and I just threw my own private git repository up there.  Now that git can host web sits (Jekyll) and now that I&amp;#8217;m using heroku to host my apps, I&amp;#8217;m thinking I don&amp;#8217;t need linode anymore (especially if just create a small account on github)&lt;/li&gt;
-&lt;li&gt;Run through git init for the app&lt;/li&gt;
-&lt;li&gt;Create a generic .gitignore file for the app.  Here&amp;#8217;s what&amp;#8217;s in one of mine:
-
-&lt;ul&gt;
-&lt;li&gt;.bundle&lt;/li&gt;
-&lt;li&gt;db/*.sqlite3&lt;/li&gt;
-&lt;li&gt;log/*.log&lt;/li&gt;
-&lt;li&gt;tmp/restart.txt&lt;/li&gt;
-&lt;li&gt;tmp/*&lt;/li&gt;
-&lt;li&gt;.DS_Store # Damn that apple DS_Store file&lt;/li&gt;
-&lt;li&gt;public/system/documents*&lt;/li&gt;
-&lt;li&gt;.sass-cache *
-.powenv
-Use RVM
-I try to use one rvm for all my &amp;#8220;rails 3.1 apps that could end up on heroku&amp;#8221;
-Add an .rvmrc file to the root directory.  You should do this before you run &amp;#8220;rails new&amp;#8221; because you want to make sure you&amp;#8217;re using the version of ruby rails you wan.  This means you should have a ruby and gem set already installed via rvm.
-Create the app: &amp;#8220;rails new &lt;app_name&gt;&amp;#8221; (You create so few apps, I always have to look this up)
-Add the gems you want to work with (above and beyond what&amp;#8217;s in the default gem file. I&amp;#8217;ve always got a few I like to use&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;   pg - this is important because postgres is the default on heroku, where most of my apps end up.  On top of that, I like the pg admin tool on mac os. Much more pleasant that mysql or using sqllite.
-   metric_fu - based on advice from railscats metrics, metrics, metrics - can&amp;#8217;t argue that.
-   formtastic - if you have any forms
- For Testing
-database-cleaner - help with faster tests
-rspec-rails - I like rspec
-cucumber-rails - I like cucumber
-capybara
-nokogiri - helpful with cucumber and capybara
-factory_girl_rails - test factories&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;For continuous testing&lt;/p&gt;
-
-&lt;p&gt;  spork
-  guard-spork
-  guard-rspec
-  guard-cucumber
-  rb-fsevent - a listener for guard&lt;/p&gt;
-
-&lt;p&gt;  Check it in… Check in early and often
-  Change your spec_helper.rb file and move functionality up into the Spork pre fork block.
-  Change your environment.rb to allow for factory girl and cucumber integration (of lots of borrowable step definitions)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; require &#8216;factory\_girl step\_definitions&#8217;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  Create a database:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; I use postgres for dev.  It&#8217;s what heroku uses, and it&#8217;s where most of my apps end up.
- I just use the pg admin tool
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  Change your database.yml:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; adapter: postgresql
- database: accountingtrak
- username: postgres
- password: password
- pool: 5
- timeout: 5000
- host: localhost
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  Install RSpec&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; rails g rspec:install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  Install Cucumber&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; rails g cucumber:install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  Add a model
-  Migrate your database(s)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; rake:db:create (if the db isn&#8217;t there)
- rake:db:migrate
- rake:db:test:prepare
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  Make sure the site runs with one of your object controllers being the default home page configure everything for running tests quickly and automatically&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; spork &#8211;bootstrap (add spork wrapper in spec\_helper.rb
- configure spec helper to use database cleaner
- guard init spork
- guard init rspec
- guard init cucumber     
- make sure spark block comes first
- make sure rspec and cucumber both startup (in guard) with the &#8211;drb option
- example: root :to &#8216;contact#index&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  Add a project in pivotal tracker to manage your stories and velocity&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; I&#8217;m partial to pivotal tracker, because it&#8217;s a web app, and it&#8217;s much faster than your typical kanban tools
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  BDD TDD in your features&lt;/p&gt;
-</content>
-  </entry>
   
   <entry>
     <title>MVCs Galore</title>

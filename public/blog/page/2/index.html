@@ -9,7 +9,7 @@
   <meta name="author" content="Daniel Dosen">
 
   
-  <meta name="description" content="in the coffee shopnot using their sucky bandwidthusing personal hotspot&#8230;profit1234567891011121314151617181920  def create    respond_to do |f...">
+  <meta name="description" content="I&#8217;m a fan of using white noise  -  mainly from using a floor fan in my bedroom on summer nights to drown out the noisy streets.  It drowns ou...">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -62,92 +62,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop/">Pomodori Controller and Blogging From the Coffee Shop&#8230;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-  
-
-
-
-<time datetime="2011-07-25T00:00:00-07:00" pubdate  data-updated="true" >Jul 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ul>
-<li>in the coffee shop</li>
-<li>not using their sucky bandwidth</li>
-<li>using personal hotspot</li>
-<li>&#8230;</li>
-<li>profit</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="k">def</span> <span class="nf">create</span>
-</span><span class='line'>    <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-</span><span class='line'>      <span class="nb">format</span><span class="o">.</span><span class="n">json</span> <span class="p">{</span>
-</span><span class='line'>        <span class="vi">@activity</span> <span class="o">=</span>  <span class="no">Activity</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:activity_id</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>        <span class="c1"># validate that this user is the current user...</span>
-</span><span class='line'>        <span class="vi">@user</span> <span class="o">=</span>  <span class="vi">@activity</span><span class="o">.</span><span class="n">user</span>
-</span><span class='line'>        <span class="vi">@pomodoro</span> <span class="o">=</span> <span class="no">Pomodoro</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:pomodoro</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>        <span class="vi">@pomodoro</span><span class="o">.</span><span class="n">activity</span> <span class="o">=</span> <span class="vi">@activity</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
-</span><span class='line'>          <span class="k">if</span> <span class="vi">@pomodoro</span><span class="o">.</span><span class="n">save</span>
-</span><span class='line'>            <span class="n">render</span> <span class="n">json</span><span class="p">:</span> <span class="vi">@activity</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="ss">:created</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="vi">@activity</span>
-</span><span class='line'>          <span class="k">else</span>
-</span><span class='line'>            <span class="n">render</span> <span class="n">json</span><span class="p">:</span> <span class="vi">@activity</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="ss">:unprocessable_entity</span>
-</span><span class='line'>          <span class="k">end</span>
-</span><span class='line'>        <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Updating a new controller in pomodoro service that works on existing activities.  No reason to nest this under the user, as the user can be gotten from the activity. That means that you need to verify the current user is the user making the json call.</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -370,10 +284,6 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2011/09/26/create-me-a-rails-app/">Create Me a Rails App</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2011/09/26/mvcs-galore/">MVCs Galore</a>
       </li>
     
@@ -387,6 +297,10 @@
     
       <li class="post">
         <a href="/blog/2011/09/16/the-lean-startup/">The Lean Startup</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/08/16/new-post/">Switched to Octopress</a>
       </li>
     
   </ul>
@@ -424,6 +338,20 @@
 
 </footer>
   
+
+<script type="text/javascript">
+    (function () {
+      var disqus_shortname = 'danieldosen';
+      
+        
+        var disqus_script = 'count.js'
+      
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
   
