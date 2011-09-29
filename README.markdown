@@ -8,7 +8,7 @@
 	remote = origin
 	merge = refs/heads/master
 [remote "heroku"]
-	url = git@heroku.com:danieldosen-org-octopress.git
+	url = git@heroku.com:danieldosen-org.git
 	fetch = +refs/heads/*:refs/remotes/heroku/*
 ```
 
