@@ -1,3 +1,18 @@
+* Website for danieldosen.org
+
+```
+[remote "origin"]
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	url = git@github.com:dgdosen/danieldosen-org.git
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "heroku"]
+	url = git@heroku.com:danieldosen-org-octopress.git
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+```
+
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
