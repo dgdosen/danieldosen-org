@@ -169,9 +169,9 @@ rb-fsevent - a listener for guard</li>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 </pre></td><td class='code'><pre><code class='haml'><span class='line'> adapter: postgresql
-</span><span class='line'> database: accountingtrak
+</span><span class='line'> database: &lt;your_db_name&gt;
 </span><span class='line'> username: postgres
-</span><span class='line'> password: password
+</span><span class='line'> password: &lt;your_password&gt;
 </span><span class='line'> pool: 5
 </span><span class='line'> timeout: 5000
 </span><span class='line'> host: localhost
@@ -184,7 +184,7 @@ rb-fsevent - a listener for guard</li>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'>rails g rspec:install
+</pre></td><td class='code'><pre><code class='haml'><span class='line'>rails generate rspec:install
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -194,7 +194,7 @@ rb-fsevent - a listener for guard</li>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'>rails g cucumber:install
+</pre></td><td class='code'><pre><code class='haml'><span class='line'>rails generate cucumber:install --capybara --rspec --spork
 </span></code></pre></td></tr></table></div></figure>
 
 

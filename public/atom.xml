@@ -4,7 +4,7 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-09-27T22:32:06-07:00</updated>
+  <updated>2011-09-28T21:08:52-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
@@ -100,9 +100,9 @@ rb-fsevent - a listener for guard&lt;/li&gt;
 &lt;span class=&#8217;line-number&#8217;&gt;6&lt;/span&gt;
 &lt;span class=&#8217;line-number&#8217;&gt;7&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt; adapter: postgresql
-&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; database: accountingtrak
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; database: &amp;lt;your_db_name&amp;gt;
 &lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; username: postgres
-&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; password: password
+&lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; password: &amp;lt;your_password&amp;gt;
 &lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; pool: 5
 &lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; timeout: 5000
 &lt;/span&gt;&lt;span class=&#8217;line&#8217;&gt; host: localhost
@@ -115,7 +115,7 @@ rb-fsevent - a listener for guard&lt;/li&gt;
 
 
 &lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;rails g rspec:install
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;rails generate rspec:install
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
 
 
@@ -125,7 +125,7 @@ rb-fsevent - a listener for guard&lt;/li&gt;
 
 
 &lt;figure class=&#8217;code&#8217;&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#8217;line-number&#8217;&gt;1&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;rails g cucumber:install
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;&lt;code class=&#8217;haml&#8217;&gt;&lt;span class=&#8217;line&#8217;&gt;rails generate cucumber:install &#8211;capybara &#8211;rspec &#8211;spork
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
 
 

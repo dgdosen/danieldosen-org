@@ -54,20 +54,20 @@ I also wound up tweaking a checklist I maintain in an Evernote entry of what I d
 - Change your database.yml:
 ``` haml
      adapter: postgresql
-     database: accountingtrak
+     database: <your_db_name>
      username: postgres
-     password: password
+     password: <your_password>
      pool: 5
      timeout: 5000
      host: localhost
 ```
 - Install RSpec
 ```
-    rails g rspec:install
+    rails generate rspec:install
 ```
 - Install Cucumber
 ```
-    rails g cucumber:install
+    rails generate cucumber:install --capybara --rspec --spork
 ```
 - Add a model
 - Migrate your database(s)
