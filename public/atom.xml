@@ -4,13 +4,24 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-10-01T14:49:18-07:00</updated>
+  <updated>2011-10-10T11:05:37-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
     
   </author>
 
+  
+  <entry>
+    <title>Moving Around in Vim - Normal Mode</title>
+    <link href="http://danieldosen.org/blog/2011/10/10/moving-around-in-vim-normal-mode/"/>
+    <updated>2011-10-10T10:53:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/10/10/moving-around-in-vim-normal-mode</id>
+    <content type="html">&lt;p&gt;So, while I&amp;#8217;m getting much better with vim, my only complaint as of a couple of days ago, was, IMO, my constant use of jklm/bw in normal mode. Specifically, when navigating around in a file, I found myself hitting too many  j&amp;#8217;s and k&amp;#8217;s to get to the right line, and then a bunch of b&amp;#8217;s or w&amp;#8217;s to get to the spot in that line that I want to edit.&lt;/p&gt;
+
+&lt;p&gt;I know how to use Ff - but they didn&amp;#8217;t seem that great of an option.  That&amp;#8217;s why I switched to EasyMotion and remapped (this may be considered sacrilege) my f and F to easymotion - w and easymotion - b.  Now, I can find myself zipping around in a file.  It&amp;#8217;s pretty automatic, and I&amp;#8217;m just wondering if other vim users do the same, or do they consider that too costly of a hack.  I mean, I never used f or F until now&amp;#8230;&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Create Me a Rails App</title>
