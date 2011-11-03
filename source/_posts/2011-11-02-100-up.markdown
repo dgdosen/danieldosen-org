@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "100-up"
+title: "100 up"
 date: 2011-11-02 16:53
 comments: true
 ---

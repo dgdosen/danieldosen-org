@@ -4,13 +4,22 @@
   <title>danieldosen.org</title>
   <link href="http://danieldosen.org/atom.xml" rel="self"/>
   <link href="http://danieldosen.org/"/>
-  <updated>2011-10-10T11:05:37-07:00</updated>
+  <updated>2011-11-02T17:25:26-07:00</updated>
   <id>http://danieldosen.org/</id>
   <author>
     <name>Daniel Dosen</name>
     
   </author>
 
+  
+  <entry>
+    <title>100 up</title>
+    <link href="http://danieldosen.org/blog/2011/11/02/100-up/"/>
+    <updated>2011-11-02T16:53:00-07:00</updated>
+    <id>http://danieldosen.org/blog/2011/11/02/100-up</id>
+    <content type="html">&lt;p&gt;I saw &lt;a href=&quot;http://www.nytimes.com/2011/11/06/magazine/running-christopher-mcdougall.html&quot; title=&quot;100-up&quot;&gt;this link&lt;/a&gt; in today&amp;#8217;s NY Times.  Everything mentioned in this article seems to be in sycn with what I&amp;#8217;ve learned from Chi-Running - but just presented in a way that makes it much easier and more natural to understand.   Gotto go try this!&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Moving Around in Vim - Normal Mode</title>
