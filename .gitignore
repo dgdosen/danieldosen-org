@@ -10,3 +10,7 @@ source/_stash
 source/stylesheets/screen.css
 vendor
 node_modules
+Thumbs.db
+!.gitkeep
+.rbenv-version
+.rvmrc
