@@ -9,14 +9,14 @@ categories:
 
 I just wrapped up a project (well, the first phase of a project) using [Microsoft's MVC3](http://www.asp.net/mvc/mvc3) framework for a client here in Seattle.  Similar to other clients I've worked with, they're a Microsoft shop and have an existing investment in the MS stack for building applications.  They wanted to leverage that investment on this project.
 
-Working with MVC3 was pretty cool in that I had a differnt perspective of using Rails(Ruby) and Django/AppEngine(Python).  So, now I have perspective on using MS MVC3 I figure I'd share it with you.  Feel free to comment.
+Working with MVC3 was pretty cool in that I had a different perspective of using Rails(Ruby) and Django/AppEngine(Python).  So, now I have perspective on using MS MVC3 I figure I'd share it with you.  Feel free to comment.
 
 First - some things I liked about using MS MVC3:
 
-- Visual Studio Intellisense - If you're going to use MS technology, you need to use those tools, and Visual Studio is great in its implementaiton of Intellisense.  It makes it easy to code and build your app. There's even Intellisense in Razor - the MS MVC equivelant to erb.
+- Visual Studio Intellisense - If you're going to use MS technology, you need to use those tools, and Visual Studio is great in its implementation of Intellisense.  It makes it easy to code and build your app. There's even Intellisense in Razor - the MS MVC equivalent to erb.
 - Visual Studio Debugging - Another great way to leverage the tools to step in, add watches, and examine what's going on in your app while the server is doing its thing.
-- The Entity Framework - I'll admit, I used to work on that team, so I'm impartial (Don't worry, evertying I worked on is well hidden).  I like EF and where it's going.  If you're staring with a DB from scratch, the EF has some nice tools integrated within Visual Studio that makes it easy to get up and running.
-- Nugets: They're the VS way to manage things like Gems inside a project.  There's really no equivilent to RVM/VirtualEnv as it just makes sure everything is up to date - but the Nuget management made it easy to add functionality form the MVC3/.Net ecosystem.
+- The Entity Framework - I'll admit, I used to work on that team, so I'm impartial (Don't worry, everything I worked on is well hidden).  I like EF and where it's going.  If you're staring with a DB from scratch, the EF has some nice tools integrated within Visual Studio that makes it easy to get up and running.
+- Nugets: They're the VS way to manage things like Gems inside a project.  There's really no equivalent to RVM/VirtualEnv as it just makes sure everything is up to date - but the Nuget management made it easy to add functionality form the MVC3/.Net ecosystem.
 
 Some things I didn't like about MVC3:
 

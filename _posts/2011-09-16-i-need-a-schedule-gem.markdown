@@ -7,7 +7,7 @@ categories:
 ---
 So, this is what I need - Well, this is what I wanted before I started out thinking I should build a Schedule gem:
 
-<iframe src='http://maptini.com/maps/06f9e830-b375-012e-3f0a-12313d0361e4?embedded=true&zoom=0.4524886877828054' height='549.0196078431372' width='800' style='border:solid 2px silver;'></iframe>
+<img src="http://s3.amazonaws.com/maptini.com/app/public/system/images/34389/original/06f9e830-b375-012e-3f0a-12313d0361e4.png?1328034042" width="800" alt="Scheduling Gem">
 
 The problem is, I really haven't found any schedule gems that I like.
 

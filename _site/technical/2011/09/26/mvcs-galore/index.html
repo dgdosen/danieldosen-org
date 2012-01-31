@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MVCs Galore</title>
+    
+    <meta name="author" content="Daniel Dosen">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">danieldosen.org</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+    	
+    	<li><a href="/archive.html">Archive</a></li>
+    	
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>MVCs Galore <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>I just wrapped up a project (well, the first phase of a project) using <a href='http://www.asp.net/mvc/mvc3'>Microsoft&#8217;s MVC3</a> framework for a client here in Seattle. Similar to other clients I&#8217;ve worked with, they&#8217;re a Microsoft shop and have an existing investment in the MS stack for building applications. They wanted to leverage that investment on this project.</p>
+
+<p>Working with MVC3 was pretty cool in that I had a different perspective of using Rails(Ruby) and Django/AppEngine(Python). So, now I have perspective on using MS MVC3 I figure I&#8217;d share it with you. Feel free to comment.</p>
+
+<p>First - some things I liked about using MS MVC3:</p>
+
+<ul>
+<li>Visual Studio Intellisense - If you&#8217;re going to use MS technology, you need to use those tools, and Visual Studio is great in its implementation of Intellisense. It makes it easy to code and build your app. There&#8217;s even Intellisense in Razor - the MS MVC equivalent to erb.</li>
+
+<li>Visual Studio Debugging - Another great way to leverage the tools to step in, add watches, and examine what&#8217;s going on in your app while the server is doing its thing.</li>
+
+<li>The Entity Framework - I&#8217;ll admit, I used to work on that team, so I&#8217;m impartial (Don&#8217;t worry, everything I worked on is well hidden). I like EF and where it&#8217;s going. If you&#8217;re staring with a DB from scratch, the EF has some nice tools integrated within Visual Studio that makes it easy to get up and running.</li>
+
+<li>Nugets: They&#8217;re the VS way to manage things like Gems inside a project. There&#8217;s really no equivalent to RVM/VirtualEnv as it just makes sure everything is up to date - but the Nuget management made it easy to add functionality form the MVC3/.Net ecosystem.</li>
+</ul>
+
+<p>Some things I didn&#8217;t like about MVC3:</p>
+
+<ul>
+<li>Migrations. Wow - I&#8217;m spoiled by Rails Migrations. They are essential when working with a team of developers. They help make it blood simple to let any one developer catch up with database changes on their own terms. I can&#8217;t remember how I lived without them. Even Objective C on iOS has their Core Data Migration capabilities. MVC3 does not. That&#8217;s painful.</li>
+
+<li>ViewModelClasses. That&#8217;s right, Models, just for the views. You already define your models, but say you want to pass a few things to a view, you should create a ViewModel Class to create strong typing of that data when you get painting those views. Sure it makes you think about what your sending to the view, but it just feels unproductive to me. With rails, you just create an @instance variable and you&#8217;re ready to go. Much simpler, IMO.</li>
+
+<li>Crashes. Visual Studio crashes alot (this is on a mid2010 MacBookPro.) Bootcamp and Windows7 run great, but Visual Studio just crashes from time to time. It&#8217;s a very heavyweight stack. Compare that to VIM, which I use for everything these days, and it&#8217;s a letdown. It&#8217;s the price you pay for that Intellisense. I&#8217;ll chose the VIM plugins any day.</li>
+
+<li>The ecosystem. Between Github and Stackoverflow, I can overcome any issue I have with a Rails app, usually in a manner of seconds. The wealth of information at your fingertips is awesome. The community works. With MVC3, there&#8217;s MSDN forums, but I found myself using Stackoverflow more often that not, and when I did, it was a bit of an echo chamber. The ability to execute within the open world of Rails just seems to move at a faster pace to me. For example, Rails just implemented CoffeeScript. With MVC3, you can, but it took some hunting, and there&#8217;s only a couple of Google links that get you to the Web Workbench tools. Or Testing. Sure there&#8217;s NUnit and Microsoft Test, but I kind of like RSpec&#8217;s matching language, and all the BDD/TDD goodness you can get from using RSpec and Cucumber together. It just seems like tools can get introduced, get developed and mature faster in the open source world.</li>
+</ul>
+
+<p>On that last point, I was talking about this with my client today. The &#8220;open&#8221; world is just getting faster and better and I don&#8217;t see how MS can keep pace unless they change the way they do things. Add to that the cost savings (bring your best TCO argument) of the non-MS environment, and I know what I&#8217;d choose, I&#8217;m just happy their&#8217;s a choice.</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2011/09/17/vim-over-vnc-on-an-ipad" title="Vim Over VNC on an iPad">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/technical/2011/09/26/create-me-a-rails-app" title="Create Me a Rails App">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'danieldosen'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>26 September 2011</span></div>
+
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Daniel Dosen 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

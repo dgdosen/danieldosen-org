@@ -14,22 +14,22 @@ meta:
 ---
 Get three shells up and running!
 
-~~~ ruby
-class Pomodoro < ActiveRecord::Base
+{% highlight ruby %}
+  class Pomodoro < ActiveRecord::Base
 
-  belongs_to :activity
+    belongs_to :activity
 
-  attr_accessible :start_date_time,
-    :length,
-    :completed,
-    :note,
-    :location_id,
-    :break_length,
-    :activity,
-    :activity_id,
-    :activity_attributes
+    attr_accessible :start_date_time,
+      :length,
+      :completed,
+      :note,
+      :location_id,
+      :break_length,
+      :activity,
+      :activity_id,
+      :activity_attributes
 
-  validates_presence_of :start_date_time
+    validates_presence_of :start_date_time
 
-end
-~~~
+  end
+{% endhighlight %>

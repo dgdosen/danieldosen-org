@@ -31,7 +31,7 @@ Trying an image:
 Looking at code snippets...
 Here's a post in cucumber:
 
-``` ruby
+{% highlight ruby %}
     Feature: Manage pomodori
       In order to [goal]
       [stakeholder]
@@ -41,14 +41,14 @@ Here's a post in cucumber:
       Scenario: Register new pomodori
         Given I am on the new pomodori page
         And I press "Create"
-```
+{% endhighlight %}
 
 And here's a ruby post:
 
-``` ruby
+{% highlight ruby %}
     class Account
       # what's up, fool?
       def init
       end
     end
-```
+{% endhighlight %}

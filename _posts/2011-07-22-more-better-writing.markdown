@@ -27,7 +27,8 @@ Hey, look-y here - this is almost a blog post.
 I have to admit, I've spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I'm particularly fascinated about is adding syntax highlighted code in a post - so here's something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown:
 <p> </p>
 
-``` ruby
+
+{% highlight ruby %}
     class Pomodoro < ActiveRecord::Base
 
       belongs_to :activity
@@ -45,4 +46,4 @@ I have to admit, I've spent more time getting this blog set up than I did writin
       validates_presence_of :start_date_time
 
     end
-```
+{% endhighlight %}
