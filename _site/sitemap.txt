@@ -6,6 +6,10 @@ http://username.github.com/index.html
 http://username.github.com/pages.html
 http://username.github.com/sitemap.txt
 http://username.github.com/tags.html
+http://username.github.com/page2/index.html
+http://username.github.com/page3/index.html
+http://username.github.com/page4/index.html
+http://username.github.com/page5/index.html
 
 http://username.github.com/2012/01/31/moved-back-to-jekyll
 http://username.github.com/economics/2011/11/09/last-legs-of-the-euro

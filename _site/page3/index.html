@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <meta name="author" content="Daniel Dosen">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">danieldosen.org</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+    	
+    	<li><a href="/archive.html">Archive</a></li>
+    	
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1> <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span14">
+    
+
+Blogging What Interests Me...
+
+
+
+  <h2 class="title"><a href="/2011/09/16/the-lean-startup">The Lean Startup</a></h2>
+  <div class="post post-/2011/09/16/the-lean-startup">
+
+    <p class="author">
+      Added by 
+      on September 16, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>I just started reading Eric Ries&#8217; new book <em>The Lean Startup</em>.<br />Almost right away, there&#8217;s a section on the five principles of the Lean Startup. Number 5 jumps out at me:</p>
+
+<p>Number 5 - <strong>Innovation Accounting</strong></p>
+
+<blockquote>
+<p>To improve entrepreneurial outcomes and hold innovators accountable, we need to focus on the boring stuff: how to measure progress, how to set up milestones, and how to prioritize work. This requires a new kind of accounting designed for startups-and the people who hold them accountable.</p>
+</blockquote>
+
+<p>Now, that&#8217;s kind of exciting to me. Here I&#8217;ve got this accounting system that I wrote and use for myself. While I use it for financial accounting for small businesses (HOAs) I want to take it to another level - and help startups with it. But as this principle notes, they need <em>more</em> than pretty invoices and automated billing, they need innovation accounting. Sure he may call it boring, but to capture and measure that data - is right up the alley of the kinds of apps I create. I&#8217;m kind of giddy after reading this, as I can see the synergy here.</p>
+
+<p>Taken to another level, here in Seattle, I know Jim Benson and David Anderson - two pioneers in using lean methodologies for software development. Why can&#8217;t I get guidance from them on creating the cool kinds of metrics and integrate that stuff together. I think there&#8217;s more than a germ of an idea here, and I just the petri dish to incubate it.</p>
+    </div>
+  </div>
+
+
+  <h2 class="title"><a href="/2011/08/16/new-post">Switched to Octopress</a></h2>
+  <div class="post post-/2011/08/16/new-post">
+
+    <p class="author">
+      Added by 
+      on August 16, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>I really like Jekyll for a static website - which this (or any blog site I write(or <em>fail</em> to write)) is. And I really like working with the Solarized theme in VIM. In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out&#8230;</p>
+
+<p>Now, I&#8217;m not sure if I&#8217;ll stay with Octopress - I&#8217;m not convinced of the value and freedom of what you already get in a jekyll site. But I have to admit, it is easier, and it&#8217;s evolving, so I imagine you can get alot for free. And Solarized is pretty to look at. For now, I should just blog with something to say&#8230; Like how to use jekyll, Octopress and Heroku together.</p>
+
+<p>And that&#8217;s what this post is about:</p>
+
+<h2 id='pushing_to_heroku'>Pushing to Heroku</h2>
+
+<p>In order to push my site to Heroku, I created a Heroku app, added that Heroku information to git, and then changed the <code>.gitignore</code> file to not exclude the <code>public</code> folder. That was really it. The problem with this is - I&#8217;ll be churning a bunch of files each time I generate the content using Jekyll&#8230; A better way to do this would be to edit the .gitignore for this branch, and then customize the rake task to build the static content and push to Heroku. Right now, I&#8217;m doing that manually, but I like to see what changes I&#8217;m committing so, we&#8217;ll see.</p>
+
+<h2 id='gotchas_with_octopress'>Gotchas with Octopress</h2>
+
+<p>My gotchas, anyway:</p>
+
+<ul>
+<li>The <code>new_post</code> Rake command. There&#8217;s no space in there&#8230; <code>rake new_post[&quot;post_name&quot;]</code> not <code>rake new_post [&quot;post name&quot;]</code>. I got stung by that&#8230;</li>
+
+<li>Using the <code>backtick</code> method for code - means that all the code needs to be indented. Just different from some other tools I was using&#8230;</li>
+</ul>
+
+<h2 id='theming'>Theming</h2>
+
+<p>This was one of the main reasons I wanted to use Octopress. Here&#8217;s what I fumbled through:</p>
+
+<ul>
+<li>It&#8217;s pretty easy - although I haven&#8217;t done much other than override fonts, some existing template stuff and colors. I&#8217;ll look to do more extensive theme changes using the custom options in Octopress - more drastic css changes. That will be next on the list&#8230;</li>
+</ul>
+    </div>
+  </div>
+
+
+  <h2 class="title"><a href="/2011/08/03/test-from-ubuntu">Trying out Ubuntu</a></h2>
+  <div class="post post-/2011/08/03/test-from-ubuntu">
+
+    <p class="author">
+      Added by 
+      on August 03, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>I really should set <code>published: false</code> for some of these posts&#8230;</p>
+
+<p>&#8230;But since I&#8217;m here, I now see the value in using Markdown - especially in an editor like VIM. I&#8217;ve also loaded some helper mappings for using the spell checker when I write. It&#8217;s pretty fast! I think finding a spell checker was my last big hangup for using VIM.</p>
+
+<p>So now I&#8217;m now a convert.</p>
+
+<p>Since getting this environment setup was so easy on my macs - I got out an old netbook with Ubuntu intalled, and I&#8217;ve pretty much got the same enironment working there! Not that I&#8217;ll ever use it, but it&#8217;s pretty easy. It makes me think there should be an easy way to do all of this over ssh to a desktop, from an iPad.</p>
+    </div>
+  </div>
+
+
+  <h2 class="title"><a href="/2011/08/02/playing_with-markdown">Trying out Markdown</a></h2>
+  <div class="post post-/2011/08/02/playing_with-markdown">
+
+    <p class="author">
+      Added by 
+      on August 02, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <h1 id='very_cool_header'>Very cool header</h1>
+
+<h2 id='an_even_cooler_header'>An even cooler header</h2>
+
+<p>Trying to look at using markdown and vim together&#8230;</p>
+
+<h3 id='header_3'>Header 3</h3>
+
+<blockquote>
+<p>What the dog saw</p>
+</blockquote>
+
+<p>Things VIM is good at:</p>
+
+<ul>
+<li>Fast Editing</li>
+
+<li>Fast Navigation</li>
+
+<li>Efficient use of time</li>
+
+<li>Multiple Buffers open at the same time</li>
+
+<li>Solarized</li>
+
+<li>Other Stuff</li>
+</ul>
+
+<p>Trying an image: <img alt='GO GREEN' src='/images/vim-shot.png' /></p>
+
+<p>Looking at code snippets&#8230; Here&#8217;s a post in cucumber:</p>
+<div class='highlight'><pre><code class='ruby'>    <span class='no'>Feature</span><span class='p'>:</span> <span class='no'>Manage</span> <span class='n'>pomodori</span>
+      <span class='no'>In</span> <span class='n'>order</span> <span class='n'>to</span> <span class='o'>[</span><span class='n'>goal</span><span class='o'>]</span>
+      <span class='o'>[</span><span class='n'>stakeholder</span><span class='o'>]</span>
+      <span class='n'>wants</span> <span class='o'>[</span><span class='n'>behaviour</span><span class='o'>]</span>
+      
+      <span class='c1'># test comment</span>
+      <span class='no'>Scenario</span><span class='p'>:</span> <span class='no'>Register</span> <span class='kp'>new</span> <span class='n'>pomodori</span>
+        <span class='no'>Given</span> <span class='n'>I</span> <span class='n'>am</span> <span class='n'>on</span> <span class='n'>the</span> <span class='kp'>new</span> <span class='n'>pomodori</span> <span class='n'>page</span>
+        <span class='no'>And</span> <span class='n'>I</span> <span class='n'>press</span> <span class='s2'>&quot;Create&quot;</span>
+</code></pre>
+</div>
+<p>And here&#8217;s a ruby post:</p>
+<div class='highlight'><pre><code class='ruby'>    <span class='k'>class</span> <span class='nc'>Account</span>
+      <span class='c1'># what&#39;s up, fool?</span>
+      <span class='k'>def</span> <span class='nf'>init</span>
+      <span class='k'>end</span>
+    <span class='k'>end</span>
+</code></pre>
+</div>
+    </div>
+  </div>
+
+
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Daniel Dosen 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

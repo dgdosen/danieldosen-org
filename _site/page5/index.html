@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>More Better Writing</title>
+    <title></title>
     
     <meta name="author" content="Daniel Dosen">
 
@@ -77,12 +77,68 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>More Better Writing <small>Supporting tagline</small></h1>
+  <h1> <small>Supporting tagline</small></h1>
 </div>
 
 <div class="row">
-  <div class="span10">
-    <p>So, I&#8217;m back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.</p>
+  <div class="span14">
+    
+
+Blogging What Interests Me...
+
+
+
+  <h2 class="title"><a href="/2011/07/24/test-locally">Round-tripping code posts with MarsEdit - Not Pretty</a></h2>
+  <div class="post post-/2011/07/24/test-locally">
+
+    <p class="author">
+      Added by 
+      on July 24, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>Trying out MarsEdit and posting&#8230;</p>
+
+<p>Using the square brackets when publishing an entry via mars edit is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter. Then you just turn off the toolbar, which doesn&#8217;t work well anyway.</p>
+<div class='highlight'><pre><code class='ruby'>      <span class='n'>describe</span> <span class='s2'>&quot;POST create&quot;</span> <span class='k'>do</span>
+        <span class='c1'># test code roundtripping with marsedit</span>
+        <span class='n'>it</span> <span class='s2'>&quot;should create a pomodoro from json&quot;</span> <span class='k'>do</span>
+          <span class='n'>post</span> <span class='ss'>:create</span><span class='p'>,</span> <span class='ss'>:format</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;json&quot;</span><span class='p'>,</span> <span class='ss'>:activity_id</span> <span class='o'>=&gt;</span> <span class='vi'>@activity</span><span class='o'>.</span><span class='n'>id</span><span class='p'>,</span> <span class='ss'>:pomodoro</span> <span class='o'>=&gt;</span> <span class='p'>{</span>
+            <span class='s2'>&quot;start_date_time&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;2011-07-22 00:00&quot;</span><span class='p'>,</span>
+            <span class='s2'>&quot;length&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;25&quot;</span><span class='p'>,</span>
+            <span class='s2'>&quot;completed&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;0&quot;</span><span class='p'>,</span>
+            <span class='s2'>&quot;note&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;json post individual pomodoro&quot;</span><span class='p'>,</span>
+            <span class='s2'>&quot;break_length&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;5&quot;</span>
+          <span class='p'>}</span>
+          <span class='n'>pomodoro</span> <span class='o'>=</span> <span class='n'>assigns</span><span class='p'>(</span><span class='ss'>:pomodoro</span><span class='p'>)</span>
+          <span class='n'>pomodoro</span><span class='o'>.</span><span class='n'>id</span><span class='o'>.</span><span class='n'>should</span> <span class='o'>&gt;</span> <span class='mi'>0</span>
+          <span class='n'>pomodoro</span><span class='o'>.</span><span class='n'>note</span><span class='o'>.</span><span class='n'>should</span> <span class='o'>==</span> <span class='s2'>&quot;json post individual pomodoro&quot;</span>
+          <span class='n'>pomodoro</span><span class='o'>.</span><span class='n'>length</span><span class='o'>.</span><span class='n'>should</span> <span class='o'>==</span> <span class='mi'>25</span>
+        <span class='k'>end</span>
+      <span class='k'>end</span>
+</code></pre>
+</div>
+<p>It looks to me, like you&#8217;ll need to do more of this before posting… Just don&#8217;t edit a post (or round trip it) in Mars Edit</p>
+    </div>
+  </div>
+
+
+  <h2 class="title"><a href="/2011/07/22/more-better-writing">More Better Writing</a></h2>
+  <div class="post post-/2011/07/22/more-better-writing">
+
+    <p class="author">
+      Added by 
+      on July 22, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>So, I&#8217;m back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.</p>
 
 <p>Now, however, I&#8217;m taking a different tack. Blogging can and should have a more powerful impact on what I&#8217;m doing and I&#8217;ve come to realize that blogging can have a positive impact on my life in a few ways: <ul>
 	<li>I want to write more to contribute to the Rails/Objective C world.</li>
@@ -114,62 +170,10 @@
     <span class='k'>end</span>
 </code></pre>
 </div>
-    <hr>
-    <div class="pagination">
-      <ul>
-      
-        <li class="prev disabled"><a>&larr; Previous</a></li>
-      
-        <li><a href="/archive.html">Archive</a></li>
-      
-        <li class="next"><a href="/2011/07/24/test-locally" title="Round-tripping code posts with MarsEdit - Not Pretty">Next &rarr;</a></li>
-      
-      </ul>
     </div>
-    <hr>
-    
-
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'danieldosen'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-
-
   </div>
-  
-  <div class="span4">
-    <h4>Published</h4>
-    <div class="date"><span>22 July 2011</span></div>
-
-  
-    <h4>Tags</h4>
-    <ul class="tag_box">
-    
-    
 
 
-  
-     
-    	<li><a href="/tags.html#Personal-ref">Personal <span>3</span></a></li>
-    
-  
-
-
-
-    </ul>
-    
   </div>
 </div>
 

@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Create Me a Rails App</title>
+    <title></title>
     
     <meta name="author" content="Daniel Dosen">
 
@@ -77,12 +77,32 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>Create Me a Rails App <small>Supporting tagline</small></h1>
+  <h1> <small>Supporting tagline</small></h1>
 </div>
 
 <div class="row">
-  <div class="span10">
-    <p>I watched the latest and very helpful Railscast episode this morning - on <a href='http://railscasts.com/episodes/285-spork'>Spork</a> and wound up tweaking all the projects I&#8217;m working on to incorporate some of the things I learned in that screencast.</p>
+  <div class="span14">
+    
+
+Blogging What Interests Me...
+
+
+
+  <h2 class="title"><a href="/technical/2011/09/26/create-me-a-rails-app">Create Me a Rails App</a></h2>
+  <div class="post post-/technical/2011/09/26/create-me-a-rails-app">
+
+    <p class="author">
+      Added by 
+      on September 26, 2011
+      in 
+       <a href="/technical.html">technical</a>
+      
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>I watched the latest and very helpful Railscast episode this morning - on <a href='http://railscasts.com/episodes/285-spork'>Spork</a> and wound up tweaking all the projects I&#8217;m working on to incorporate some of the things I learned in that screencast.</p>
 
 <p>I also wound up tweaking a checklist I maintain in an Evernote entry of what I do to setup a Rails project. Of the projects I&#8217;m working on, I wind up putting them all into a similar environment and figured it would be a useful blog post. So here it is:</p>
 
@@ -166,46 +186,103 @@
 </ul>
 
 <p>Now this post doesn&#8217;t really delve into configuration for most of these setup options, but there&#8217;s a ton of great resources on the web. Feel free to comment with your own indispensable configuration&#8230;</p>
-    <hr>
-    <div class="pagination">
-      <ul>
-      
-        <li class="prev"><a href="/technical/2011/09/26/mvcs-galore" title="MVCs Galore">&larr; Previous</a></li>
-      
-        <li><a href="/archive.html">Archive</a></li>
-      
-        <li class="next"><a href="/tech/2011/10/10/moving-around-in-vim-normal-mode" title="Moving Around in Vim - Normal Mode">Next &rarr;</a></li>
-      
-      </ul>
     </div>
-    <hr>
-    
-
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = 'danieldosen'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-
-
   </div>
-  
-  <div class="span4">
-    <h4>Published</h4>
-    <div class="date"><span>26 September 2011</span></div>
 
-    
+
+  <h2 class="title"><a href="/technical/2011/09/26/mvcs-galore">MVCs Galore</a></h2>
+  <div class="post post-/technical/2011/09/26/mvcs-galore">
+
+    <p class="author">
+      Added by 
+      on September 26, 2011
+      in 
+       <a href="/technical.html">technical</a>
+      
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>I just wrapped up a project (well, the first phase of a project) using <a href='http://www.asp.net/mvc/mvc3'>Microsoft&#8217;s MVC3</a> framework for a client here in Seattle. Similar to other clients I&#8217;ve worked with, they&#8217;re a Microsoft shop and have an existing investment in the MS stack for building applications. They wanted to leverage that investment on this project.</p>
+
+<p>Working with MVC3 was pretty cool in that I had a different perspective of using Rails(Ruby) and Django/AppEngine(Python). So, now I have perspective on using MS MVC3 I figure I&#8217;d share it with you. Feel free to comment.</p>
+
+<p>First - some things I liked about using MS MVC3:</p>
+
+<ul>
+<li>Visual Studio Intellisense - If you&#8217;re going to use MS technology, you need to use those tools, and Visual Studio is great in its implementation of Intellisense. It makes it easy to code and build your app. There&#8217;s even Intellisense in Razor - the MS MVC equivalent to erb.</li>
+
+<li>Visual Studio Debugging - Another great way to leverage the tools to step in, add watches, and examine what&#8217;s going on in your app while the server is doing its thing.</li>
+
+<li>The Entity Framework - I&#8217;ll admit, I used to work on that team, so I&#8217;m impartial (Don&#8217;t worry, everything I worked on is well hidden). I like EF and where it&#8217;s going. If you&#8217;re staring with a DB from scratch, the EF has some nice tools integrated within Visual Studio that makes it easy to get up and running.</li>
+
+<li>Nugets: They&#8217;re the VS way to manage things like Gems inside a project. There&#8217;s really no equivalent to RVM/VirtualEnv as it just makes sure everything is up to date - but the Nuget management made it easy to add functionality form the MVC3/.Net ecosystem.</li>
+</ul>
+
+<p>Some things I didn&#8217;t like about MVC3:</p>
+
+<ul>
+<li>Migrations. Wow - I&#8217;m spoiled by Rails Migrations. They are essential when working with a team of developers. They help make it blood simple to let any one developer catch up with database changes on their own terms. I can&#8217;t remember how I lived without them. Even Objective C on iOS has their Core Data Migration capabilities. MVC3 does not. That&#8217;s painful.</li>
+
+<li>ViewModelClasses. That&#8217;s right, Models, just for the views. You already define your models, but say you want to pass a few things to a view, you should create a ViewModel Class to create strong typing of that data when you get painting those views. Sure it makes you think about what your sending to the view, but it just feels unproductive to me. With rails, you just create an @instance variable and you&#8217;re ready to go. Much simpler, IMO.</li>
+
+<li>Crashes. Visual Studio crashes alot (this is on a mid2010 MacBookPro.) Bootcamp and Windows7 run great, but Visual Studio just crashes from time to time. It&#8217;s a very heavyweight stack. Compare that to VIM, which I use for everything these days, and it&#8217;s a letdown. It&#8217;s the price you pay for that Intellisense. I&#8217;ll chose the VIM plugins any day.</li>
+
+<li>The ecosystem. Between Github and Stackoverflow, I can overcome any issue I have with a Rails app, usually in a manner of seconds. The wealth of information at your fingertips is awesome. The community works. With MVC3, there&#8217;s MSDN forums, but I found myself using Stackoverflow more often that not, and when I did, it was a bit of an echo chamber. The ability to execute within the open world of Rails just seems to move at a faster pace to me. For example, Rails just implemented CoffeeScript. With MVC3, you can, but it took some hunting, and there&#8217;s only a couple of Google links that get you to the Web Workbench tools. Or Testing. Sure there&#8217;s NUnit and Microsoft Test, but I kind of like RSpec&#8217;s matching language, and all the BDD/TDD goodness you can get from using RSpec and Cucumber together. It just seems like tools can get introduced, get developed and mature faster in the open source world.</li>
+</ul>
+
+<p>On that last point, I was talking about this with my client today. The &#8220;open&#8221; world is just getting faster and better and I don&#8217;t see how MS can keep pace unless they change the way they do things. Add to that the cost savings (bring your best TCO argument) of the non-MS environment, and I know what I&#8217;d choose, I&#8217;m just happy their&#8217;s a choice.</p>
+    </div>
+  </div>
+
+
+  <h2 class="title"><a href="/2011/09/17/vim-over-vnc-on-an-ipad">Vim Over VNC on an iPad</a></h2>
+  <div class="post post-/2011/09/17/vim-over-vnc-on-an-ipad">
+
+    <p class="author">
+      Added by 
+      on September 17, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>OK, now this is geeky, but I needed to share it. Take your iPad and add a VNC client (I added Remoter, which is 99 cents of bugginess). Now use your iPad with a BT keyboard and connect the VNC client to a Mac Lion machine - or VM. Start up iTerm on the host and VIM away&#8230;</p>
+
+<p><img alt='Vim over VNC' src='/images/vnc-vim.png' /></p>
+
+<p>This image may look a little ugly, but Remoter doesn&#8217;t seem to hang on to my keyboard unless I have the onscreen keyboard up. Luckily, you can just alpha it away&#8230;</p>
+
+<p>I wanted to see how snappy this would be using an iPad over my iPhone Personal Hotspot sharing&#8230; and it&#8217;s kind of nice! Now I need a stand for the iPad.</p>
+
+<p>I also need to stay within VIM or iTerm2 when doing git checkins. I haven&#8217;t really tried fugitive.vim, because gitx is so nice. I think I&#8217;ll have to give it a shot.</p>
+    </div>
+  </div>
+
+
+  <h2 class="title"><a href="/2011/09/16/i-need-a-schedule-gem">I Need a Schedule Gem</a></h2>
+  <div class="post post-/2011/09/16/i-need-a-schedule-gem">
+
+    <p class="author">
+      Added by 
+      on September 16, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>So, this is what I need - Well, this is what I wanted before I started out thinking I should build a Schedule gem:</p>
+<img alt='Scheduling Gem' src='http://s3.amazonaws.com/maptini.com/app/public/system/images/34389/original/06f9e830-b375-012e-3f0a-12313d0361e4.png?1328034042' width='800' />
+<p>The problem is, I really haven&#8217;t found any schedule gems that I like.</p>
+
+<p>What I want, is to be able to create a schedule, in a manner very similar to the API shown on the ice_cube gem - but with more than just an API, as I want something that&#8217;s easy to show on a Rails (or Formtastic) form. So, why not build a new one&#8230; That&#8217;s where I&#8217;m at right now. I&#8217;ll let you know where it goes.</p>
+    </div>
+  </div>
+
+
   </div>
 </div>
 
