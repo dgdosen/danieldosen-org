@@ -4,7 +4,7 @@
  <title>danieldosen.org</title>
  <link href="http://username.github.com/atom.xml" rel="self"/>
  <link href="http://username.github.com"/>
- <updated>2012-01-31T13:32:23-08:00</updated>
+ <updated>2012-02-11T21:25:47-08:00</updated>
  <id>http://username.github.com</id>
  <author>
    <name>Daniel Dosen</name>
@@ -196,7 +196,7 @@
    <id>hhttp://username.github.com/2011/09/17/vim-over-vnc-on-an-ipad</id>
    <content type="html">&lt;p&gt;OK, now this is geeky, but I needed to share it. Take your iPad and add a VNC client (I added Remoter, which is 99 cents of bugginess). Now use your iPad with a BT keyboard and connect the VNC client to a Mac Lion machine - or VM. Start up iTerm on the host and VIM away&amp;#8230;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt='Vim over VNC' src='/images/vnc-vim.png' /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src='/images/vnc-vim.png' alt='Vim over VNC' /&gt;&lt;/p&gt;
 
 &lt;p&gt;This image may look a little ugly, but Remoter doesn&amp;#8217;t seem to hang on to my keyboard unless I have the onscreen keyboard up. Luckily, you can just alpha it away&amp;#8230;&lt;/p&gt;
 
@@ -211,7 +211,7 @@
    <updated>2011-09-16T16:25:00-07:00</updated>
    <id>hhttp://username.github.com/2011/09/16/i-need-a-schedule-gem</id>
    <content type="html">&lt;p&gt;So, this is what I need - Well, this is what I wanted before I started out thinking I should build a Schedule gem:&lt;/p&gt;
-&lt;img alt='Scheduling Gem' src='http://s3.amazonaws.com/maptini.com/app/public/system/images/34389/original/06f9e830-b375-012e-3f0a-12313d0361e4.png?1328034042' width='800' /&gt;
+&lt;img src='http://s3.amazonaws.com/maptini.com/app/public/system/images/34389/original/06f9e830-b375-012e-3f0a-12313d0361e4.png?1328034042' alt='Scheduling Gem' width='800' /&gt;
 &lt;p&gt;The problem is, I really haven&amp;#8217;t found any schedule gems that I like.&lt;/p&gt;
 
 &lt;p&gt;What I want, is to be able to create a schedule, in a manner very similar to the API shown on the ice_cube gem - but with more than just an API, as I want something that&amp;#8217;s easy to show on a Rails (or Formtastic) form. So, why not build a new one&amp;#8230; That&amp;#8217;s where I&amp;#8217;m at right now. I&amp;#8217;ll let you know where it goes.&lt;/p&gt;</content>
@@ -316,7 +316,7 @@
 &lt;li&gt;Other Stuff&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Trying an image: &lt;img alt='GO GREEN' src='/images/vim-shot.png' /&gt;&lt;/p&gt;
+&lt;p&gt;Trying an image: &lt;img src='/images/vim-shot.png' alt='GO GREEN' /&gt;&lt;/p&gt;
 
 &lt;p&gt;Looking at code snippets&amp;#8230; Here&amp;#8217;s a post in cucumber:&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;    &lt;span class='no'&gt;Feature&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='no'&gt;Manage&lt;/span&gt; &lt;span class='n'&gt;pomodori&lt;/span&gt;
@@ -358,7 +358,7 @@
    <updated>2011-07-25T00:00:00-07:00</updated>
    <id>hhttp://username.github.com/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
    <content type="html">&lt;p&gt;Just wrapping up testing of a completed API for pomodoro service. I&amp;#8217;ll post the API in another post… This post just notes minimal testing on the pomodori controller:&lt;/p&gt;
-&lt;img alt='got to green' border='0' height='178' src='/images/cucumber-green.png' width='600' /&gt;
+&lt;img src='/images/cucumber-green.png' border='0' height='178' alt='got to green' width='600' /&gt;
 &lt;p&gt;Obviously, this image was from me using Textmate and the cucumber plugin. This is before I saw the light and switched to vim.&lt;/p&gt;</content>
  </entry>
  
