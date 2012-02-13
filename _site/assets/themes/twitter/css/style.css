@@ -135,6 +135,7 @@ body {
 /* .highlight .il { color: #009999 } /1* Literal.Number.Integer.Long *1/ */
 
 
+li{line-height:18px; color:black;}
 
 .highlight { color: #839496; background-color: #002b36; }
 .highlight .err { color: #dc322f; background-color: #073642; }
