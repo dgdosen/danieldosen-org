@@ -1,4 +1,3 @@
-/* this is a test... */
 /* Override some defaults */
 html, body {
   background-color: #eee;
@@ -136,6 +135,7 @@ html, body {
 /* .highlight .il { color: #009999 } /1* Literal.Number.Integer.Long *1/ */
 
 
+li{line-height:18px; color:black;}
 code,pre{padding:8px 8px 8px;font-family:Monaco, Andale Mono, Courier New, monospace;font-size:12px;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;}
 
 .highlight { border-radius: 8px; }
@@ -174,5 +174,3 @@ code,pre{padding:8px 8px 8px;font-family:Monaco, Andale Mono, Courier New, monos
 .highlight .vc, .highlight .vg, .highlight .vi { color: #268bd2; }
 .highlight .ne, .highlight .nf { color: #dc322f; font-weight: bold; }
 
-
-/* hello */
