@@ -4,7 +4,7 @@
  <title>danieldosen.org</title>
  <link href="http://username.github.com/atom.xml" rel="self"/>
  <link href="http://username.github.com"/>
- <updated>2012-02-13T15:16:11-08:00</updated>
+ <updated>2012-04-29T12:06:39-07:00</updated>
  <id>http://username.github.com</id>
  <author>
    <name>Daniel Dosen</name>
@@ -16,7 +16,7 @@
    <title>Moved Back to Jekyll</title>
    <link href="http://username.github.com/2012/01/31/moved-back-to-jekyll"/>
    <updated>2012-01-31T00:00:00-08:00</updated>
-   <id>hhttp://username.github.com/2012/01/31/moved-back-to-jekyll</id>
+   <id>http://username.github.com/2012/01/31/moved-back-to-jekyll</id>
    <content type="html">&lt;p&gt;Well, the Octopress experiment is over - It seemed a bit too complex to be able to change a theme in the way I wanted&amp;#8230; And using plain old vanilla Jekyll seemed to work find - especially when it comes to applying themes like Bootstrap. So now I&amp;#8217;m back to using plain old jekyll. I need to clean a few things up, but aside from moving code snippets back to a pygments way of defining. I&amp;#8217;m set!&lt;/p&gt;
 
 &lt;p&gt;That should mean I blog and have more content on this site&amp;#8230;&lt;/p&gt;</content>
@@ -26,7 +26,7 @@
    <title>last legs of the euro</title>
    <link href="http://username.github.com/economics/2011/11/09/last-legs-of-the-euro"/>
    <updated>2011-11-09T14:09:00-08:00</updated>
-   <id>hhttp://username.github.com/economics/2011/11/09/last-legs-of-the-euro</id>
+   <id>http://username.github.com/economics/2011/11/09/last-legs-of-the-euro</id>
    <content type="html">&lt;p&gt;If you&amp;#8217;ve been watching the news and the slow-moving-train wreck of the European Union, I sit here and wonder how and why smart people are doing dumb things with the world economy. If and when the Euro does go down, imagine the costs of currency switching in all those EU countries. Not only is that going to be a drain on each of those economies, it will also dampen an already weak world economy. This is going to hurt the US. What&amp;#8217;s worse is that the US economy is in such bad shape as it is, I&amp;#8217;m not sure how much more it can take.&lt;/p&gt;
 
 &lt;p&gt;This is particularly bad new for Obama, as no matter what, this is his economy, and if things get worse, he&amp;#8217;ll really be certain of a single term.&lt;/p&gt;
@@ -48,7 +48,7 @@
    <title>100 up</title>
    <link href="http://username.github.com/2011/11/02/100-up"/>
    <updated>2011-11-02T16:53:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/11/02/100-up</id>
+   <id>http://username.github.com/2011/11/02/100-up</id>
    <content type="html">&lt;p&gt;I saw &lt;a href='http://www.nytimes.com/2011/11/06/magazine/running-christopher-mcdougall.html' title='100-up'&gt;this link&lt;/a&gt; in today&amp;#8217;s NY Times. Everything mentioned in this article seems to be in sync with what I&amp;#8217;ve learned from Chi-Running - but just presented in a way that makes it much easier and more natural to understand. Gotto go try this!&lt;/p&gt;</content>
  </entry>
  
@@ -56,7 +56,7 @@
    <title>Moving Around in Vim - Normal Mode</title>
    <link href="http://username.github.com/tech/2011/10/10/moving-around-in-vim-normal-mode"/>
    <updated>2011-10-10T10:53:00-07:00</updated>
-   <id>hhttp://username.github.com/tech/2011/10/10/moving-around-in-vim-normal-mode</id>
+   <id>http://username.github.com/tech/2011/10/10/moving-around-in-vim-normal-mode</id>
    <content type="html">&lt;p&gt;So, while I&amp;#8217;m getting much better with vim, my only complaint as of a couple of days ago, was, IMO, my constant use of jklm/bw in normal mode. Specifically, when navigating around in a file, I found myself hitting too many j&amp;#8217;s and k&amp;#8217;s to get to the right line, and then a bunch of b&amp;#8217;s or w&amp;#8217;s to get to the spot in that line that I want to edit.&lt;/p&gt;
 
 &lt;p&gt;I know how to use Ff - but they didn&amp;#8217;t seem that great of an option. That&amp;#8217;s why I switched to EasyMotion and remapped (this may be considered sacrilege) my f and F to easymotion - w and easymotion - b. Now, I can find myself zipping around in a file. It&amp;#8217;s pretty automatic, and I&amp;#8217;m just wondering if other vim users do the same, or do they consider that too costly of a hack. I mean, I never used f or F until now&amp;#8230;&lt;/p&gt;</content>
@@ -66,7 +66,7 @@
    <title>Create Me a Rails App</title>
    <link href="http://username.github.com/technical/2011/09/26/create-me-a-rails-app"/>
    <updated>2011-09-26T20:18:00-07:00</updated>
-   <id>hhttp://username.github.com/technical/2011/09/26/create-me-a-rails-app</id>
+   <id>http://username.github.com/technical/2011/09/26/create-me-a-rails-app</id>
    <content type="html">&lt;p&gt;I watched the latest and very helpful Railscast episode this morning - on &lt;a href='http://railscasts.com/episodes/285-spork'&gt;Spork&lt;/a&gt; and wound up tweaking all the projects I&amp;#8217;m working on to incorporate some of the things I learned in that screencast.&lt;/p&gt;
 
 &lt;p&gt;I also wound up tweaking a checklist I maintain in an Evernote entry of what I do to setup a Rails project. Of the projects I&amp;#8217;m working on, I wind up putting them all into a similar environment and figured it would be a useful blog post. So here it is:&lt;/p&gt;
@@ -157,7 +157,7 @@
    <title>MVCs Galore</title>
    <link href="http://username.github.com/technical/2011/09/26/mvcs-galore"/>
    <updated>2011-09-26T01:05:00-07:00</updated>
-   <id>hhttp://username.github.com/technical/2011/09/26/mvcs-galore</id>
+   <id>http://username.github.com/technical/2011/09/26/mvcs-galore</id>
    <content type="html">&lt;p&gt;I just wrapped up a project (well, the first phase of a project) using &lt;a href='http://www.asp.net/mvc/mvc3'&gt;Microsoft&amp;#8217;s MVC3&lt;/a&gt; framework for a client here in Seattle. Similar to other clients I&amp;#8217;ve worked with, they&amp;#8217;re a Microsoft shop and have an existing investment in the MS stack for building applications. They wanted to leverage that investment on this project.&lt;/p&gt;
 
 &lt;p&gt;Working with MVC3 was pretty cool in that I had a different perspective of using Rails(Ruby) and Django/AppEngine(Python). So, now I have perspective on using MS MVC3 I figure I&amp;#8217;d share it with you. Feel free to comment.&lt;/p&gt;
@@ -193,7 +193,7 @@
    <title>Vim Over VNC on an iPad</title>
    <link href="http://username.github.com/2011/09/17/vim-over-vnc-on-an-ipad"/>
    <updated>2011-09-17T14:18:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/09/17/vim-over-vnc-on-an-ipad</id>
+   <id>http://username.github.com/2011/09/17/vim-over-vnc-on-an-ipad</id>
    <content type="html">&lt;p&gt;OK, now this is geeky, but I needed to share it. Take your iPad and add a VNC client (I added Remoter, which is 99 cents of bugginess). Now use your iPad with a BT keyboard and connect the VNC client to a Mac Lion machine - or VM. Start up iTerm on the host and VIM away&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src='/images/vnc-vim.png' alt='Vim over VNC' /&gt;&lt;/p&gt;
@@ -209,7 +209,7 @@
    <title>I Need a Schedule Gem</title>
    <link href="http://username.github.com/2011/09/16/i-need-a-schedule-gem"/>
    <updated>2011-09-16T16:25:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/09/16/i-need-a-schedule-gem</id>
+   <id>http://username.github.com/2011/09/16/i-need-a-schedule-gem</id>
    <content type="html">&lt;p&gt;So, this is what I need - Well, this is what I wanted before I started out thinking I should build a Schedule gem:&lt;/p&gt;
 &lt;img src='http://s3.amazonaws.com/maptini.com/app/public/system/images/34389/original/06f9e830-b375-012e-3f0a-12313d0361e4.png?1328034042' alt='Scheduling Gem' width='800' /&gt;
 &lt;p&gt;The problem is, I really haven&amp;#8217;t found any schedule gems that I like.&lt;/p&gt;
@@ -221,7 +221,7 @@
    <title>The Lean Startup</title>
    <link href="http://username.github.com/2011/09/16/the-lean-startup"/>
    <updated>2011-09-16T14:37:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/09/16/the-lean-startup</id>
+   <id>http://username.github.com/2011/09/16/the-lean-startup</id>
    <content type="html">&lt;p&gt;I just started reading Eric Ries&amp;#8217; new book &lt;em&gt;The Lean Startup&lt;/em&gt;.&lt;br /&gt;Almost right away, there&amp;#8217;s a section on the five principles of the Lean Startup. Number 5 jumps out at me:&lt;/p&gt;
 
 &lt;p&gt;Number 5 - &lt;strong&gt;Innovation Accounting&lt;/strong&gt;&lt;/p&gt;
@@ -239,7 +239,7 @@
    <title>Switched to Octopress</title>
    <link href="http://username.github.com/2011/08/16/new-post"/>
    <updated>2011-08-16T17:24:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/08/16/new-post</id>
+   <id>http://username.github.com/2011/08/16/new-post</id>
    <content type="html">&lt;p&gt;I really like Jekyll for a static website - which this (or any blog site I write(or &lt;em&gt;fail&lt;/em&gt; to write)) is. And I really like working with the Solarized theme in VIM. In fact, while googleing for a Solarized jekyll them, I stumbled across Octopress and am now trying it out&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;Now, I&amp;#8217;m not sure if I&amp;#8217;ll stay with Octopress - I&amp;#8217;m not convinced of the value and freedom of what you already get in a jekyll site. But I have to admit, it is easier, and it&amp;#8217;s evolving, so I imagine you can get alot for free. And Solarized is pretty to look at. For now, I should just blog with something to say&amp;#8230; Like how to use jekyll, Octopress and Heroku together.&lt;/p&gt;
@@ -273,7 +273,7 @@
    <title>Trying out Ubuntu</title>
    <link href="http://username.github.com/2011/08/03/test-from-ubuntu"/>
    <updated>2011-08-03T00:00:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/08/03/test-from-ubuntu</id>
+   <id>http://username.github.com/2011/08/03/test-from-ubuntu</id>
    <content type="html">&lt;p&gt;I really should set &lt;code&gt;published: false&lt;/code&gt; for some of these posts&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;&amp;#8230;But since I&amp;#8217;m here, I now see the value in using Markdown - especially in an editor like VIM. I&amp;#8217;ve also loaded some helper mappings for using the spell checker when I write. It&amp;#8217;s pretty fast! I think finding a spell checker was my last big hangup for using VIM.&lt;/p&gt;
@@ -287,7 +287,7 @@
    <title>Trying out Markdown</title>
    <link href="http://username.github.com/2011/08/02/playing_with-markdown"/>
    <updated>2011-08-02T00:00:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/08/02/playing_with-markdown</id>
+   <id>http://username.github.com/2011/08/02/playing_with-markdown</id>
    <content type="html">&lt;h1 id='very_cool_header'&gt;Very cool header&lt;/h1&gt;
 
 &lt;h2 id='an_even_cooler_header'&gt;An even cooler header&lt;/h2&gt;
@@ -344,7 +344,7 @@
    <title>Jekyllization</title>
    <link href="http://username.github.com/2011/08/02/jekyllization"/>
    <updated>2011-08-02T00:00:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/08/02/jekyllization</id>
+   <id>http://username.github.com/2011/08/02/jekyllization</id>
    <content type="html">&lt;h1&gt;Jekyll&lt;/h1&gt;
 &lt;p&gt;I&amp;#8217;ve been reading about Jekyll (on github) and it looks like a much more desirable way to host a website and related blog than wordpress. It works great because all your posts are stored as text using haml and kept under source control &amp;#8211; It&amp;#8217;s makes it easy to work from anywhere, and gives you feature parity you could get with MarsEdit &amp;#8211; but just easier to work with.&lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s so easy &amp;#8211; it looks like stealing candy from a  baby! &amp;#8211; What a lark, let&amp;#8217;s try!&lt;/p&gt;
@@ -356,7 +356,7 @@
    <title>Posting an image from MarsEdit to a wordpress blog..</title>
    <link href="http://username.github.com/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog"/>
    <updated>2011-07-25T00:00:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
+   <id>http://username.github.com/2011/07/25/posting-an-image-from-marsedit-to-a-wordpress-blog</id>
    <content type="html">&lt;p&gt;Just wrapping up testing of a completed API for pomodoro service. I&amp;#8217;ll post the API in another post… This post just notes minimal testing on the pomodori controller:&lt;/p&gt;
 &lt;img src='/images/cucumber-green.png' border='0' height='178' alt='got to green' width='600' /&gt;
 &lt;p&gt;Obviously, this image was from me using Textmate and the cucumber plugin. This is before I saw the light and switched to vim.&lt;/p&gt;</content>
@@ -366,7 +366,7 @@
    <title>Pomodori Controller and Blogging from the coffee shop...</title>
    <link href="http://username.github.com/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop"/>
    <updated>2011-07-25T00:00:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop</id>
+   <id>http://username.github.com/2011/07/25/pomodori-controller-and-blogging-from-the-coffee-shop</id>
    <content type="html">&lt;ul&gt;
 &lt;li&gt;in the coffee shop&lt;/li&gt;
 
@@ -405,7 +405,7 @@
    <title>Concentration and simplynoise.com</title>
    <link href="http://username.github.com/2011/07/25/concentration-and-simplynoise-com"/>
    <updated>2011-07-25T00:00:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/07/25/concentration-and-simplynoise-com</id>
+   <id>http://username.github.com/2011/07/25/concentration-and-simplynoise-com</id>
    <content type="html">&lt;p&gt;I&amp;#8217;m a fan of using white noise - mainly from using a floor fan in my bedroom on summer nights to drown out the noisy streets. It drowns out any noise wafting up from 35th street - and there&amp;#8217;s plenty of noise on that street.&lt;/p&gt;
 
 &lt;p&gt;It turns out I&amp;#8217;m also a big fan of white noise when working - or my favorite brown noise from simplynoise.com. Combine that and the ticking of a pomodoro and my ADHDness melts away.&lt;/p&gt;
@@ -417,7 +417,7 @@
    <title>Round-tripping code posts with MarsEdit - Not Pretty</title>
    <link href="http://username.github.com/2011/07/24/test-locally"/>
    <updated>2011-07-24T00:00:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/07/24/test-locally</id>
+   <id>http://username.github.com/2011/07/24/test-locally</id>
    <content type="html">&lt;p&gt;Trying out MarsEdit and posting&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;Using the square brackets when publishing an entry via mars edit is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter. Then you just turn off the toolbar, which doesn&amp;#8217;t work well anyway.&lt;/p&gt;
@@ -446,7 +446,7 @@
    <title>More Better Writing</title>
    <link href="http://username.github.com/2011/07/22/more-better-writing"/>
    <updated>2011-07-22T00:00:00-07:00</updated>
-   <id>hhttp://username.github.com/2011/07/22/more-better-writing</id>
+   <id>http://username.github.com/2011/07/22/more-better-writing</id>
    <content type="html">&lt;p&gt;So, I&amp;#8217;m back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.&lt;/p&gt;
 
 &lt;p&gt;Now, however, I&amp;#8217;m taking a different tack. Blogging can and should have a more powerful impact on what I&amp;#8217;m doing and I&amp;#8217;ve come to realize that blogging can have a positive impact on my life in a few ways: &lt;ul&gt;
