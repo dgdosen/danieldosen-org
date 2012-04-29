@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <meta name="author" content="Daniel Dosen">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">danieldosen.org</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1> <small>Blogging What Interests Me</small></h1>
+</div>
+
+<div class="row">
+  <div class="span12">
+    
+
+Blogging What Interests Me...
+
+
+
+  <h2 class="title"><a href="/2011/07/24/test-locally">Round-tripping code posts with MarsEdit - Not Pretty</a></h2>
+  <div class="post post-/2011/07/24/test-locally">
+
+    <p class="author">
+      Added by 
+      on July 24, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>Trying out MarsEdit and posting&#8230;</p>
+
+<p>Using the square brackets when publishing an entry via mars edit is pretty fragile. The best bet is to just use simple pre tags, as is the case with the default version of WP Syntax Highlighter. Then you just turn off the toolbar, which doesn&#8217;t work well anyway.</p>
+<div class='highlight'><pre><code class='ruby'>      <span class='n'>describe</span> <span class='s2'>&quot;POST create&quot;</span> <span class='k'>do</span>
+        <span class='c1'># test code roundtripping with marsedit</span>
+        <span class='n'>it</span> <span class='s2'>&quot;should create a pomodoro from json&quot;</span> <span class='k'>do</span>
+          <span class='n'>post</span> <span class='ss'>:create</span><span class='p'>,</span> <span class='ss'>:format</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;json&quot;</span><span class='p'>,</span> <span class='ss'>:activity_id</span> <span class='o'>=&gt;</span> <span class='vi'>@activity</span><span class='o'>.</span><span class='n'>id</span><span class='p'>,</span> <span class='ss'>:pomodoro</span> <span class='o'>=&gt;</span> <span class='p'>{</span>
+            <span class='s2'>&quot;start_date_time&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;2011-07-22 00:00&quot;</span><span class='p'>,</span>
+            <span class='s2'>&quot;length&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;25&quot;</span><span class='p'>,</span>
+            <span class='s2'>&quot;completed&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;0&quot;</span><span class='p'>,</span>
+            <span class='s2'>&quot;note&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;json post individual pomodoro&quot;</span><span class='p'>,</span>
+            <span class='s2'>&quot;break_length&quot;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;5&quot;</span>
+          <span class='p'>}</span>
+          <span class='n'>pomodoro</span> <span class='o'>=</span> <span class='n'>assigns</span><span class='p'>(</span><span class='ss'>:pomodoro</span><span class='p'>)</span>
+          <span class='n'>pomodoro</span><span class='o'>.</span><span class='n'>id</span><span class='o'>.</span><span class='n'>should</span> <span class='o'>&gt;</span> <span class='mi'>0</span>
+          <span class='n'>pomodoro</span><span class='o'>.</span><span class='n'>note</span><span class='o'>.</span><span class='n'>should</span> <span class='o'>==</span> <span class='s2'>&quot;json post individual pomodoro&quot;</span>
+          <span class='n'>pomodoro</span><span class='o'>.</span><span class='n'>length</span><span class='o'>.</span><span class='n'>should</span> <span class='o'>==</span> <span class='mi'>25</span>
+        <span class='k'>end</span>
+      <span class='k'>end</span>
+</code></pre>
+</div>
+<p>It looks to me, like you&#8217;ll need to do more of this before posting… Just don&#8217;t edit a post (or round trip it) in Mars Edit</p>
+    </div>
+  </div>
+
+
+  <h2 class="title"><a href="/2011/07/22/more-better-writing">More Better Writing</a></h2>
+  <div class="post post-/2011/07/22/more-better-writing">
+
+    <p class="author">
+      Added by 
+      on July 22, 2011
+      in 
+    </p>
+
+    <hr />
+
+    <div class="entrybody">
+      <p>So, I&#8217;m back to posting. This is, what will be, one of my first blog posts in any blog for a long time. And just to set the record straight - every time I started to blog about anything, I never kept with it.</p>
+
+<p>Now, however, I&#8217;m taking a different tack. Blogging can and should have a more powerful impact on what I&#8217;m doing and I&#8217;ve come to realize that blogging can have a positive impact on my life in a few ways: <ul>
+	<li>I want to write more to contribute to the Rails/Objective C world.</li>
+	<li>I'd like to write more about data modeling and rails - if only to capture some of the cool things I've learned in the past year or two. Right now, all these little gems I've learned, or applied, are stuck in some Evernote notebook.</li>
+	<li>I want to apply lean development practices to lean publishing (which is already a term I learned about this week at Seattle's Lean Camp.</li>
+	<li>Blogging is the gateway drug to book-writing - which when it comes to something like ePub - there's no reason why the world doesn't need a book by Daniel Dosen - even if nobody or just a few read it. Now it's a goal of mine, so it will happen.</li>
+	<li>…</li>
+	<li>Profit</li>
+	<li>I want to publicly commit do doing things like - updating or writing a gem. The main reason is, to me, I need more github based code with my name on it. Most everything I do or have, is in a private repository on github, or on my own git server at agidevelopment.com</li>
+</ul> Hey, look-y here - this is almost a blog post.</p>
+
+<p>I have to admit, I&#8217;ve spent more time getting this blog set up than I did writing this post. And this is WordPress - One thing I&#8217;m particularly fascinated about is adding syntax highlighted code in a post - so here&#8217;s something working with the WP-GeSHi-Highlight plug-in. It works, but I wish it supported markdown: <p> </p></p>
+<div class='highlight'><pre><code class='ruby'>    <span class='k'>class</span> <span class='nc'>Pomodoro</span> <span class='o'>&lt;</span> <span class='no'>ActiveRecord</span><span class='o'>::</span><span class='no'>Base</span>
+
+      <span class='n'>belongs_to</span> <span class='ss'>:activity</span>
+
+      <span class='n'>attr_accessible</span> <span class='ss'>:start_date_time</span><span class='p'>,</span>
+        <span class='ss'>:length</span><span class='p'>,</span>
+        <span class='ss'>:completed</span><span class='p'>,</span>
+        <span class='ss'>:note</span><span class='p'>,</span>
+        <span class='ss'>:location_id</span><span class='p'>,</span>
+        <span class='ss'>:break_length</span><span class='p'>,</span>
+        <span class='ss'>:activity</span><span class='p'>,</span>
+        <span class='ss'>:activity_id</span><span class='p'>,</span>
+        <span class='ss'>:activity_attributes</span>
+
+      <span class='n'>validates_presence_of</span> <span class='ss'>:start_date_time</span>
+
+    <span class='k'>end</span>
+</code></pre>
+</div>
+    </div>
+  </div>
+
+
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Daniel Dosen 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
