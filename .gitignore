@@ -1,5 +1,6 @@
 .bundle
 _site/*
+start/*
 _theme_packages/*
 .DS_Store
 .sass-cache
