@@ -1,7 +1,7 @@
 ---
 layout: post
 category : lessons
-tags : [intro, beginner, jekyll, foo, tutorial]
+tags : [intro, beginner, jekyll, tutorial]
 published : false
 ---
 {% include JB/setup %}
