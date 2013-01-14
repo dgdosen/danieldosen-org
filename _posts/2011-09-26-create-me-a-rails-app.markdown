@@ -47,8 +47,8 @@ I also wound up tweaking a checklist I maintain in an Evernote entry of what I d
 - Did you Check in yet?  Check in early and often
 - Change your spec\_helper.rb file and move functionality up into the Spork pre fork block.
 - Change your environment.rb to allow for factory girl and cucumber integration (of lots of borrowable step definitions)
-
 {% highlight ruby %}
+
     require 'factory_girl/step_definitions'
 {% endhighlight %}
 
