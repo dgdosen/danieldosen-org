@@ -9,6 +9,7 @@ paginate: 4
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
+url: http://danieldosen.org
 title: danieldosen.org
 tagline: blogging what interests me
 author :
