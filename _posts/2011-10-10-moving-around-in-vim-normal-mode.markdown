@@ -3,7 +3,7 @@ layout: post
 title: "Moving Around in Vim - Normal Mode"
 date: 2011-10-10 10:53
 comments: true
-categories: tech
+categories: technical
 ---
 
 So, while I'm getting much better with vim, my only complaint as of a couple of days ago, was, IMO, my constant use of jklm/bw in normal mode. Specifically, when navigating around in a file, I found myself hitting too many  j's and k's to get to the right line, and then a bunch of b's or w's to get to the spot in that line that I want to edit. 

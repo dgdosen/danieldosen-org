@@ -19,6 +19,9 @@ author :
   twitter : dgdosen
 simple_search: http://google.com/search
 
+# jekyll_sort:
+#  - src: categories
+#    dest: sorted_categories
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt

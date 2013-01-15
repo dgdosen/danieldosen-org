@@ -4,8 +4,7 @@ title: "Create Me a Rails App"
 date: 2011-09-26 20:18
 published: true
 comments: true
-categories:
-- technical
+category: technical
 ---
 I watched the latest and very helpful Railscast episode this morning - on [Spork](http://railscasts.com/episodes/285-spork) and wound up tweaking all the projects I'm working on to incorporate some of the things I learned in that screencast.
 
