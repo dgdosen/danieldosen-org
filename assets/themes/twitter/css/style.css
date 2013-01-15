@@ -51,6 +51,14 @@ html, body {
 .tag_box.inline li {
 	float:left;
 }
+.icon {
+  width: 20px;
+  float: left;
+  display: inline;
+	line-height:40px;
+  /* height: 28px; */
+}
+
 .tag_box a {
 	padding: 3px 6px;
 	margin: 2px;
@@ -68,4 +76,4 @@ html, body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	
+
